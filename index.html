@@ -874,6 +874,24 @@ function renderStateGrid() {
       psapStateMap[String(p.psap_id).replace(/^0+/, '') || '0'] = p.state;
     }
   });
+  // Build PSAP-by-state map from registry for statewide lookups
+  const psapsByState = {};
+  (DATA.psaps || []).forEach(p => {
+    if (p.psap_id && p.state) {
+      if (!psapsByState[p.state]) psapsByState[p.state] = [];
+      psapsByState[p.state].push(String(p.psap_id));
+    }
+  });
+
+  // Collect statewide filing states and their agencies
+  const statewideStates = {};
+  (DATA.filings || []).forEach(f => {
+    const sw = (f.statewide_state || '').toUpperCase();
+    if (sw) {
+      statewideStates[sw] = f.poc_agency || statewideStates[sw] || '';
+    }
+  });
+
   const psapsFiledByState = {};
   (DATA.filings || []).forEach(f => {
     const ids = new Set([
@@ -888,6 +906,12 @@ function renderStateGrid() {
         psapsFiledByState[st].add(String(id));
       }
     });
+  });
+
+  // For statewide filings, add all PSAPs in the state to psapsFiledByState
+  Object.keys(statewideStates).forEach(st => {
+    if (!psapsFiledByState[st]) psapsFiledByState[st] = new Set();
+    (psapsByState[st] || []).forEach(pid => psapsFiledByState[st].add(pid));
   });
 
   const s = DATA.summary;
@@ -938,17 +962,18 @@ function renderStateGrid() {
         if (agency) psapIdToAgency[sid] = agency;
       });
     });
-    
-    // Second pass: map county FIPS to agency via PSAPs
+
+    // Second pass: map county FIPS to agency via PSAPs + statewide filings
     const countyFipsToState = {};
     (DATA.psaps || []).forEach(p => {
       if (p.county_fips) {
         countyFipsToState[p.county_fips] = p.state;
         const pid = String(p.psap_id);
         const pidNorm = pid.replace(/^0+/, '') || '0';
-        if (allFiledPsapIds.has(pid) || allFiledPsapIds.has(pidNorm)) {
+        const isStatewide = statewideStates.hasOwnProperty(p.state);
+        if (allFiledPsapIds.has(pid) || allFiledPsapIds.has(pidNorm) || isStatewide) {
           filedCountyFips.add(p.county_fips);
-          const agency = psapIdToAgency[pid] || psapIdToAgency[pidNorm] || '';
+          const agency = psapIdToAgency[pid] || psapIdToAgency[pidNorm] || (isStatewide ? statewideStates[p.state] : '') || '';
           if (agency && !countyFipsAgency[p.county_fips]) {
             countyFipsAgency[p.county_fips] = agency;
           }

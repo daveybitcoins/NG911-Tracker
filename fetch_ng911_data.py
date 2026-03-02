@@ -101,6 +101,8 @@ PSAP_ID_SKIP = {
     '29607',  # ZIP code from SC filing
     '29456',  # ZIP code from SC filing
     '05495',  # ZIP/number from SC filing
+    '46221',  # ZIP code from IN statewide filing (Fort Wayne area)
+    '46204',  # ZIP code from IN statewide filing (Indianapolis)
 }
 
 # Known statewide authorities — filings from these cover ALL PSAPs in their state
@@ -769,6 +771,15 @@ def extract_phase_from_pdf(pdf_path):
                 continue
             if 'or Both)' in stripped:
                 continue  # part of table header
+            # Skip date fragments (e.g. "May 5," or "January 15, 2025")
+            if re.match(r'^(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d', stripped, re.IGNORECASE):
+                continue
+            # Skip lines that are just "All PSAPs in STATE" (statewide reference, no individual data)
+            if re.match(r'^All\s+PSAPs?\s+in\s+', stripped, re.IGNORECASE):
+                continue
+            # Skip lines about ZIP codes (delivery point info, not PSAP data)
+            if 'zip code' in stripped.lower():
+                continue
                 
             # Try space-separated PSAP IDs first (e.g. "6 6 9 5 1" instead of "66951")
             # Must check before normal match since normal regex would match just the first digit
