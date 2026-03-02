@@ -83,11 +83,24 @@ FILER_STATE_OVERRIDES = {
     'texas eastern 9-1-1 network': 'TX',
     'peninsula fiber network, llc': 'MI',
     'alicia atkinson': 'TX',  # Kilgore, TX filing
+    'rio grande valley emergency communication district': 'TX',
 }
 
 # Manual PSAP ID corrections for known data entry errors in FCC filings
 PSAP_ID_CORRECTIONS = {
     '4423': '7423',  # Florence County WI filed with wrong ID (4423=Rockingham NC, 7423=Florence WI)
+    '4918': '6645',  # Rio Grande Valley TX filed NM Hidalgo 4918; correct TX Hidalgo is 6645
+}
+
+# PSAP IDs to ignore — data entry errors, dates, or ZIP codes parsed as PSAP IDs
+PSAP_ID_SKIP = {
+    '506',    # MN filing listed 506 (Tucson Airport AZ) — no matching MN PSAP
+    '2025',   # Date "2025" parsed as PSAP ID (IA Wayne County)
+    '2026',   # Date "2026" parsed as PSAP ID (IA Hamilton County)
+    '8500',   # ZIP/address from SC filing (NV DPS Elko)
+    '29607',  # ZIP code from SC filing
+    '29456',  # ZIP code from SC filing
+    '05495',  # ZIP/number from SC filing
 }
 
 # Known statewide authorities — filings from these cover ALL PSAPs in their state
@@ -1734,16 +1747,60 @@ def build_tracker(parsed_filings, psap_registry):
             print("    County-level map coloring won't work.")
             print("    Fix: pip3 install addfips  OR  place county_fips_lookup.json alongside this script")
 
-    # Apply PSAP ID corrections to filings before building maps
+    # Apply PSAP ID corrections and remove known-bad IDs before building maps
     for f in parsed_filings:
         pid = f.get("psap_id_extracted", "")
-        if pid in PSAP_ID_CORRECTIONS:
+        if pid in PSAP_ID_SKIP:
+            f["psap_id_extracted"] = ""
+        elif pid in PSAP_ID_CORRECTIONS:
             f["psap_id_extracted"] = PSAP_ID_CORRECTIONS[pid]
         for entry in f.get("psap_table", []):
             epid = entry.get("psap_id", "")
-            if epid in PSAP_ID_CORRECTIONS:
+            if epid in PSAP_ID_SKIP:
+                entry["psap_id"] = ""
+            elif epid in PSAP_ID_CORRECTIONS:
                 entry["psap_id"] = PSAP_ID_CORRECTIONS[epid]
-        f["psap_ids_from_pdf"] = [PSAP_ID_CORRECTIONS.get(p, p) for p in f.get("psap_ids_from_pdf", [])]
+        f["psap_ids_from_pdf"] = [PSAP_ID_CORRECTIONS.get(p, p) for p in f.get("psap_ids_from_pdf", []) if p not in PSAP_ID_SKIP]
+
+    # Infer filer_state from PSAP IDs when all PSAPs are in the same state
+    psap_id_to_state = {}
+    for p in psap_registry:
+        pid = str(p.get("psap_id", "")).strip()
+        st = (p.get("state") or "").upper().strip()
+        if pid and st:
+            psap_id_to_state[pid] = st
+
+    inferred_count = 0
+    for f in parsed_filings:
+        if f.get("filer_state", "").strip():
+            continue  # already has a state
+        # Collect all PSAP IDs from this filing
+        all_pids = set()
+        pid = f.get("psap_id_extracted", "")
+        if pid:
+            all_pids.add(pid)
+        for entry in f.get("psap_table", []):
+            epid = entry.get("psap_id", "")
+            if epid:
+                all_pids.add(epid)
+        for epid in f.get("psap_ids_from_pdf", []):
+            if epid:
+                all_pids.add(epid)
+        if not all_pids:
+            continue
+        # Look up states for all PSAP IDs
+        states = set()
+        for pid in all_pids:
+            st = psap_id_to_state.get(pid)
+            if st:
+                states.add(st)
+        # Only infer if all PSAPs resolve to the same single state
+        if len(states) == 1:
+            inferred_state = states.pop()
+            f["filer_state"] = inferred_state
+            inferred_count += 1
+    if inferred_count:
+        print(f"  ✓ Inferred filer_state for {inferred_count} filings from PSAP IDs")
 
     # PSAP-level filing map
     psap_id_filings = {}
