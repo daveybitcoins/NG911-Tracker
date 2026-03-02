@@ -1,5 +1,5 @@
 # NG911 Filing Tracker
-## Tracking PSAP filings under FCC PS Docket 25-143
+## Tracking PSAP Filings
 
 This toolkit monitors which 911 Authorities and PSAPs have filed NG911 Phase 1 and Phase 2 service requests with the FCC, and cross-references them against the full Master PSAP Registry to identify who has and hasn't filed.
 
