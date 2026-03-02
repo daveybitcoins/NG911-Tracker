@@ -808,12 +808,65 @@ def extract_phase_from_pdf(pdf_path):
                         "phase": pphase,
                     })
                     psap_ids.append(pid)
+                continue
+
+            # PSAP ID at END of line: "Alcona County 3308" or "Kent County - Grand Rapids PD 3394"
+            end_match = re.match(r'^(.+?)\s+(\d{3,5})\s*$', cleaned)
+            if end_match:
+                pname = end_match.group(1).strip()
+                pid = end_match.group(2)
+                pid_int = int(pid)
+                boilerplate = ('authority', 'registry', 'commission', 'cfr', 'section',
+                               'approved by', 'estimated time', 'expires', 'washington')
+                if (pid_int > 500 and pid_int != 911 and pid not in psap_ids and
+                        not any(b in pname.lower() for b in boilerplate)):
+                    psap_table.append({
+                        "psap_id": pid,
+                        "psap_name": pname,
+                        "phase": "",
+                    })
+                    psap_ids.append(pid)
 
     # Also extract PSAP IDs from filer name patterns anywhere in doc
     for match in re.finditer(r'PSAP\s*ID\s*[:#]?\s*(\d+)', full_text, re.IGNORECASE):
         pid = match.group(1)
         if pid not in psap_ids:
             psap_ids.append(pid)
+
+    # Scan for attached PSAP list after the form (e.g. Michigan "ALL PSAPs ... see attached")
+    # If Q9 referenced an attached list but no PSAPs were found in Q9, scan the doc
+    # for "PSAP Name FCC_ID" lines where the ID is at the end, starting after the list header
+    has_see_attached = bool(re.search(r'see\s+attached', full_text, re.IGNORECASE))
+    has_psap_header = bool(re.search(r'PSAP\s+Name\s+FCC\s*ID', full_text, re.IGNORECASE))
+    if (has_see_attached or has_psap_header) and not psap_ids:
+        seen_ids = set()
+        boilerplate = ('authority', 'registry', 'commission', 'cfr', 'section',
+                       'approved by', 'estimated time', 'expires', 'washington',
+                       'docket', 'response', 'paperwork', 'privacy', 'date of submission')
+        # Only start scanning after the PSAP list header line
+        in_psap_list = False
+        for line in lines:
+            stripped = line.strip()
+            if re.match(r'PSAP\s+Name\s+FCC\s*ID', stripped, re.IGNORECASE):
+                in_psap_list = True
+                continue
+            if not in_psap_list:
+                continue
+            end_match = re.match(r'^(.+?)\s+(\d{3,5})\s*$', stripped)
+            if end_match:
+                pname = end_match.group(1).strip()
+                pid = end_match.group(2)
+                pid_int = int(pid)
+                if (pid_int > 500 and pid_int != 911 and pid not in seen_ids and
+                        not any(b in pname.lower() for b in boilerplate) and
+                        len(pname) > 3):
+                    seen_ids.add(pid)
+                    psap_table.append({
+                        "psap_id": pid,
+                        "psap_name": pname,
+                        "phase": "",
+                    })
+                    psap_ids.append(pid)
 
     # Detect "All PSAPs in [STATE]" statewide filings
     statewide_state = ""
@@ -1220,13 +1273,33 @@ def extract_psap_attachment(file_path):
                         pid = match2.group(1)
                         pname = match2.group(2).strip()
                         pphase = match2.group(3) or ''
-                        
+
                         if pid not in seen_ids and not pid.isalpha() and pid not in ('NG911',):
                             seen_ids.add(pid)
                             psap_table.append({
                                 "psap_id": pid,
                                 "psap_name": pname,
                                 "phase": pphase,
+                            })
+                            psap_ids.append(pid)
+                        continue
+
+                    # Pattern: PSAP ID at END of line: "Alcona County 3308"
+                    end_match = re.match(r'^(.+?)\s+(\d{3,5})\s*$', line)
+                    if end_match:
+                        pname = end_match.group(1).strip()
+                        pid = end_match.group(2)
+                        pid_int = int(pid)
+                        boilerplate = ('authority', 'registry', 'commission', 'cfr', 'section',
+                                       'assembly street', 'approved by', 'estimated time',
+                                       'expires', 'washington', 'docket', 'response')
+                        if (pid_int > 500 and pid_int != 911 and pid not in seen_ids and
+                                not any(b in pname.lower() for b in boilerplate)):
+                            seen_ids.add(pid)
+                            psap_table.append({
+                                "psap_id": pid,
+                                "psap_name": pname,
+                                "phase": "",
                             })
                             psap_ids.append(pid)
             except:
