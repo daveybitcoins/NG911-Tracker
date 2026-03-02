@@ -89,6 +89,8 @@ FILER_STATE_OVERRIDES = {
 # POC agency overrides — when the form's Q4 agency doesn't reflect the actual ESInet provider
 POC_AGENCY_OVERRIDES = {
     'washington military department': 'Comtech',  # Q7 text identifies Comtech as ESInet provider
+    'massachusetts state 911 department': 'Comtech',  # MA ESInet provider is Comtech
+    'minnesota it services at minnesota department of public safety (mndps),': 'Sinch',  # MN ESInet provider is Sinch
 }
 
 # Manual PSAP ID corrections for known data entry errors in FCC filings
@@ -1764,10 +1766,19 @@ def build_tracker(parsed_filings, psap_registry):
             print("    Fix: pip3 install addfips  OR  place county_fips_lookup.json alongside this script")
 
     # Apply POC agency overrides
+    filer_agency_overrides = {
+        'minnesota department of public safety': 'Sinch',
+    }
     for f in parsed_filings:
         agency = f.get("poc_agency", "").strip()
         if agency.lower() in POC_AGENCY_OVERRIDES:
             f["poc_agency"] = POC_AGENCY_OVERRIDES[agency.lower()]
+        elif not agency:
+            filer = f.get("filer_primary", "").strip().lower()
+            for key, val in filer_agency_overrides.items():
+                if key in filer:
+                    f["poc_agency"] = val
+                    break
 
     # Apply PSAP ID corrections and remove known-bad IDs before building maps
     for f in parsed_filings:
