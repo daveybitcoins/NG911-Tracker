@@ -378,8 +378,7 @@
       <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#f87171;border-radius:2px;display:inline-block;"></span> NGA 911</span>
       <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#fde047;border-radius:2px;display:inline-block;"></span> Peninsula Fiber</span>
       <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#fb923c;border-radius:2px;display:inline-block;"></span> INdigital</span>
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#d4a574;border-radius:2px;display:inline-block;"></span> Sinch</span>
-      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#34d399;border-radius:2px;display:inline-block;"></span> Other</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#34d399;border-radius:2px;display:inline-block;"></span> State Filed</span>
     </div>
   </div>
 
@@ -716,7 +715,6 @@ function normalizeAgencies() {
     [/\bnga911\b/i, 'NGA 911'],
     [/\bnga\s*$/i, 'NGA 911'],
     [/^nga\b/i, 'NGA 911'],
-    [/\bsinch\b/i, 'Sinch'],
     [/\bintrado/i, 'Intrado'],
     [/\bwest\s+safety/i, 'Intrado'],
     [/\blumen/i, 'Lumen'],
@@ -991,7 +989,6 @@ function renderStateGrid() {
       'NGA 911':                   '#f87171',  // light red
       'Peninsula Fiber Network':   '#fde047',  // light yellow
       'INdigital':                 '#fb923c',  // light orange
-      'Sinch':                     '#d4a574',  // sky blue
     };
     const defaultAgencyColor = '#34d399';  // light green for others
     
