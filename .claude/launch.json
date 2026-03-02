@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "dashboard",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["serve.py"],
+      "runtimeExecutable": "/opt/homebrew/bin/node",
+      "runtimeArgs": ["serve.js"],
       "port": 8080
     }
   ]

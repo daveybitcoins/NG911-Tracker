@@ -40,6 +40,13 @@ try:
 except ImportError:
     HAS_DOCX = False
 
+try:
+    import pytesseract
+    from pdf2image import convert_from_path
+    HAS_OCR = True
+except ImportError:
+    HAS_OCR = False
+
 # ──────────────────────────────────────────────
 # Configuration
 # ──────────────────────────────────────────────
@@ -66,6 +73,37 @@ US_STATES = {
 }
 STATE_ABBREVS = set(US_STATES.values())
 
+# Known filer-to-state mappings for filings with no address data in ECFS
+FILER_STATE_OVERRIDES = {
+    'mclennan county 9-1-1 emergency assistance district': 'TX',
+    'bexar metro 9-1-1 network': 'TX',
+    'bexar metro 911 network': 'TX',
+    'kerr emergency 9-1-1 network': 'TX',
+    'city of kilgore': 'TX',
+    'texas eastern 9-1-1 network': 'TX',
+    'peninsula fiber network, llc': 'MI',
+    'alicia atkinson': 'TX',  # Kilgore, TX filing
+}
+
+# Manual PSAP ID corrections for known data entry errors in FCC filings
+PSAP_ID_CORRECTIONS = {
+    '4423': '7423',  # Florence County WI filed with wrong ID (4423=Rockingham NC, 7423=Florence WI)
+}
+
+# Known statewide authorities — filings from these cover ALL PSAPs in their state
+STATEWIDE_AUTHORITIES = {
+    'massachusetts state 911 department': 'MA',
+    'ohio department of administrative services 9-1-1 program office': 'OH',
+    'ohio department of administrative services 9-1-1 program office ("ohio 911 program office")': 'OH',
+    'washington military department - state 911 coordination office': 'WA',
+    'state of michigan, state 911 committee': 'MI',
+    'indiana 911 board': 'IN',
+    'indiana statewide 911 board': 'IN',
+    'illinois state police division of statewide 9-1-1': 'IL',
+    'minnesota department of public safety (mndps), emergency communications division (ecn)': 'MN',
+    'north central texas emergency communications district (nct 9-1-1)': 'TX',
+}
+
 # ──────────────────────────────────────────────
 # Helper: HTTP GET with retries
 # ──────────────────────────────────────────────
@@ -91,7 +129,10 @@ def fetch_json(url, retries=3, delay=2):
 
 def extract_state_from_name(name):
     """Try to extract a US state from a filer name string."""
-    name_lower = name.lower()
+    name_lower = name.lower().strip()
+    # Check known filer-to-state overrides first
+    if name_lower in FILER_STATE_OVERRIDES:
+        return FILER_STATE_OVERRIDES[name_lower]
     # Check for full state names (longer names first)
     for state_name, abbrev in sorted(US_STATES.items(), key=lambda x: -len(x[0])):
         if state_name in name_lower:
@@ -439,15 +480,41 @@ def download_pdf(url, dest_path, retries=2, timeout=90):
                 return False
 
 
+def ocr_pdf(pdf_path):
+    """OCR a scanned/image PDF using pdf2image + pytesseract."""
+    if not HAS_OCR:
+        return ""
+    try:
+        # Use Homebrew paths if standard PATH doesn't include them
+        poppler_path = None
+        if os.path.isfile("/opt/homebrew/bin/pdftoppm"):
+            poppler_path = "/opt/homebrew/bin"
+        tesseract_path = "/opt/homebrew/bin/tesseract"
+        if os.path.isfile(tesseract_path):
+            pytesseract.pytesseract.tesseract_cmd = tesseract_path
+
+        kwargs = {}
+        if poppler_path:
+            kwargs["poppler_path"] = poppler_path
+        images = convert_from_path(pdf_path, **kwargs)
+        full_text = ""
+        for img in images:
+            text = pytesseract.image_to_string(img)
+            full_text += text + "\n"
+        return full_text
+    except Exception as e:
+        return ""
+
+
 def extract_phase_from_pdf(pdf_path):
     """
     Extract structured data from an FCC NG911 Valid Request Form PDF.
-    
+
     Extracts:
       - Q1: 911 Authority name (the actual PSAP/entity, not the person who filed)
       - Q6: Phase selection (Phase 1, Phase 2, or both)
       - Q9: PSAP table (PSAP ID, Name, Phase)
-    
+
     Based on confirmed pdfplumber text output:
       - Checked boxes render as ☒
       - Unchecked boxes render as ☐
@@ -465,6 +532,13 @@ def extract_phase_from_pdf(pdf_path):
                 full_text += text + "\n"
     except Exception as e:
         return {"phase": "PDF error", "authority_name": "", "poc_agency": "", "psap_ids": [], "psap_table": [], "raw_excerpt": str(e)}
+
+    # OCR fallback for scanned/image PDFs with little extractable text
+    if len(full_text.strip()) < 100 and HAS_OCR:
+        ocr_text = ocr_pdf(pdf_path)
+        if len(ocr_text.strip()) > len(full_text.strip()):
+            print(f"    ⟳ OCR fallback: {len(ocr_text.strip())} chars recovered from scanned PDF")
+            full_text = ocr_text
 
     lines = full_text.split('\n')
 
@@ -683,13 +757,33 @@ def extract_phase_from_pdf(pdf_path):
             if 'or Both)' in stripped:
                 continue  # part of table header
                 
+            # Try space-separated PSAP IDs first (e.g. "6 6 9 5 1" instead of "66951")
+            # Must check before normal match since normal regex would match just the first digit
+            space_match = re.match(r'^(\d(?:\s+\d){2,5})\s+(.+?)(?:\s+(1|2|Both|1\s*(?:&|and)\s*2))?\s*$', stripped)
+            if space_match and ' ' in space_match.group(1):
+                pid = space_match.group(1).replace(' ', '')
+                pname = space_match.group(2).strip()
+                pphase = space_match.group(3) or ""
+                if pid.isdigit() and int(pid) > 50:
+                    psap_table.append({
+                        "psap_id": pid,
+                        "psap_name": pname,
+                        "phase": pphase,
+                    })
+                    if pid not in psap_ids:
+                        psap_ids.append(pid)
+                continue
+
+            # Clean OCR pipe artifacts: "35EGNC910821 | Harrison County 1" → "35EGNC910821 Harrison County 1"
+            cleaned = re.sub(r'\s*\|\s*', ' ', stripped)
+
             # Try to extract PSAP ID from start of line (1-5 digit number)
-            match = re.match(r'^(\d{1,5})\s+(.+?)(?:\s+(1|2|Both|1\s*(?:&|and)\s*2))?\s*$', stripped)
+            match = re.match(r'^(\d{1,5})\s+(.+?)(?:\s+(1|2|Both|1\s*(?:&|and)\s*2))?\s*$', cleaned)
             if match:
                 pid = match.group(1)
                 pname = match.group(2).strip()
                 pphase = match.group(3) or ""
-                
+
                 # Filter out false positives (page numbers, footnotes, zip codes in wrong section)
                 if int(pid) > 50:  # PSAP IDs are typically 100+
                     psap_table.append({
@@ -699,6 +793,21 @@ def extract_phase_from_pdf(pdf_path):
                     })
                     if pid not in psap_ids:
                         psap_ids.append(pid)
+                continue
+
+            # Non-standard alphanumeric PSAP IDs (e.g. "35EGNC910821 Harrison County 1")
+            match2 = re.match(r'^([A-Z0-9]{5,15})\s+(.+?)(?:\s+(1|2|Both))?\s*$', cleaned)
+            if match2:
+                pid = match2.group(1)
+                pname = match2.group(2).strip()
+                pphase = match2.group(3) or ""
+                if not pid.isalpha() and pid not in ('NG911',) and pid not in psap_ids:
+                    psap_table.append({
+                        "psap_id": pid,
+                        "psap_name": pname,
+                        "phase": pphase,
+                    })
+                    psap_ids.append(pid)
 
     # Also extract PSAP IDs from filer name patterns anywhere in doc
     for match in re.finditer(r'PSAP\s*ID\s*[:#]?\s*(\d+)', full_text, re.IGNORECASE):
@@ -706,12 +815,20 @@ def extract_phase_from_pdf(pdf_path):
         if pid not in psap_ids:
             psap_ids.append(pid)
 
+    # Detect "All PSAPs in [STATE]" statewide filings
+    statewide_state = ""
+    all_psap_match = re.search(r'all\s+psaps?\s+in\s+(\w[\w\s]*?)(?:\s+(?:\(|phase|1|2|both))', full_text, re.IGNORECASE)
+    if all_psap_match:
+        state_text = all_psap_match.group(1).strip()
+        statewide_state = extract_state_from_name(state_text)
+
     return {
         "phase": phase,
         "authority_name": authority_name,
         "poc_agency": poc_agency,
         "psap_ids": psap_ids,
         "psap_table": psap_table,
+        "statewide_state": statewide_state,
         "raw_excerpt": "",
     }
 
@@ -848,7 +965,8 @@ def extract_phase_from_docx(docx_path):
                 if pid not in psap_ids:
                     psap_ids.append(pid)
     
-    # Also scan all tables for PSAP-ID-like patterns
+    # Also scan all tables for PSAP-ID-like patterns and "All PSAPs" statewide text
+    statewide_state = ""
     for table in tables:
         for row in table.rows:
             full_text = " ".join(c.text for c in row.cells)
@@ -856,6 +974,11 @@ def extract_phase_from_docx(docx_path):
                 pid = match.group(1)
                 if pid not in psap_ids:
                     psap_ids.append(pid)
+            # Detect "All PSAPs in [STATE]"
+            all_match = re.search(r'all\s+psaps?\s+in\s+(\w[\w\s]*?)(?:\s|$)', full_text, re.IGNORECASE)
+            if all_match and not statewide_state:
+                state_text = all_match.group(1).strip()
+                statewide_state = extract_state_from_name(state_text)
 
     return {
         "phase": phase,
@@ -863,6 +986,7 @@ def extract_phase_from_docx(docx_path):
         "poc_agency": poc_agency,
         "psap_ids": psap_ids,
         "psap_table": psap_table,
+        "statewide_state": statewide_state,
         "raw_excerpt": "",
     }
 
@@ -881,15 +1005,66 @@ def extract_psap_attachment(file_path):
     try:
         with open(file_path, 'rb') as f:
             header = f.read(4)
-        if header != b'%PDF':
-            return {"psap_ids": [], "psap_table": []}
     except:
         return {"psap_ids": [], "psap_table": []}
-    
+
+    # If this is a .docx disguised as .pdf, scan ALL tables for PSAP data
+    if header[:4] == b'PK\x03\x04':
+        if HAS_DOCX:
+            try:
+                document = docx.Document(file_path)
+            except:
+                return {"psap_ids": [], "psap_table": []}
+            psap_ids = []
+            psap_table = []
+            for table in document.tables:
+                if len(table.rows) < 2:
+                    continue
+                # Check if this table has PSAP-like columns
+                header_cells = [c.text.strip().lower().replace('\n', ' ') for c in table.rows[0].cells]
+                id_col = None
+                name_col = None
+                phase_col = None
+                for ci, cell in enumerate(header_cells):
+                    if 'psap' in cell and 'id' in cell:
+                        id_col = ci
+                    elif 'psap' in cell and 'name' in cell:
+                        name_col = ci
+                    elif 'phase' in cell:
+                        phase_col = ci
+                # If no PSAP header, check if first data row starts with a number
+                if id_col is None and len(table.rows) > 1:
+                    first_data = [c.text.strip() for c in table.rows[1].cells]
+                    if first_data and first_data[0] and re.match(r'^\d{2,5}$', first_data[0]):
+                        id_col = 0
+                        name_col = 1 if len(first_data) > 1 else None
+                        phase_col = 2 if len(first_data) > 2 else None
+                if id_col is None:
+                    continue
+                for row in table.rows[1:]:
+                    cells = [c.text.strip().replace('\n', ' ') for c in row.cells]
+                    if len(cells) <= id_col:
+                        continue
+                    pid = cells[id_col]
+                    pname = cells[name_col] if name_col is not None and len(cells) > name_col else ''
+                    pphase = cells[phase_col] if phase_col is not None and len(cells) > phase_col else ''
+                    if not pid or not pid[0].isdigit():
+                        continue
+                    if re.match(r'^\d{2,5}$', pid) and int(pid) > 50 and pid not in psap_ids:
+                        psap_table.append({"psap_id": pid, "psap_name": pname, "phase": pphase})
+                        psap_ids.append(pid)
+            if psap_table:
+                print(f"    ✓ Attachment (docx) parser found {len(psap_table)} PSAPs")
+            return {"psap_ids": psap_ids, "psap_table": psap_table}
+        return {"psap_ids": [], "psap_table": []}
+
+    if header != b'%PDF':
+        return {"psap_ids": [], "psap_table": []}
+
     psap_table = []
     psap_ids = []
     seen_ids = set()
-    
+
     try:
         pdf = pdfplumber.open(file_path)
     except:
@@ -957,6 +1132,9 @@ def extract_psap_attachment(file_path):
                             pname = name_lines[li].strip() if li < len(name_lines) else ''
                             pphase = phase_lines[li].strip() if li < len(phase_lines) else ''
                             
+                            # Collapse space-separated digits (e.g. "6 6 9 5 1" -> "66951")
+                            if re.match(r'^\d(\s+\d){2,5}$', pid):
+                                pid = pid.replace(' ', '')
                             # Validate: PSAP ID should be numeric 3-5 digits or alphanumeric pattern
                             if re.match(r'^\d{3,5}$', pid):
                                 pid_int = int(pid)
@@ -996,13 +1174,30 @@ def extract_psap_attachment(file_path):
                     if not line:
                         continue
                     
+                    # Pattern: space-separated PSAP IDs "6 6 9 5 1 Kerr County..."
+                    # Check before normal match since normal regex matches just the first digit
+                    space_match = re.match(r'^(\d(?:\s+\d){2,5})\s+(.+?)(?:\s+(1|2|Both|1\s*(?:&|and)\s*2))?\s*$', line)
+                    if space_match and ' ' in space_match.group(1):
+                        pid = space_match.group(1).replace(' ', '')
+                        pname = space_match.group(2).strip()
+                        pphase = space_match.group(3) or ''
+                        if pid.isdigit() and int(pid) > 500 and pid not in seen_ids:
+                            seen_ids.add(pid)
+                            psap_table.append({
+                                "psap_id": pid,
+                                "psap_name": pname,
+                                "phase": pphase,
+                            })
+                            psap_ids.append(pid)
+                        continue
+
                     # Pattern: "6013 Abbeville County 9-1-1 1"
                     match = re.match(r'^(\d{2,5})\s+(.+?)(?:\s+(1|2|Both|1\s*(?:&|and)\s*2))?\s*$', line)
                     if match:
                         pid = match.group(1)
                         pname = match.group(2).strip()
                         pphase = match.group(3) or ''
-                        
+
                         pid_int = int(pid)
                         # Filter: real PSAP IDs are 500+, skip boilerplate/zip codes
                         # Also skip 911 itself and if "name" looks like form boilerplate
@@ -1017,6 +1212,7 @@ def extract_psap_attachment(file_path):
                                 "phase": pphase,
                             })
                             psap_ids.append(pid)
+                        continue
                     
                     # Pattern: "35EGNC910821 Harrison County SO 1"
                     match2 = re.match(r'^([A-Z0-9]{5,15})\s+(.+?)(?:\s+(1|2|Both))?\s*$', line)
@@ -1037,10 +1233,31 @@ def extract_psap_attachment(file_path):
                 pass
     finally:
         pdf.close()
-    
+
+    # OCR fallback: if pdfplumber found nothing, try OCR
+    if not psap_table and HAS_OCR:
+        ocr_text = ocr_pdf(file_path)
+        if ocr_text.strip():
+            for line in ocr_text.split('\n'):
+                line = line.strip()
+                if not line:
+                    continue
+                match = re.match(r'^(\d{2,5})\s+(.+?)(?:\s+(1|2|Both|1\s*(?:&|and)\s*2))?\s*$', line)
+                if match:
+                    pid = match.group(1)
+                    pname = match.group(2).strip()
+                    pphase = match.group(3) or ''
+                    pid_int = int(pid)
+                    if pid_int > 500 and pid_int != 911 and pid not in seen_ids:
+                        seen_ids.add(pid)
+                        psap_table.append({"psap_id": pid, "psap_name": pname, "phase": pphase})
+                        psap_ids.append(pid)
+            if psap_table:
+                print(f"    ✓ Attachment OCR found {len(psap_table)} PSAPs")
+
     if psap_table:
         print(f"    ✓ Attachment parser found {len(psap_table)} PSAPs")
-    
+
     return {"psap_ids": psap_ids, "psap_table": psap_table}
 
 
@@ -1276,8 +1493,9 @@ def enrich_filings_with_pdfs(parsed_filings):
             has_phase = result["phase"] not in ("See PDF", "PDF error", "DOCX error", "File error")
             has_name = bool(result.get("authority_name"))
             has_psaps = bool(result.get("psap_ids"))
+            has_statewide = bool(result.get("statewide_state"))
 
-            if has_phase or has_name or has_psaps:
+            if has_phase or has_name or has_psaps or has_statewide:
                 # This doc has form data — use it
                 if best_result is None:
                     best_result = result
@@ -1294,6 +1512,8 @@ def enrich_filings_with_pdfs(parsed_filings):
                         best_result["psap_ids"] = list(set(existing + result["psap_ids"]))
                     if result.get("psap_table") and not best_result.get("psap_table"):
                         best_result["psap_table"] = result["psap_table"]
+                    if has_statewide and not best_result.get("statewide_state"):
+                        best_result["statewide_state"] = result["statewide_state"]
 
         # Apply best result to filing
         if best_result is None:
@@ -1353,6 +1573,26 @@ def enrich_filings_with_pdfs(parsed_filings):
             filing["psap_ids_from_pdf"] = list(set(existing + result["psap_ids"]))
             if not filing["psap_id_extracted"] and result["psap_ids"]:
                 filing["psap_id_extracted"] = result["psap_ids"][0]
+
+        # Store statewide flag — filing covers all PSAPs in a state
+        if result.get("statewide_state"):
+            filing["statewide_state"] = result["statewide_state"]
+            if not filing["filer_state"]:
+                filing["filer_state"] = result["statewide_state"]
+
+        # Check known statewide authorities if no statewide flag from doc
+        if not filing.get("statewide_state"):
+            auth_key = (result.get("authority_name") or filing.get("filer_primary", "")).lower().strip()
+            if auth_key in STATEWIDE_AUTHORITIES:
+                filing["statewide_state"] = STATEWIDE_AUTHORITIES[auth_key]
+                if not filing["filer_state"]:
+                    filing["filer_state"] = STATEWIDE_AUTHORITIES[auth_key]
+            # Also check filer_primary
+            filer_key = filing.get("filer_primary", "").lower().strip()
+            if filer_key in STATEWIDE_AUTHORITIES and not filing.get("statewide_state"):
+                filing["statewide_state"] = STATEWIDE_AUTHORITIES[filer_key]
+                if not filing["filer_state"]:
+                    filing["filer_state"] = STATEWIDE_AUTHORITIES[filer_key]
 
         # Also try to extract state from authority name if we don't have one
         if not filing["filer_state"] and result.get("authority_name"):
@@ -1421,12 +1661,39 @@ def build_tracker(parsed_filings, psap_registry):
             print("    County-level map coloring won't work.")
             print("    Fix: pip3 install addfips  OR  place county_fips_lookup.json alongside this script")
 
+    # Apply PSAP ID corrections to filings before building maps
+    for f in parsed_filings:
+        pid = f.get("psap_id_extracted", "")
+        if pid in PSAP_ID_CORRECTIONS:
+            f["psap_id_extracted"] = PSAP_ID_CORRECTIONS[pid]
+        for entry in f.get("psap_table", []):
+            epid = entry.get("psap_id", "")
+            if epid in PSAP_ID_CORRECTIONS:
+                entry["psap_id"] = PSAP_ID_CORRECTIONS[epid]
+        f["psap_ids_from_pdf"] = [PSAP_ID_CORRECTIONS.get(p, p) for p in f.get("psap_ids_from_pdf", [])]
+
     # PSAP-level filing map
     psap_id_filings = {}
     for f in parsed_filings:
         pid = f.get("psap_id_extracted", "")
         if pid:
             psap_id_filings.setdefault(pid, []).append(f)
+        # Also map from psap_table entries
+        for entry in f.get("psap_table", []):
+            epid = entry.get("psap_id", "")
+            if epid and epid not in psap_id_filings.get(epid, []):
+                psap_id_filings.setdefault(epid, []).append(f)
+        # Also map from psap_ids_from_pdf
+        for epid in f.get("psap_ids_from_pdf", []):
+            if epid not in psap_id_filings.get(epid, []):
+                psap_id_filings.setdefault(epid, []).append(f)
+
+    # Expand statewide filings: match to all PSAPs in the state
+    statewide_filings = {}
+    for f in parsed_filings:
+        sw_state = f.get("statewide_state", "")
+        if sw_state:
+            statewide_filings.setdefault(sw_state.upper(), []).append(f)
 
     # State-level filing summary
     states_with_filings = {}
@@ -1450,11 +1717,15 @@ def build_tracker(parsed_filings, psap_registry):
         psap_id = str(p.get("psap_id", "")).strip()
 
         direct_match = psap_id in psap_id_filings
+        statewide_match = state in statewide_filings
         state_match = state in states_with_filings
 
         if direct_match:
             status = "Filed (PSAP match)"
             filing_count = len(psap_id_filings[psap_id])
+        elif statewide_match:
+            status = "Filed (statewide)"
+            filing_count = len(statewide_filings[state])
         elif state_match:
             status = "Filed (state-level)"
             filing_count = len(states_with_filings[state])
