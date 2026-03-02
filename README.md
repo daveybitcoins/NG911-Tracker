@@ -12,7 +12,7 @@ Pulls data from two FCC APIs:
 - **ECFS API** (docket 25-143) — all NG911 valid request filings
 - **FCC Master PSAP Registry** (Socrata/SODA API) — ~7,000+ PSAPs nationwide
 
-### 2. `ng911_dashboard.html` — Interactive Dashboard
+### 2. `index.html` — Interactive Dashboard
 A self-contained HTML dashboard with:
 - State-by-state filing heatmap (click any state to drill down)
 - Searchable/sortable ECFS filings table
@@ -37,7 +37,7 @@ This creates three files:
 - `ng911_tracker_data.json` — merged dataset for the dashboard
 
 ### Step 3: Open the dashboard
-Open `ng911_dashboard.html` in any browser, then click **"Load JSON File"** and select `ng911_tracker_data.json`.
+Open `index.html` in any browser, then click **"Load JSON File"** and select `ng911_tracker_data.json`.
 
 Or click **"Load Demo Data"** to preview the dashboard with sample data.
 
