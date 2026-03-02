@@ -1727,6 +1727,15 @@ def enrich_filings_with_pdfs(parsed_filings):
 
 # ──────────────────────────────────────────────
 # Step 4: Build the merged tracker dataset
+def _classify_psap_type(psap):
+    """Classify PSAP as Primary/Secondary/Orphaned from API type_of_change_full_text."""
+    text = (psap.get("type_of_change_full_text") or "").lower()
+    if "secondary" in text:
+        return "Secondary"
+    if "orphan" in text:
+        return "Orphaned"
+    return "Primary"
+
 # ──────────────────────────────────────────────
 def build_tracker(parsed_filings, psap_registry):
     print("\n═══ Step 4: Building merged tracker dataset ═══")
@@ -1891,7 +1900,7 @@ def build_tracker(parsed_filings, psap_registry):
             "county": p.get("county", ""),
             "county_fips": county_fips_lookup.get(f"{state}|{p.get('county','').strip()}", ""),
             "city": p.get("city", ""),
-            "psap_type": p.get("psap_type", ""),
+            "psap_type": p.get("psap_type", "") or _classify_psap_type(p),
             "state_has_filings": state_match or direct_match,
             "direct_psap_match": direct_match,
             "state_filing_count": filing_count,
