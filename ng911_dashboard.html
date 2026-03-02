@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NG911 Filing Tracker — PS Docket 25-143</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e17;
+    --surface: #111827;
+    --surface-2: #1a2234;
+    --border: #1e2d44;
+    --text: #e2e8f0;
+    --text-dim: #8899aa;
+    --accent: #22d3ee;
+    --accent-dim: rgba(34,211,238,0.15);
+    --green: #34d399;
+    --green-dim: rgba(52,211,153,0.15);
+    --red: #f87171;
+    --red-dim: rgba(248,113,113,0.15);
+    --amber: #fbbf24;
+    --amber-dim: rgba(251,191,36,0.15);
+    --purple: #a78bfa;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-inner {
+    max-width: 1600px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    flex-wrap: wrap;
+  }
+  .header h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; font-weight: 700; letter-spacing: -0.5px;
+    color: var(--accent);
+  }
+  .header h1 span { color: var(--text-dim); font-weight: 400; }
+  .header-meta {
+    font-size: 13px; color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .header-meta .live-dot {
+    display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green); margin-right: 6px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+  }
+
+  /* ── Data loader ── */
+  .loader-section {
+    max-width: 1600px; margin: 30px auto; padding: 0 40px;
+  }
+  .loader-card {
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 40px; text-align: center;
+  }
+  .loader-card h2 {
+    font-size: 18px; margin-bottom: 12px; color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .loader-card p { color: var(--text-dim); margin-bottom: 20px; line-height: 1.6; }
+  .loader-card input[type=file] { display: none; }
+  .loader-card label, .loader-card button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px; font-weight: 600;
+    transition: all 0.2s;
+    margin: 4px;
+  }
+  .loader-card label:hover, .loader-card button:hover {
+    background: var(--accent); color: var(--bg);
+  }
+
+  /* ── Main content ── */
+  .main { max-width: 1600px; margin: 0 auto; padding: 30px 40px; }
+  .main.hidden { display: none; }
+
+  /* ── Stat cards ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px; margin-bottom: 30px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .stat-card .stat-label {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+    color: var(--text-dim); margin-bottom: 8px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .stat-card .stat-value {
+    font-size: 36px; font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .stat-card .stat-sub {
+    font-size: 13px; color: var(--text-dim); margin-top: 4px;
+  }
+  .stat-card.green .stat-value { color: var(--green); }
+  .stat-card.red .stat-value { color: var(--red); }
+  .stat-card.cyan .stat-value { color: var(--accent); }
+  .stat-card.amber .stat-value { color: var(--amber); }
+  .stat-card.purple .stat-value { color: var(--purple); }
+
+  /* ── Tabs ── */
+  .tab-bar {
+    display: flex; gap: 4px; margin-bottom: 24px;
+    border-bottom: 1px solid var(--border); padding-bottom: 0;
+  }
+  .tab-btn {
+    padding: 12px 24px;
+    background: none; border: none;
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── Filters ── */
+  .filters {
+    display: flex; gap: 12px; margin-bottom: 20px;
+    flex-wrap: wrap; align-items: center;
+  }
+  .filters input, .filters select {
+    padding: 10px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .filters input:focus, .filters select:focus {
+    border-color: var(--accent);
+  }
+  .filters input::placeholder { color: var(--text-dim); }
+  .filters select { cursor: pointer; }
+  .filter-count {
+    margin-left: auto;
+    font-size: 13px; color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ── Tables ── */
+  .table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .table-scroll { overflow-x: auto; max-height: 600px; overflow-y: auto; }
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px;
+  }
+  thead {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--surface-2);
+  }
+  th {
+    padding: 14px 16px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+    cursor: pointer; user-select: none;
+    white-space: nowrap;
+  }
+  th:hover { color: var(--accent); }
+  th .sort-arrow { margin-left: 4px; opacity: 0.4; }
+  th.sorted .sort-arrow { opacity: 1; color: var(--accent); }
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    white-space: nowrap;
+  }
+  tr:hover td { background: rgba(34,211,238,0.03); }
+  tr:last-child td { border-bottom: none; }
+
+  /* Status badges */
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .badge.filed { background: var(--green-dim); color: var(--green); }
+  .badge.not-filed { background: var(--red-dim); color: var(--red); }
+  .badge.pending { background: var(--amber-dim); color: var(--amber); }
+  .badge.phase1 { background: var(--accent-dim); color: var(--accent); }
+  .badge.phase2 { background: rgba(167,139,250,0.15); color: var(--purple); }
+
+  .doc-link {
+    color: var(--accent); text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+  }
+  .doc-link:hover { text-decoration: underline; }
+
+  /* ── State heatmap ── */
+  .state-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px; margin-bottom: 30px;
+  }
+  .state-tile {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .state-tile:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .state-tile.filed {
+    background: var(--green-dim);
+    border-color: rgba(52,211,153,0.3);
+  }
+  .state-tile .state-abbr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px; font-weight: 700;
+  }
+  .state-tile.filed .state-abbr { color: var(--green); }
+  .state-tile .state-count {
+    font-size: 11px; color: var(--text-dim); margin-top: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ── Pagination ── */
+  .pagination {
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 20px; padding: 16px 0;
+  }
+  .pagination button {
+    padding: 8px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    transition: all 0.2s;
+  }
+  .pagination button:hover { border-color: var(--accent); color: var(--accent); }
+  .pagination button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .pagination button:disabled { opacity: 0.3; cursor: default; }
+
+  /* ── Export button ── */
+  .export-bar {
+    display: flex; gap: 8px; margin-bottom: 20px; justify-content: flex-end;
+  }
+  .export-btn {
+    padding: 8px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    transition: all 0.2s;
+  }
+  .export-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .header { padding: 20px; }
+    .main, .loader-section { padding: 20px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-card .stat-value { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-inner">
+    <h1>NG911 TRACKER <span>// PS Docket 25-143</span></h1>
+    <div class="header-meta">
+      <span class="live-dot"></span>
+      <span id="lastUpdated">No data loaded</span>
+    </div>
+  </div>
+</div>
+
+<!-- Data Loader (shown before data is loaded) -->
+<div class="loader-section" id="loaderSection">
+  <div class="loader-card">
+    <h2>Load Tracker Data</h2>
+    <p>
+      Load the <code>ng911_tracker_data.json</code> file generated by the Python fetcher script,<br>
+      or click "Load Demo Data" to see the dashboard with sample data.
+    </p>
+    <input type="file" id="fileInput" accept=".json">
+    <label for="fileInput">📂 Load JSON File</label>
+    <button onclick="loadDemoData()">⚡ Load Demo Data</button>
+  </div>
+</div>
+
+<!-- Main Dashboard (hidden until data loads) -->
+<div class="main hidden" id="mainDashboard">
+
+  <!-- Stats -->
+  <div class="stats-grid" id="statsGrid"></div>
+
+  <!-- Tabs -->
+  <div class="tab-bar" id="tabBar">
+    <button class="tab-btn active" data-tab="overview">State Overview</button>
+    <button class="tab-btn" data-tab="filings">ECFS Filings (25-143)</button>
+    <button class="tab-btn" data-tab="agreements">Mutual Agreements (25-145)</button>
+    <button class="tab-btn" data-tab="psaps">PSAP Registry</button>
+  </div>
+
+  <!-- Tab: State Overview -->
+  <div class="tab-panel active" id="tab-overview">
+    <div class="export-bar">
+      <button class="export-btn" onclick="exportCSV('states')">↓ Export States CSV</button>
+    </div>
+    <div id="mapContainer" style="position:relative;max-width:960px;margin:0 auto;">
+      <svg id="usMap" viewBox="0 0 960 600" style="width:100%;height:auto;"></svg>
+      <div id="mapTooltip" style="display:none;position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;pointer-events:none;z-index:100;box-shadow:0 4px 12px rgba(0,0,0,0.3);"></div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin-top:12px;font-size:12px;color:var(--text-dim);flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#374151;border:1px solid #4b5563;border-radius:2px;display:inline-block;"></span> No Filing</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#60a5fa;border-radius:2px;display:inline-block;"></span> AT&T</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#c084fc;border-radius:2px;display:inline-block;"></span> Comtech</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#e2e8f0;border-radius:2px;display:inline-block;"></span> Motorola</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#f87171;border-radius:2px;display:inline-block;"></span> NGA 911</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#fde047;border-radius:2px;display:inline-block;"></span> Peninsula Fiber</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#fb923c;border-radius:2px;display:inline-block;"></span> INdigital</span>
+      <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:#34d399;border-radius:2px;display:inline-block;"></span> Other</span>
+    </div>
+  </div>
+
+  <!-- Tab: ECFS Filings -->
+  <div class="tab-panel" id="tab-filings">
+    <div class="filters">
+      <input type="text" id="filingSearch" placeholder="Search filer, PSAP ID..." oninput="renderFilings()">
+      <select id="filingStateFilter" onchange="renderFilings()">
+        <option value="">All States</option>
+      </select>
+      <select id="filingAgencyFilter" onchange="renderFilings()">
+        <option value="">All Agencies</option>
+      </select>
+      <select id="filingPhaseFilter" onchange="renderFilings()">
+        <option value="">All Phases</option>
+      </select>
+      <select id="filingTypeFilter" onchange="renderFilings()">
+        <option value="">All Types</option>
+      </select>
+      <span class="filter-count" id="filingCount"></span>
+    </div>
+    <div class="export-bar">
+      <button class="export-btn" onclick="exportCSV('filings')">↓ Export Filings CSV</button>
+    </div>
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table id="filingsTable">
+          <thead>
+            <tr>
+              <th onclick="sortFilings('date_submitted')">Date <span class="sort-arrow">↕</span></th>
+              <th onclick="sortFilings('filer_primary')">Filer <span class="sort-arrow">↕</span></th>
+              <th onclick="sortFilings('poc_agency')">Agency <span class="sort-arrow">↕</span></th>
+              <th onclick="sortFilings('filer_state')">State <span class="sort-arrow">↕</span></th>
+              <th onclick="sortFilings('filing_type')">Type <span class="sort-arrow">↕</span></th>
+              <th>Phase</th>
+              <th>Documents</th>
+              <th>Filing ID</th>
+              <th onclick="sortFilings('_psap_ids_display')">PSAP ID <span class="sort-arrow">↕</span></th>
+            </tr>
+          </thead>
+          <tbody id="filingsBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pagination" id="filingsPagination"></div>
+  </div>
+
+  <!-- Tab: Mutual Agreements (25-145) -->
+  <div class="tab-panel" id="tab-agreements">
+    <div class="filters">
+      <input type="text" id="maSearch" placeholder="Search filer, document title..." oninput="renderMutualAgreements()">
+      <span class="filter-count" id="maCount"></span>
+    </div>
+    <div class="export-bar">
+      <button class="export-btn" onclick="exportCSV('agreements')">↓ Export CSV</button>
+    </div>
+    <div id="maNoData" style="display:none;text-align:center;padding:40px;color:var(--text-dim);">
+      <p style="font-size:18px;margin-bottom:8px;">No mutual agreements data loaded</p>
+      <p style="font-size:13px;">Place <code>mutual_agreements_25145.json</code> in the same folder as this dashboard,<br>
+      or the fetcher will generate it automatically with <code>--skip-ma</code> omitted.</p>
+    </div>
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table id="maTable">
+          <thead>
+            <tr>
+              <th onclick="sortMA('date_received')">Date <span class="sort-arrow">↕</span></th>
+              <th onclick="sortMA('filer')">Filer <span class="sort-arrow">↕</span></th>
+              <th onclick="sortMA('type_of_filing')">Type <span class="sort-arrow">↕</span></th>
+              <th>Documents</th>
+              <th>ECFS Link</th>
+            </tr>
+          </thead>
+          <tbody id="maBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pagination" id="maPagination"></div>
+  </div>
+
+  <!-- Tab: PSAP Registry -->
+  <div class="tab-panel" id="tab-psaps">
+    <div class="filters">
+      <input type="text" id="psapSearch" placeholder="Search PSAP name, ID, county..." oninput="renderPSAPs()">
+      <select id="psapStateFilter" onchange="renderPSAPs()">
+        <option value="">All States</option>
+      </select>
+      <select id="psapStatusFilter" onchange="renderPSAPs()">
+        <option value="">All Statuses</option>
+        <option value="filed">Filing Found</option>
+        <option value="not-filed">No Filing</option>
+      </select>
+      <select id="psapTypeFilter" onchange="renderPSAPs()">
+        <option value="">All Types</option>
+      </select>
+      <span class="filter-count" id="psapCount"></span>
+    </div>
+    <div class="export-bar">
+      <button class="export-btn" onclick="exportCSV('psaps')">↓ Export PSAPs CSV</button>
+    </div>
+    <div class="table-wrap">
+      <div class="table-scroll">
+        <table id="psapsTable">
+          <thead>
+            <tr>
+              <th onclick="sortPSAPs('psap_id')">PSAP ID <span class="sort-arrow">↕</span></th>
+              <th onclick="sortPSAPs('psap_name')">PSAP Name <span class="sort-arrow">↕</span></th>
+              <th onclick="sortPSAPs('state')">State <span class="sort-arrow">↕</span></th>
+              <th onclick="sortPSAPs('county')">County <span class="sort-arrow">↕</span></th>
+              <th onclick="sortPSAPs('city')">City <span class="sort-arrow">↕</span></th>
+              <th onclick="sortPSAPs('psap_type')">Type <span class="sort-arrow">↕</span></th>
+              <th>NG911 Status</th>
+            </tr>
+          </thead>
+          <tbody id="psapsBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="pagination" id="psapsPagination"></div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════
+// State
+// ════════════════════════════════════════════
+let DATA = null;
+let MA_DATA = null;  // Mutual Agreements (25-145) data
+let filingSortKey = 'date_submitted', filingSortDir = -1;
+let psapSortKey = 'state', psapSortDir = 1;
+let maSortKey = 'date_received', maSortDir = -1;
+let filingPage = 0, psapPage = 0, maPage = 0;
+const PAGE_SIZE = 50;
+
+// ════════════════════════════════════════════
+// Data Loading
+// ════════════════════════════════════════════
+
+// Auto-load ng911_tracker_data.json from same folder on page load
+fetch('ng911_tracker_data.json')
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    DATA = data;
+    initDashboard();
+  })
+  .catch(() => {
+    // JSON not found in same folder — show manual loader
+    console.log('ng911_tracker_data.json not found, showing manual loader');
+  });
+
+// Auto-load mutual_agreements_25145.json (independent of main data)
+fetch('mutual_agreements_25145.json')
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => {
+    MA_DATA = data;
+    if (DATA) renderMutualAgreements();  // render if main dashboard already loaded
+  })
+  .catch(() => {
+    console.log('mutual_agreements_25145.json not found');
+  });
+
+document.getElementById('fileInput').addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    try {
+      const parsed = JSON.parse(ev.target.result);
+      // Detect if this is a mutual agreements file or main tracker file
+      if (parsed.docket === '25-145' || parsed.filings?.[0]?.ecfs_url) {
+        MA_DATA = parsed;
+        renderMutualAgreements();
+        alert('Mutual agreements data loaded (' + (parsed.filings||[]).length + ' filings)');
+      } else {
+        DATA = parsed;
+        initDashboard();
+      }
+    } catch (err) {
+      alert('Error parsing JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+});
+
+function loadDemoData() {
+  DATA = generateDemoData();
+  initDashboard();
+}
+
+// ════════════════════════════════════════════
+// Demo Data Generator
+// ════════════════════════════════════════════
+function generateDemoData() {
+  const states = [
+    'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
+    'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
+    'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+    'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC',
+    'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY','DC'
+  ];
+
+  // Simulate ~15 states that have filed
+  const filedStates = ['WA','CA','TX','NY','FL','IL','VA','CO','MN','IN','NC','OR','MD','PA','OH'];
+  const filerNames = {
+    'WA': 'Washington State E911 Coordination Office',
+    'CA': 'California Governor\'s Office of Emergency Services',
+    'TX': 'Commission on State Emergency Communications (TX)',
+    'NY': 'New York State Division of Homeland Security',
+    'FL': 'Florida Division of Telecommunications',
+    'IL': 'Illinois State Police, Bureau of Communications',
+    'VA': 'Virginia Information Technologies Agency',
+    'CO': 'Colorado Public Utilities Commission',
+    'MN': 'Minnesota Dept of Public Safety - ECN',
+    'IN': 'Indiana Statewide 911 Board',
+    'NC': 'North Carolina 911 Board',
+    'OR': 'Oregon Office of Emergency Management',
+    'MD': 'Maryland 911 Board',
+    'PA': 'Pennsylvania Emergency Management Agency',
+    'OH': 'Ohio 9-1-1 Program Office',
+  };
+
+  // Generate filings
+  const filings = [];
+  filedStates.forEach((st, idx) => {
+    const month = 3 + Math.floor(idx / 4);
+    const day = 25 + (idx % 5);
+    const phase = idx < 10 ? '1' : '1 and 2';
+    filings.push({
+      filing_id: `10204000${100 + idx}`,
+      filer_primary: filerNames[st],
+      filer_names: [filerNames[st]],
+      filer_state: st,
+      filer_city: '',
+      date_submitted: `2025-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}T12:00:00.000Z`,
+      date_received: `2025-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}T12:00:00.000Z`,
+      date_disseminated: `2025-${String(month).padStart(2,'0')}-${String(day+1).padStart(2,'0')}T12:00:00.000Z`,
+      filing_type: 'REQUEST',
+      document_urls: [`https://www.fcc.gov/ecfs/document/view?id=6050${idx}`],
+      document_count: 1,
+      phase_requested: `Phase ${phase}`,
+      psap_ids_listed: [],
+    });
+  });
+
+  // Generate PSAP registry (subset for demo)
+  const cities = ['Springfield','Franklin','Greenville','Bristol','Fairview','Salem','Madison','Georgetown','Arlington','Clinton'];
+  const counties = ['Washington','Jefferson','Franklin','Lincoln','Jackson','Madison','Hamilton','Monroe','Adams','Grant'];
+  const psaps = [];
+  let psapIdCounter = 1000;
+  states.forEach(st => {
+    const count = 5 + Math.floor(Math.random() * 10);
+    for (let i = 0; i < count; i++) {
+      const hasFiling = filedStates.includes(st);
+      psaps.push({
+        psap_id: String(psapIdCounter++),
+        psap_name: `${cities[i % cities.length]} ${st} ${i < count/2 ? 'Police Dispatch' : 'Fire/EMS Dispatch'}`,
+        state: st,
+        county: counties[Math.floor(Math.random() * counties.length)],
+        city: cities[i % cities.length],
+        psap_type: i === 0 ? 'Primary' : (Math.random() > 0.3 ? 'Primary' : 'Secondary'),
+        state_has_filings: hasFiling,
+        state_filing_count: hasFiling ? 1 : 0,
+        ng911_status: hasFiling ? 'Filed (state-level)' : 'No filing detected',
+        psap_level_status: 'Requires PDF review',
+      });
+    }
+  });
+
+  // Build summary
+  const stateFilingMap = {};
+  filedStates.forEach(st => {
+    const f = filings.find(x => x.filer_state === st);
+    stateFilingMap[st] = {
+      count: 1,
+      latest_date: f.date_submitted,
+      filers: [f.filer_primary],
+    };
+  });
+
+  return {
+    summary: {
+      generated_at: new Date().toISOString(),
+      total_psaps_in_registry: psaps.length,
+      total_ecfs_filings: filings.length,
+      states_with_filings: filedStates,
+      states_without_filings: states.filter(s => !filedStates.includes(s)),
+      state_filing_count: filedStates.length,
+      state_no_filing_count: states.length - filedStates.length,
+      filings_by_state: stateFilingMap,
+    },
+    filings,
+    psaps,
+  };
+}
+
+// ════════════════════════════════════════════
+// Initialize Dashboard
+// ════════════════════════════════════════════
+function initDashboard() {
+  document.getElementById('loaderSection').style.display = 'none';
+  document.getElementById('mainDashboard').classList.remove('hidden');
+
+  // Normalize agency names
+  normalizeAgencies();
+  // Enrich filings with state from PSAP registry
+  enrichFilingStates();
+
+  const s = DATA.summary;
+  document.getElementById('lastUpdated').textContent =
+    `Updated: ${new Date(s.generated_at).toLocaleString()} • ${s.total_ecfs_filings} filings`;
+
+  renderStats();
+  renderStateGrid();
+  renderFilingFilters();
+  renderPSAPFilters();
+  renderFilings();
+  renderPSAPs();
+  renderMutualAgreements();
+  initTabs();
+}
+
+function normalizeAgencies() {
+  // Map of patterns → canonical name
+  // Each entry: [regex or lowercase substring, canonical display name]
+  const rules = [
+    [/\bat\s*&\s*t\b/i, 'AT&T'],
+    [/\batt\b/i, 'AT&T'],
+    [/\bindigital\b/i, 'INdigital'],
+    [/\bin\s*digital\b/i, 'INdigital'],
+    [/\bmotorola/i, 'Motorola Solutions'],
+    [/\bpeninsula\s*fiber/i, 'Peninsula Fiber Network'],
+    [/\bpfn\b/i, 'Peninsula Fiber Network'],
+    [/\bnga\s*911\b/i, 'NGA 911'],
+    [/\bnga911\b/i, 'NGA 911'],
+    [/\bnga\s*$/i, 'NGA 911'],
+    [/^nga\b/i, 'NGA 911'],
+    [/\bintrado/i, 'Intrado'],
+    [/\bwest\s+safety/i, 'Intrado'],
+    [/\blumen/i, 'Lumen'],
+    [/\bcenturylink/i, 'Lumen'],
+    [/\brapid\s*sos/i, 'RapidSOS'],
+    [/\brapidsos/i, 'RapidSOS'],
+    [/\btyler\s+tech/i, 'Tyler Technologies'],
+    [/\bzetron/i, 'Zetron'],
+    [/\bplant\s*equipment/i, 'Plant Equipment Inc.'],
+    [/\bpei\b/i, 'Plant Equipment Inc.'],
+    [/\bfrontier/i, 'Frontier'],
+    [/\bcomtech/i, 'Comtech'],
+    [/\bsolacom/i, 'Solacom'],
+    [/\bxtend/i, 'Xtend'],
+    [/\bnomad/i, 'Nomad Global'],
+    [/\bkomutel/i, 'Komutel'],
+    [/\bcarbyne/i, 'Carbyne'],
+    [/\bnena\b/i, 'NENA'],
+    [/\bmcp\b.*911/i, 'Mission Critical Partners'],
+    [/\bmission\s*critical/i, 'Mission Critical Partners'],
+    [/\bgeneral\s*dynamics/i, 'General Dynamics'],
+  ];
+
+  let normalized = 0;
+  (DATA.filings || []).forEach(f => {
+    if (!f.poc_agency) return;
+    const original = f.poc_agency;
+    for (const [pattern, canonical] of rules) {
+      if (pattern.test(original) && original !== canonical) {
+        f.poc_agency = canonical;
+        normalized++;
+        break;
+      }
+    }
+  });
+
+  if (normalized > 0) {
+    console.log(`Normalized ${normalized} agency names`);
+  }
+}
+
+function enrichFilingStates() {
+  // Build PSAP ID → state lookup from registry (normalize to string, strip leading zeros)
+  const psapStateMap = {};
+  (DATA.psaps || []).forEach(p => {
+    if (p.psap_id && p.state) {
+      const normalizedId = String(p.psap_id).replace(/^0+/, '') || '0';
+      psapStateMap[normalizedId] = p.state;
+      psapStateMap[String(p.psap_id)] = p.state;
+    }
+  });
+
+  // Build exact PSAP name → state lookup
+  const psapNameStateMap = {};
+  (DATA.psaps || []).forEach(p => {
+    if (p.psap_name && p.state) {
+      psapNameStateMap[p.psap_name.toLowerCase().trim()] = p.state;
+    }
+  });
+
+  let enriched = 0;
+  (DATA.filings || []).forEach(f => {
+    if (f.filer_state) return;
+
+    // Method 1: Look up state strictly by PSAP ID
+    const allIds = [
+      ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+      ...(f.psap_ids_from_pdf || []),
+      ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+    ];
+    for (const pid of allIds) {
+      const normalized = String(pid).replace(/^0+/, '') || '0';
+      if (psapStateMap[normalized] || psapStateMap[String(pid)]) {
+        f.filer_state = psapStateMap[normalized] || psapStateMap[String(pid)];
+        enriched++;
+        return;
+      }
+    }
+
+    // Method 2: Exact name match against PSAP registry names
+    const names = [f.authority_name, f.filer_display, f.filer_primary].filter(Boolean);
+    for (const name of names) {
+      const key = name.toLowerCase().trim();
+      if (psapNameStateMap[key]) {
+        f.filer_state = psapNameStateMap[key];
+        enriched++;
+        return;
+      }
+    }
+  });
+
+  if (enriched > 0) {
+    console.log(`Enriched ${enriched} filings with state from PSAP registry`);
+  }
+}
+
+// ════════════════════════════════════════════
+// Stats Cards
+// ════════════════════════════════════════════
+function renderStats() {
+  const s = DATA.summary;
+  const grid = document.getElementById('statsGrid');
+
+  // Count unique PSAPs where both filer_display and poc_agency are populated
+  const psapsFiled = new Set();
+  (DATA.filings || []).forEach(f => {
+    const hasFiler = f.filer_display && f.filer_display !== '—';
+    const hasAgency = f.poc_agency && f.poc_agency !== '—';
+    if (hasFiler && hasAgency) {
+      // Only count actual PSAP IDs — no proxies
+      const ids = new Set([
+        ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+        ...(f.psap_ids_from_pdf || []),
+        ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+      ]);
+      ids.forEach(id => psapsFiled.add(id));
+    }
+  });
+
+  // Count PSAP types from registry
+  let primaryCount = 0, secondaryCount = 0, orphanedCount = 0;
+  (DATA.psaps || []).forEach(p => {
+    const t = (p.psap_type || '').toLowerCase();
+    if (t.includes('primary')) primaryCount++;
+    else if (t.includes('secondary')) secondaryCount++;
+    else if (t.includes('orphan')) orphanedCount++;
+  });
+
+  grid.innerHTML = `
+    <div class="stat-card cyan">
+      <div class="stat-label">Total ECFS Filings</div>
+      <div class="stat-value">${s.total_ecfs_filings}</div>
+      <div class="stat-sub">PS Docket 25-143</div>
+    </div>
+    <div class="stat-card purple">
+      <div class="stat-label">PSAPs Filed</div>
+      <div class="stat-value">${psapsFiled.size.toLocaleString()}</div>
+      <div class="stat-sub">Unique PSAPs</div>
+    </div>
+    <div class="stat-card amber">
+      <div class="stat-label">PSAPs in Registry</div>
+      <div class="stat-value">${s.total_psaps_in_registry.toLocaleString()}</div>
+      <div class="stat-sub">${primaryCount.toLocaleString()} Primary · ${secondaryCount.toLocaleString()} Secondary · ${orphanedCount.toLocaleString()} Orphaned</div>
+    </div>
+  `;
+}
+
+// ════════════════════════════════════════════
+// State Heatmap Grid
+// ════════════════════════════════════════════
+function renderStateGrid() {
+  // Build PSAPs filed per state
+  const psapStateMap = {};
+  (DATA.psaps || []).forEach(p => {
+    if (p.psap_id && p.state) {
+      psapStateMap[String(p.psap_id)] = p.state;
+      psapStateMap[String(p.psap_id).replace(/^0+/, '') || '0'] = p.state;
+    }
+  });
+  const psapsFiledByState = {};
+  (DATA.filings || []).forEach(f => {
+    const ids = new Set([
+      ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+      ...(f.psap_ids_from_pdf || []),
+      ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+    ]);
+    ids.forEach(id => {
+      const st = psapStateMap[String(id)] || psapStateMap[String(id).replace(/^0+/, '') || '0'] || f.filer_state;
+      if (st) {
+        if (!psapsFiledByState[st]) psapsFiledByState[st] = new Set();
+        psapsFiledByState[st].add(String(id));
+      }
+    });
+  });
+
+  const s = DATA.summary;
+  const filingsByState = s.filings_by_state || {};
+
+  // FIPS to state abbreviation
+  const fipsToState = {
+    '01':'AL','02':'AK','04':'AZ','05':'AR','06':'CA','08':'CO','09':'CT','10':'DE',
+    '11':'DC','12':'FL','13':'GA','15':'HI','16':'ID','17':'IL','18':'IN','19':'IA',
+    '20':'KS','21':'KY','22':'LA','23':'ME','24':'MD','25':'MA','26':'MI','27':'MN',
+    '28':'MS','29':'MO','30':'MT','31':'NE','32':'NV','33':'NH','34':'NJ','35':'NM',
+    '36':'NY','37':'NC','38':'ND','39':'OH','40':'OK','41':'OR','42':'PA','44':'RI',
+    '45':'SC','46':'SD','47':'TN','48':'TX','49':'UT','50':'VT','51':'VA','53':'WA',
+    '54':'WV','55':'WI','56':'WY','60':'AS','66':'GU','69':'MP','72':'PR','78':'VI'
+  };
+
+  // Load D3 for projection + TopoJSON for data
+  Promise.all([
+    loadScript('https://d3js.org/d3.v7.min.js'),
+    loadScript('https://unpkg.com/topojson-client@3'),
+    fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(r => r.json()),
+    fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json').then(r => r.json()).catch(() => null),
+  ]).then(([_1, _2, us, usCounties]) => {
+    const projection = d3.geoAlbersUsa().scale(1280).translate([480, 300]);
+    const path = d3.geoPath().projection(projection);
+    const states = topojson.feature(us, us.objects.states).features;
+
+    const svg = document.getElementById('usMap');
+    let html = '';
+
+    // Build set of county FIPS codes that have PSAPs with filings + map to agency
+    const filedCountyFips = new Set();
+    const countyFipsAgency = {};  // county FIPS -> agency name
+    const allFiledPsapIds = new Set();
+    const psapIdToAgency = {};  // PSAP ID -> agency
+    
+    // First pass: map each PSAP ID to its filing's agency
+    (DATA.filings || []).forEach(f => {
+      const agency = f.poc_agency || '';
+      const ids = [
+        ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+        ...(f.psap_ids_from_pdf || []),
+        ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+      ];
+      ids.forEach(id => {
+        const sid = String(id);
+        allFiledPsapIds.add(sid);
+        if (agency) psapIdToAgency[sid] = agency;
+      });
+    });
+    
+    // Second pass: map county FIPS to agency via PSAPs
+    const countyFipsToState = {};
+    (DATA.psaps || []).forEach(p => {
+      if (p.county_fips) {
+        countyFipsToState[p.county_fips] = p.state;
+        const pid = String(p.psap_id);
+        const pidNorm = pid.replace(/^0+/, '') || '0';
+        if (allFiledPsapIds.has(pid) || allFiledPsapIds.has(pidNorm)) {
+          filedCountyFips.add(p.county_fips);
+          const agency = psapIdToAgency[pid] || psapIdToAgency[pidNorm] || '';
+          if (agency && !countyFipsAgency[p.county_fips]) {
+            countyFipsAgency[p.county_fips] = agency;
+          }
+        }
+      }
+    });
+
+    // Agency color map
+    const agencyColors = {
+      'AT&T':                      '#60a5fa',  // light blue
+      'Comtech':                   '#c084fc',  // light purple
+      'Motorola Solutions':        '#e2e8f0',  // white/light gray
+      'NGA 911':                   '#f87171',  // light red
+      'Peninsula Fiber Network':   '#fde047',  // light yellow
+      'INdigital':                 '#fb923c',  // light orange
+    };
+    const defaultAgencyColor = '#34d399';  // light green for others
+    
+    function getAgencyColor(countyFips) {
+      const agency = countyFipsAgency[countyFips] || '';
+      for (const [key, color] of Object.entries(agencyColors)) {
+        if (agency.toLowerCase().includes(key.toLowerCase())) return color;
+      }
+      return agency ? defaultAgencyColor : '#374151';
+    }
+
+    // Draw county fills if counties data is available
+    if (usCounties && usCounties.objects && usCounties.objects.counties) {
+      const counties = topojson.feature(usCounties, usCounties.objects.counties).features;
+      counties.forEach(feature => {
+        const fips = String(feature.id).padStart(5, '0');
+        const stateFips = fips.substring(0, 2);
+        const st = fipsToState[stateFips];
+        if (!st) return;
+
+        const d = path(feature);
+        if (!d) return;
+
+        const hasFiled = filedCountyFips.has(fips);
+        const color = hasFiled ? getAgencyColor(fips) : '#374151';
+        
+        const psapCount = psapsFiledByState[st] ? psapsFiledByState[st].size : 0;
+        const filingCount = filingsByState[st] ? filingsByState[st].count : 0;
+        const agency = countyFipsAgency[fips] || '';
+        const agencyTip = agency ? ` (${agency})` : '';
+
+        html += `<path d="${d}" fill="${color}" stroke="rgba(255,255,255,0.08)" stroke-width="0.2"
+          style="cursor:pointer;transition:opacity .15s;"
+          onmouseenter="this.style.opacity='0.8';showMapTooltip(event,'${st}',${psapCount},${filingCount},'${agency.replace(/'/g,"\\'")}')"
+          onmouseleave="this.style.opacity='1';hideMapTooltip()"
+          onclick="filterByState('${st}')"/>`;
+      });
+    } else {
+      // Fallback: state-level fills if county data failed to load
+      states.forEach(feature => {
+        const fips = String(feature.id).padStart(2, '0');
+        const st = fipsToState[fips];
+        if (!st) return;
+
+        const psapCount = psapsFiledByState[st] ? psapsFiledByState[st].size : 0;
+        const filingCount = filingsByState[st] ? filingsByState[st].count : 0;
+        const hasFiled = psapCount > 0;
+        const color = hasFiled ? '#10b981' : '#374151';
+        const d = path(feature);
+        if (!d) return;
+
+        html += `<path d="${d}" fill="${color}" stroke="#1f2937" stroke-width="0.8"
+          style="cursor:pointer;transition:opacity .15s;"
+          onmouseenter="this.style.opacity='0.8';showMapTooltip(event,'${st}',${psapCount},${filingCount})"
+          onmouseleave="this.style.opacity='1';hideMapTooltip()"
+          onclick="filterByState('${st}')"/>`;
+      });
+    }
+
+    // Draw state borders
+    html += `<path d="${path(topojson.mesh(us, us.objects.states, (a, b) => a !== b))}" 
+      fill="none" stroke="#6b7280" stroke-width="0.8" style="pointer-events:none;"/>`;
+
+    // Add state labels with leader lines for small states
+    // Small states that need labels pushed outside with leader lines
+    const leaderStates = {
+      'NH': [40, -15], 'VT': [30, -20], 'MA': [48, 0], 'RI': [45, 10],
+      'CT': [40, 16], 'NJ': [36, 6], 'DE': [36, 4], 'MD': [42, 14],
+      'DC': [50, 24],
+    };
+    // States where centroid is slightly off — manual nudges
+    const nudges = {
+      'MI': [14, 16], 'FL': [18, -4], 'LA': [-10, -4], 'CA': [-10, 0],
+      'ID': [0, 8], 'VA': [10, -6],
+    };
+
+    states.forEach(feature => {
+      const fips = String(feature.id).padStart(2, '0');
+      const st = fipsToState[fips];
+      if (!st) return;
+
+      const centroid = path.centroid(feature);
+      if (!centroid || isNaN(centroid[0])) return;
+
+      const psapCount = psapsFiledByState[st] ? psapsFiledByState[st].size : 0;
+      const textColor = psapCount > 0 ? '#fff' : '#9ca3af';
+
+      if (leaderStates[st]) {
+        // Small state: draw leader line from centroid to offset label
+        const [ox, oy] = leaderStates[st];
+        const lx = centroid[0] + ox;
+        const ly = centroid[1] + oy;
+        html += `<line x1="${centroid[0]}" y1="${centroid[1]}" x2="${lx}" y2="${ly}" 
+          stroke="#6b7280" stroke-width="0.7" style="pointer-events:none;"/>`;
+        html += `<circle cx="${centroid[0]}" cy="${centroid[1]}" r="1.5" fill="#6b7280" style="pointer-events:none;"/>`;
+        html += `<text x="${lx}" y="${ly+4}" text-anchor="middle" 
+          fill="${textColor}" font-size="10" font-weight="700" font-family="system-ui" 
+          style="pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,0.8);">${st}</text>`;
+      } else {
+        // Normal state: label at centroid with optional nudge
+        const [nx, ny] = nudges[st] || [0, 0];
+        html += `<text x="${centroid[0]+nx}" y="${centroid[1]+ny+4}" text-anchor="middle" 
+          fill="${textColor}" font-size="10" font-weight="700" font-family="system-ui" 
+          style="pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,0.8);">${st}</text>`;
+      }
+    });
+
+    svg.innerHTML = html;
+  }).catch(err => {
+    console.error('Map load error:', err);
+    renderFallbackTiles(psapsFiledByState, filingsByState);
+  });
+}
+
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) return resolve();
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+function renderFallbackTiles(psapsFiledByState, filingsByState) {
+  const s = DATA.summary;
+  const all = [...(s.states_with_filings || []), ...(s.states_without_filings || [])].sort();
+  const container = document.getElementById('mapContainer');
+  
+  let html = '<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px;padding:12px;">';
+  all.forEach(st => {
+    const psapCount = psapsFiledByState[st] ? psapsFiledByState[st].size : 0;
+    const color = psapCount > 0 ? '#10b981' : '#374151';
+    const desc = psapCount > 0 ? `${psapCount} PSAPs filed` : 'No PSAPs filed';
+    html += `<div onclick="filterByState('${st}')" style="background:${color};border-radius:6px;padding:8px;text-align:center;cursor:pointer;transition:transform .15s;" 
+      onmouseenter="this.style.transform='scale(1.1)'" onmouseleave="this.style.transform='scale(1)'"
+      title="${st}: ${desc}">
+      <div style="font-weight:700;font-size:16px;">${st}</div>
+      <div style="font-size:11px;opacity:0.8;">${desc}</div>
+    </div>`;
+  });
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function showMapTooltip(event, st, psapCount, filingCount, agency) {
+  const tooltip = document.getElementById('mapTooltip');
+  const desc = psapCount > 0 ? `${psapCount} PSAP${psapCount !== 1 ? 's' : ''} filed` : 'No PSAPs filed';
+  const agencyLine = agency ? `<br><span style="color:#9ca3af">Agency: ${agency}</span>` : '';
+  tooltip.innerHTML = `<strong>${st}</strong><br>${desc}<br>${filingCount} filing${filingCount !== 1 ? 's' : ''}${agencyLine}`;
+  tooltip.style.display = 'block';
+  const container = document.getElementById('mapContainer');
+  const rect = container.getBoundingClientRect();
+  tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
+  tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
+}
+
+function hideMapTooltip() {
+  document.getElementById('mapTooltip').style.display = 'none';
+}
+
+function filterByState(st) {
+  // Switch to ECFS Filings tab and filter by state
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelector('[data-tab="filings"]').classList.add('active');
+  document.getElementById('tab-filings').classList.add('active');
+  document.getElementById('filingStateFilter').value = st;
+  filingPage = 0;
+  renderFilings();
+}
+
+// ════════════════════════════════════════════
+// Mutual Agreements (25-145)
+// ════════════════════════════════════════════
+const MA_PAGE_SIZE = 25;
+
+function renderMutualAgreements() {
+  const filings = MA_DATA ? (MA_DATA.filings || []) : [];
+  const noDataEl = document.getElementById('maNoData');
+  const tableEl = document.getElementById('maTable');
+  
+  if (!filings.length) {
+    if (noDataEl) noDataEl.style.display = 'block';
+    if (tableEl) tableEl.style.display = 'none';
+    document.getElementById('maCount').textContent = '0 filings';
+    return;
+  }
+  if (noDataEl) noDataEl.style.display = 'none';
+  if (tableEl) tableEl.style.display = '';
+
+  // Search filter
+  const search = (document.getElementById('maSearch')?.value || '').toLowerCase();
+  let filtered = filings;
+  if (search) {
+    filtered = filings.filter(f => {
+      const haystack = `${f.filer} ${(f.documents||[]).map(d=>d.title).join(' ')} ${f.filing_id}`.toLowerCase();
+      return haystack.includes(search);
+    });
+  }
+
+  // Sort
+  filtered.sort((a, b) => {
+    const av = (a[maSortKey] || '').toLowerCase();
+    const bv = (b[maSortKey] || '').toLowerCase();
+    return av < bv ? -maSortDir : av > bv ? maSortDir : 0;
+  });
+
+  // Paginate
+  const totalPages = Math.ceil(filtered.length / MA_PAGE_SIZE);
+  if (maPage >= totalPages) maPage = Math.max(0, totalPages - 1);
+  const start = maPage * MA_PAGE_SIZE;
+  const page = filtered.slice(start, start + MA_PAGE_SIZE);
+
+  document.getElementById('maCount').textContent = `${filtered.length} filing${filtered.length !== 1 ? 's' : ''}`;
+
+  const tbody = document.getElementById('maBody');
+  tbody.innerHTML = page.map(f => {
+    const date = f.date_received ? new Date(f.date_received).toLocaleDateString() : '—';
+    const docs = (f.documents || []).map(d => {
+      if (d.url) {
+        return `<a href="${d.url}" target="_blank" style="color:var(--accent);text-decoration:none;">${d.title || 'Document'}</a>`;
+      }
+      return d.title || '—';
+    }).join('<br>');
+    const ecfsLink = f.ecfs_url ? `<a href="${f.ecfs_url}" target="_blank" style="color:var(--accent);text-decoration:none;">View</a>` : '—';
+    
+    return `<tr>
+      <td>${date}</td>
+      <td>${f.filer || '—'}</td>
+      <td>${f.type_of_filing || '—'}</td>
+      <td>${docs || '—'}</td>
+      <td>${ecfsLink}</td>
+    </tr>`;
+  }).join('');
+
+  // Pagination
+  const pagEl = document.getElementById('maPagination');
+  if (totalPages <= 1) {
+    pagEl.innerHTML = '';
+    return;
+  }
+  let pagHtml = '';
+  if (maPage > 0) pagHtml += `<button onclick="maPage=0;renderMutualAgreements()">«</button>`;
+  if (maPage > 0) pagHtml += `<button onclick="maPage--;renderMutualAgreements()">‹</button>`;
+  pagHtml += `<span style="padding:0 12px;color:var(--text-dim);">Page ${maPage+1} of ${totalPages}</span>`;
+  if (maPage < totalPages-1) pagHtml += `<button onclick="maPage++;renderMutualAgreements()">›</button>`;
+  if (maPage < totalPages-1) pagHtml += `<button onclick="maPage=${totalPages-1};renderMutualAgreements()">»</button>`;
+  pagEl.innerHTML = pagHtml;
+}
+
+function sortMA(key) {
+  if (maSortKey === key) {
+    maSortDir *= -1;
+  } else {
+    maSortKey = key;
+    maSortDir = key === 'date_received' ? -1 : 1;
+  }
+  maPage = 0;
+  renderMutualAgreements();
+}
+
+// ════════════════════════════════════════════
+// Tabs
+// ════════════════════════════════════════════
+function initTabs() {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+}
+
+// ════════════════════════════════════════════
+// Filings Table
+// ════════════════════════════════════════════
+function renderFilingFilters() {
+  const states = [...new Set(DATA.filings.map(f => f.filer_state).filter(Boolean))].sort();
+  const types = [...new Set(DATA.filings.map(f => f.filing_type).filter(Boolean))].sort();
+  const agencies = [...new Set(DATA.filings.map(f => f.poc_agency).filter(Boolean))].sort();
+
+  const stateSelect = document.getElementById('filingStateFilter');
+  states.forEach(st => {
+    const opt = document.createElement('option');
+    opt.value = st; opt.textContent = st;
+    stateSelect.appendChild(opt);
+  });
+
+  const agencySelect = document.getElementById('filingAgencyFilter');
+  agencies.forEach(a => {
+    const opt = document.createElement('option');
+    opt.value = a; opt.textContent = a;
+    agencySelect.appendChild(opt);
+  });
+
+  const phases = [...new Set(DATA.filings.map(f => f.phase_requested).filter(Boolean))].sort();
+  const phaseSelect = document.getElementById('filingPhaseFilter');
+  phases.forEach(p => {
+    const opt = document.createElement('option');
+    opt.value = p; opt.textContent = p;
+    phaseSelect.appendChild(opt);
+  });
+
+  const typeSelect = document.getElementById('filingTypeFilter');
+  types.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    typeSelect.appendChild(opt);
+  });
+}
+
+function getFilteredFilings() {
+  const search = document.getElementById('filingSearch').value.toLowerCase();
+  const state = document.getElementById('filingStateFilter').value;
+  const agency = document.getElementById('filingAgencyFilter').value;
+  const phase = document.getElementById('filingPhaseFilter').value;
+  const type = document.getElementById('filingTypeFilter').value;
+
+  return DATA.filings.filter(f => {
+    if (search) {
+      const psapIds = [
+        ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+        ...(f.psap_ids_from_pdf || []),
+        ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+      ].join(' ');
+      const haystack = `${f.filer_display||f.filer_primary} ${f.poc_agency||''} ${f.filing_id} ${psapIds}`.toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+    if (state && f.filer_state !== state) return false;
+    if (agency && f.poc_agency !== agency) return false;
+    if (phase && f.phase_requested !== phase) return false;
+    if (type && f.filing_type !== type) return false;
+    return true;
+  }).sort((a, b) => {
+    const av = a[filingSortKey] || '';
+    const bv = b[filingSortKey] || '';
+    return av < bv ? -filingSortDir : av > bv ? filingSortDir : 0;
+  });
+}
+
+function renderFilings() {
+  const filtered = getFilteredFilings();
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  filingPage = Math.min(filingPage, Math.max(0, pages - 1));
+  const slice = filtered.slice(filingPage * PAGE_SIZE, (filingPage + 1) * PAGE_SIZE);
+
+  document.getElementById('filingCount').textContent = `${total} filing${total !== 1 ? 's' : ''}`;
+
+  const tbody = document.getElementById('filingsBody');
+  tbody.innerHTML = slice.map(f => {
+    const date = f.date_submitted ? new Date(f.date_submitted).toLocaleDateString() : '—';
+    const phase = f.phase_requested || 'See PDF';
+    const phaseBadge = phase.includes('1') && phase.includes('2') ? 'phase2' :
+                       phase.includes('2') ? 'phase2' :
+                       phase.includes('1') ? 'phase1' : 'pending';
+    const docLinks = f.document_urls?.length
+      ? f.document_urls.map((u, i) => `<a class="doc-link" href="${u}" target="_blank">Doc ${i+1}</a>`).join(' ')
+      : '—';
+
+    // Collect PSAP IDs from all sources
+    const psapIds = new Set([
+      ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+      ...(f.psap_ids_from_pdf || []),
+      ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+    ]);
+    f._psap_ids_display = [...psapIds].join(', ');
+    const psapDisplay = psapIds.size > 0
+      ? [...psapIds].map(id => `<span style="font-family:'JetBrains Mono',monospace;font-size:11px">${id}</span>`).join(', ')
+      : '—';
+
+    return `<tr>
+      <td>${date}</td>
+      <td>${f.filer_display||f.filer_primary}</td>
+      <td>${f.poc_agency || '—'}</td>
+      <td><strong>${f.filer_state || '—'}</strong></td>
+      <td><span class="badge filed">${f.filing_type || '—'}</span></td>
+      <td><span class="badge ${phaseBadge}">${phase}</span></td>
+      <td>${docLinks}</td>
+      <td style="color:var(--text-dim);font-family:'JetBrains Mono',monospace;font-size:11px">${f.filing_id}</td>
+      <td>${psapDisplay}</td>
+    </tr>`;
+  }).join('');
+
+  renderPagination('filingsPagination', pages, filingPage, (p) => { filingPage = p; renderFilings(); });
+}
+
+function sortFilings(key) {
+  if (filingSortKey === key) filingSortDir *= -1;
+  else { filingSortKey = key; filingSortDir = 1; }
+  filingPage = 0;
+  renderFilings();
+}
+
+// ════════════════════════════════════════════
+// PSAPs Table
+// ════════════════════════════════════════════
+function renderPSAPFilters() {
+  const states = [...new Set(DATA.psaps.map(p => p.state).filter(Boolean))].sort();
+  const types = [...new Set(DATA.psaps.map(p => p.psap_type).filter(Boolean))].sort();
+
+  const stateSelect = document.getElementById('psapStateFilter');
+  states.forEach(st => {
+    const opt = document.createElement('option');
+    opt.value = st; opt.textContent = st;
+    stateSelect.appendChild(opt);
+  });
+
+  const typeSelect = document.getElementById('psapTypeFilter');
+  types.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    typeSelect.appendChild(opt);
+  });
+}
+
+function getFilteredPSAPs() {
+  const search = document.getElementById('psapSearch').value.toLowerCase();
+  const state = document.getElementById('psapStateFilter').value;
+  const status = document.getElementById('psapStatusFilter').value;
+  const type = document.getElementById('psapTypeFilter').value;
+
+  // Ensure filed PSAP IDs set is built
+  if (!window._filedPsapIds) renderPSAPs();
+
+  return DATA.psaps.filter(p => {
+    if (search) {
+      const haystack = `${p.psap_id} ${p.psap_name} ${p.county} ${p.city}`.toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
+    if (state && p.state !== state) return false;
+    const pid = String(p.psap_id);
+    const pidNorm = pid.replace(/^0+/, '') || '0';
+    const hasFiling = window._filedPsapIds && (window._filedPsapIds.has(pid) || window._filedPsapIds.has(pidNorm));
+    if (status === 'filed' && !hasFiling) return false;
+    if (status === 'not-filed' && hasFiling) return false;
+    if (type && p.psap_type !== type) return false;
+    return true;
+  }).sort((a, b) => {
+    const av = a[psapSortKey] || '';
+    const bv = b[psapSortKey] || '';
+    return av < bv ? -psapSortDir : av > bv ? psapSortDir : 0;
+  });
+}
+
+function renderPSAPs() {
+  // Build set of PSAP IDs that have filings
+  if (!window._filedPsapIds) {
+    window._filedPsapIds = new Set();
+    (DATA.filings || []).forEach(f => {
+      const ids = [
+        ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+        ...(f.psap_ids_from_pdf || []),
+        ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+      ];
+      ids.forEach(id => {
+        window._filedPsapIds.add(String(id));
+        window._filedPsapIds.add(String(id).replace(/^0+/, '') || '0');
+      });
+    });
+  }
+
+  const filtered = getFilteredPSAPs();
+  const total = filtered.length;
+  const pages = Math.ceil(total / PAGE_SIZE);
+  psapPage = Math.min(psapPage, Math.max(0, pages - 1));
+  const slice = filtered.slice(psapPage * PAGE_SIZE, (psapPage + 1) * PAGE_SIZE);
+
+  document.getElementById('psapCount').textContent = `${total.toLocaleString()} PSAP${total !== 1 ? 's' : ''}`;
+
+  const tbody = document.getElementById('psapsBody');
+  tbody.innerHTML = slice.map(p => {
+    const pid = String(p.psap_id);
+    const pidNorm = pid.replace(/^0+/, '') || '0';
+    const hasFiling = window._filedPsapIds.has(pid) || window._filedPsapIds.has(pidNorm);
+    const statusBadge = hasFiling ? 'filed' : 'not-filed';
+    const statusText = hasFiling ? 'Filing Found' : 'No Filing';
+    return `<tr>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:12px">${p.psap_id}</td>
+      <td>${p.psap_name}</td>
+      <td><strong>${p.state}</strong></td>
+      <td>${p.county}</td>
+      <td>${p.city}</td>
+      <td>${p.psap_type}</td>
+      <td><span class="badge ${statusBadge}">${statusText}</span></td>
+    </tr>`;
+  }).join('');
+
+  renderPagination('psapsPagination', pages, psapPage, (p) => { psapPage = p; renderPSAPs(); });
+}
+
+function sortPSAPs(key) {
+  if (psapSortKey === key) psapSortDir *= -1;
+  else { psapSortKey = key; psapSortDir = 1; }
+  psapPage = 0;
+  renderPSAPs();
+}
+
+// ════════════════════════════════════════════
+// Pagination
+// ════════════════════════════════════════════
+function renderPagination(containerId, totalPages, currentPage, onPageChange) {
+  const container = document.getElementById(containerId);
+  if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+  let html = `<button ${currentPage === 0 ? 'disabled' : ''} onclick="void(0)">← Prev</button>`;
+
+  const start = Math.max(0, currentPage - 3);
+  const end = Math.min(totalPages, currentPage + 4);
+
+  if (start > 0) html += `<button onclick="void(0)">1</button>`;
+  if (start > 1) html += `<button disabled>…</button>`;
+
+  for (let i = start; i < end; i++) {
+    html += `<button class="${i === currentPage ? 'active' : ''}" onclick="void(0)">${i + 1}</button>`;
+  }
+
+  if (end < totalPages - 1) html += `<button disabled>…</button>`;
+  if (end < totalPages) html += `<button onclick="void(0)">${totalPages}</button>`;
+
+  html += `<button ${currentPage >= totalPages - 1 ? 'disabled' : ''} onclick="void(0)">Next →</button>`;
+
+  container.innerHTML = html;
+
+  // Attach click handlers
+  container.querySelectorAll('button:not([disabled])').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.textContent.trim();
+      if (text === '← Prev') onPageChange(currentPage - 1);
+      else if (text === 'Next →') onPageChange(currentPage + 1);
+      else if (!isNaN(parseInt(text))) onPageChange(parseInt(text) - 1);
+    });
+  });
+}
+
+// ════════════════════════════════════════════
+// CSV Export
+// ════════════════════════════════════════════
+function exportCSV(type) {
+  let rows = [], filename = '';
+
+  if (type === 'filings') {
+    rows = [['Date','Filer','Agency','State','PSAP ID','Type','Phase','Filing ID','Document URLs']];
+    getFilteredFilings().forEach(f => {
+      const psapIds = [...new Set([
+        ...((f.psap_table || []).map(p => p.psap_id).filter(Boolean)),
+        ...(f.psap_ids_from_pdf || []),
+        ...(f.psap_id_extracted ? [f.psap_id_extracted] : []),
+      ])].join('; ');
+      rows.push([
+        f.date_submitted ? new Date(f.date_submitted).toLocaleDateString() : '',
+        `"${f.filer_display||f.filer_primary}"`, `"${f.poc_agency||''}"`, f.filer_state,
+        `"${psapIds}"`, f.filing_type,
+        f.phase_requested, f.filing_id,
+        `"${(f.document_urls||[]).join('; ')}"`,
+      ]);
+    });
+    filename = 'ng911_ecfs_filings.csv';
+  }
+  else if (type === 'psaps') {
+    rows = [['PSAP ID','PSAP Name','State','County','City','Type','NG911 Status']];
+    getFilteredPSAPs().forEach(p => {
+      const pid = String(p.psap_id);
+      const pidNorm = pid.replace(/^0+/, '') || '0';
+      const hasFiling = window._filedPsapIds && (window._filedPsapIds.has(pid) || window._filedPsapIds.has(pidNorm));
+      rows.push([
+        p.psap_id, `"${p.psap_name}"`, p.state, `"${p.county}"`,
+        `"${p.city}"`, p.psap_type,
+        hasFiling ? 'Filing Found' : 'No Filing',
+      ]);
+    });
+    filename = 'ng911_psap_status.csv';
+  }
+  else if (type === 'states') {
+    const s = DATA.summary;
+    const all = [...(s.states_with_filings||[]), ...(s.states_without_filings||[])].sort();
+    rows = [['State','Filed','Filings','Latest Date','Filer(s)']];
+    all.forEach(st => {
+      const info = s.filings_by_state?.[st];
+      rows.push([
+        st, info ? 'Yes' : 'No',
+        info ? info.count : 0,
+        info?.latest_date ? new Date(info.latest_date).toLocaleDateString() : '',
+        info ? `"${info.filers.join('; ')}"` : '',
+      ]);
+    });
+    filename = 'ng911_state_overview.csv';
+  }
+  else if (type === 'agreements') {
+    rows = [['Date','Filer','Type','Documents','ECFS URL']];
+    const filings = MA_DATA ? (MA_DATA.filings || []) : [];
+    const search = (document.getElementById('maSearch')?.value || '').toLowerCase();
+    filings.filter(f => {
+      if (!search) return true;
+      return `${f.filer} ${(f.documents||[]).map(d=>d.title).join(' ')}`.toLowerCase().includes(search);
+    }).forEach(f => {
+      rows.push([
+        f.date_received ? new Date(f.date_received).toLocaleDateString() : '',
+        `"${f.filer||''}"`,
+        f.type_of_filing || '',
+        `"${(f.documents||[]).map(d=>d.title).join('; ')}"`,
+        f.ecfs_url || '',
+      ]);
+    });
+    filename = 'ng911_mutual_agreements_25145.csv';
+  }
+
+  const csv = rows.map(r => r.join(',')).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
