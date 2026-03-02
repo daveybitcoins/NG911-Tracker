@@ -86,6 +86,11 @@ FILER_STATE_OVERRIDES = {
     'rio grande valley emergency communication district': 'TX',
 }
 
+# POC agency overrides — when the form's Q4 agency doesn't reflect the actual ESInet provider
+POC_AGENCY_OVERRIDES = {
+    'washington military department': 'Comtech',  # Q7 text identifies Comtech as ESInet provider
+}
+
 # Manual PSAP ID corrections for known data entry errors in FCC filings
 PSAP_ID_CORRECTIONS = {
     '4423': '7423',  # Florence County WI filed with wrong ID (4423=Rockingham NC, 7423=Florence WI)
@@ -1757,6 +1762,12 @@ def build_tracker(parsed_filings, psap_registry):
             print("  ⚠ addfips not installed and no county_fips_lookup.json found")
             print("    County-level map coloring won't work.")
             print("    Fix: pip3 install addfips  OR  place county_fips_lookup.json alongside this script")
+
+    # Apply POC agency overrides
+    for f in parsed_filings:
+        agency = f.get("poc_agency", "").strip()
+        if agency.lower() in POC_AGENCY_OVERRIDES:
+            f["poc_agency"] = POC_AGENCY_OVERRIDES[agency.lower()]
 
     # Apply PSAP ID corrections and remove known-bad IDs before building maps
     for f in parsed_filings:
