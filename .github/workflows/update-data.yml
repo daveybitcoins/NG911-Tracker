@@ -1,0 +1,40 @@
+name: Update NG911 Filing Data
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Daily at noon UTC
+  workflow_dispatch:        # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch latest filing data
+        run: python fetch_ng911_data.py --api-key "${{ secrets.FCC_API_KEY }}"
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ecfs_filings.json psap_registry.json ng911_tracker_data.json mutual_agreements_25145.json pdfs/
+          if git diff --cached --quiet; then
+            echo "No new filing data detected."
+          else
+            git commit -m "Auto-update: new NG911 filing data $(date -u +%Y-%m-%d)"
+            git push
+          fi
