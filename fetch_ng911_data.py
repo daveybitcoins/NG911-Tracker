@@ -443,7 +443,7 @@ def parse_ecfs_filings(raw_filings):
 # ──────────────────────────────────────────────
 # Step 3b: Download PDFs and extract phase/PSAP data
 # ──────────────────────────────────────────────
-def download_pdf(url, dest_path, retries=2, timeout=90):
+def download_pdf(url, dest_path, retries=4, timeout=120):
     """Download a PDF file from a URL. Handles FCC redirects and large files."""
     import ssl
     from urllib.request import build_opener, HTTPRedirectHandler, HTTPSHandler
@@ -489,8 +489,9 @@ def download_pdf(url, dest_path, retries=2, timeout=90):
             return True
         except Exception as e:
             if attempt < retries - 1:
-                print(f"    ⟳ Retry {attempt+1}: {str(e)[:60]}")
-                time.sleep(3)
+                wait = 5 * (attempt + 1)
+                print(f"    ⟳ Retry {attempt+1}/{retries-1}: {str(e)[:60]} (waiting {wait}s)")
+                time.sleep(wait)
             else:
                 print(f"    ✗ Failed: {str(e)[:80]}")
                 # Clean up partial download
