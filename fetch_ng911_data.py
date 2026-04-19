@@ -443,8 +443,15 @@ def parse_ecfs_filings(raw_filings):
 # ──────────────────────────────────────────────
 # Step 3b: Download PDFs and extract phase/PSAP data
 # ──────────────────────────────────────────────
-def download_pdf(url, dest_path, retries=4, timeout=120):
-    """Download a PDF file from a URL. Handles FCC redirects and large files."""
+def download_pdf(url, dest_path, retries=5, timeout=300):
+    """Download a PDF file from a URL. Handles FCC redirects and large files.
+
+    The FCC ECFS endpoint frequently stalls when accessed from datacenter IPs
+    (e.g. GitHub Actions): TCP connects fine but bytes trickle in slowly or
+    not at all. Use generous read timeouts and back off aggressively so the
+    server has time to recover between attempts.
+    """
+    import random
     import ssl
     from urllib.request import build_opener, HTTPRedirectHandler, HTTPSHandler
 
@@ -461,6 +468,10 @@ def download_pdf(url, dest_path, retries=4, timeout=120):
         ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"),
         ("Accept", "application/pdf,*/*"),
     ]
+
+    # Exponential back-off with jitter; longer waits help when FCC throttles
+    # the source IP rather than rejecting outright.
+    backoff_schedule = [15, 45, 120, 240]
 
     for attempt in range(retries):
         try:
@@ -489,8 +500,9 @@ def download_pdf(url, dest_path, retries=4, timeout=120):
             return True
         except Exception as e:
             if attempt < retries - 1:
-                wait = 5 * (attempt + 1)
-                print(f"    ⟳ Retry {attempt+1}/{retries-1}: {str(e)[:60]} (waiting {wait}s)")
+                base_wait = backoff_schedule[min(attempt, len(backoff_schedule) - 1)]
+                wait = base_wait + random.uniform(0, base_wait * 0.25)
+                print(f"    ⟳ Retry {attempt+1}/{retries-1}: {str(e)[:60]} (waiting {wait:.0f}s)")
                 time.sleep(wait)
             else:
                 print(f"    ✗ Failed: {str(e)[:80]}")
@@ -1582,7 +1594,7 @@ def enrich_filings_with_pdfs(parsed_filings):
                 success = download_pdf(download_url, doc_path)
                 if not success:
                     continue
-                time.sleep(0.5)  # be polite
+                time.sleep(2.0)  # be polite — FCC throttles datacenter IPs
 
             # Extract data with error protection — handles both PDF and DOCX
             try:
