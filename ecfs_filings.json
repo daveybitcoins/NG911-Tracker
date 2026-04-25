@@ -1,6 +1,157 @@
 [
   {
     "submissiontype": {
+      "filingsCount": 0,
+      "flag_public": "N",
+      "short": "PUB NOTICE",
+      "description": "PUBLIC NOTICE",
+      "id": 88,
+      "type": "PN"
+    },
+    "is_staff_upload": 0,
+    "documents": [
+      {
+        "filename": "DA-26-407A1.pdf",
+        "src": "https://docs.fcc.gov/public/attachments/DA-26-407A1.pdf",
+        "description": ""
+      }
+    ],
+    "delegated_authority_number": "DA-26-407",
+    "id_submission": "1042445605852",
+    "bureaus": [
+      {
+        "code": "PSHSB",
+        "name": "Public Safety & Homeland Security Bureau",
+        "edocs_bureau_code": "PSHSB"
+      }
+    ],
+    "lawfirms": [
+      {
+        "name": "FCC"
+      }
+    ],
+    "bureau_id": "",
+    "date_comment_period": "2026-05-04T17:00:00.000Z",
+    "file_number": "",
+    "admincomment": "",
+    "report_number": "",
+    "date_disseminated": "2026-04-24T17:00:00.000Z",
+    "id_edocs": 421004,
+    "proceedings": [
+      {
+        "name": "21-479",
+        "bureau_code": "PSHSB",
+        "description": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      },
+      {
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-04-24T17:00:00.000Z",
+    "reg_flex_analysis": "N",
+    "date_last_modified": "2026-04-24T21:04:24.000Z",
+    "small_business_impact": "N",
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "fcc_record": "",
+    "date_reply_comment": "2026-05-11T17:00:00.000Z",
+    "express_comment": 0,
+    "is_action": 1,
+    "exparte_or_late_filed": "N",
+    "filers": [
+      {
+        "name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_submission": "2026-04-24T17:00:00.000Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "trackChanges": [
+      {
+        "changes": {},
+        "user": "edocs.interface",
+        "updated": "2026-04-24T16:15:23.029Z"
+      }
+    ],
+    "entity": "Filer",
+    "authors": [
+      {
+        "name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "_index": "filings.actions.2026"
+  },
+  {
+    "submissiontype": {
+      "description": "REQUEST",
+      "short": "REQUEST",
+      "id": 95,
+      "abbreviation": "RQ"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "Tift Co GA - FCC 911-Authority-NG911-Valid-Request-Form.docx",
+        "src": "https://www.fcc.gov/ecfs/document/1042419869559/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "1042419869559",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-04-24T17:00:33.122Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-04-24T14:11:38.015Z",
+    "date_last_modified": "2026-04-24T14:11:38.015Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "Tift County E-911"
+      }
+    ],
+    "date_submission": "2026-04-24T14:11:38.015Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [],
+    "entity": "Filer",
+    "authors": [],
+    "_index": "filings.2026.4",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
       "description": "REQUEST",
       "short": "REQUEST",
       "id": 95,
