@@ -1,6 +1,87 @@
 [
   {
     "submissiontype": {
+      "description": "NOTICE OF EXPARTE",
+      "short": "NOTICE",
+      "id": 45,
+      "abbreviation": "NO"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "RFA Ex Parte Notice Letter_04302026.pdf",
+        "src": "https://www.fcc.gov/ecfs/document/10501230212565/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "10501230212565",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-05-01T15:00:32.443Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": "2025-03-21T04:00:00.000Z",
+        "date_closed": "2099-12-31T23:59:59.999Z",
+        "id_proceeding": 2021122005851,
+        "name": "21-479",
+        "bureau_code": "PSHSB",
+        "description": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "created_date": "2021-12-15T18:35:12.000Z",
+        "description_display": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      },
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-05-01T11:24:54.509Z",
+    "date_last_modified": "2026-05-01T11:24:54.509Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Sunshine",
+      "id": 40
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "South Carolina Revenue and Fiscal Affairs Office"
+      }
+    ],
+    "date_submission": "2026-05-01T11:24:54.509Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [
+      {
+        "filingsCount": 0,
+        "bureau_code": "PSHSB",
+        "name": "Public Safety & Homeland Security Bureau",
+        "edocs_bureau_code": "PSHSB",
+        "id": 155
+      }
+    ],
+    "entity": "Filer",
+    "authors": [],
+    "_index": "filings.2026.5",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
       "description": "REQUEST",
       "short": "REQUEST",
       "id": 95,
