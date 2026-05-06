@@ -1,6 +1,83 @@
 [
   {
     "submissiontype": {
+      "description": "COMMENT",
+      "short": "COMMENT",
+      "id": 7,
+      "abbreviation": "CO"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "2026.5.4 As-filed UST Comments in Support of VZ NG911 waiver petition.pdf",
+        "src": "https://www.fcc.gov/ecfs/document/105040583516320/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "105040583516320",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-05-05T15:00:32.702Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": "2025-03-21T04:00:00.000Z",
+        "date_closed": "2099-12-31T23:59:59.999Z",
+        "id_proceeding": 2021122005851,
+        "name": "21-479",
+        "bureau_code": "PSHSB",
+        "description": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "created_date": "2021-12-15T18:35:12.000Z",
+        "description_display": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      },
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-05-04T19:39:01.561Z",
+    "date_last_modified": "2026-05-04T19:39:01.560Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Sunshine",
+      "id": 40
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "USTelecom-The Broadband Association"
+      }
+    ],
+    "date_submission": "2026-05-04T19:39:01.560Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [],
+    "entity": "Filer",
+    "authors": [
+      {
+        "name": "Diana Eisner"
+      }
+    ],
+    "_index": "filings.2026.5",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
       "description": "NOTICE OF EXPARTE",
       "short": "NOTICE",
       "id": 45,
