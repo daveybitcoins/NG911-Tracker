@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-05-08T13:21:35.960578Z",
+    "generated_at": "2026-05-09T13:06:15.021476Z",
     "total_psaps_in_registry": 8557,
-    "total_ecfs_filings": 233,
-    "direct_psap_matches": 949,
+    "total_ecfs_filings": 235,
+    "direct_psap_matches": 1004,
     "states_with_filings": [
       "AL",
       "AZ",
@@ -21,6 +21,7 @@
       "MS",
       "ND",
       "NH",
+      "NM",
       "NV",
       "OH",
       "OK",
@@ -51,7 +52,6 @@
       "NC",
       "NE",
       "NJ",
-      "NM",
       "NY",
       "OR",
       "PA",
@@ -63,33 +63,132 @@
       "VT",
       "WY"
     ],
-    "state_filing_count": 26,
-    "state_no_filing_count": 29,
+    "state_filing_count": 27,
+    "state_no_filing_count": 28,
     "filings_by_state": {
-      "WV": {
-        "count": 13,
-        "latest_date": "2026-05-07T18:35:01.691Z",
+      "FL": {
+        "count": 39,
+        "latest_date": "2026-05-08T17:23:14.911Z",
         "filers": [
-          "Upshur County 911",
+          "Madison County Florida PSAP ID 1572",
+          "Nassau County Florida PSAP ID 1594",
+          "Calhoun County Sheriffs Office",
+          "Suwannee County Florida PSAP ID 1666",
+          "Manatee County Public Safety Department",
+          "Hernando County Sheriffs Department",
+          "Duval County Florida PSAP IDs 1446 1543 1544 1545 1595 8689",
+          "Taylor County Florida PSAP ID 1670",
+          "Christine Cooper",
+          "Hamilton County Florida PSAP ID 1524",
           "Niki Sears",
-          "Barbour County Office of Emergency Management 911",
-          "Lincoln County 9-1-1",
-          "Mason County 911",
-          "Logan County Emergency Operations Center",
-          "Allen Holder",
-          "Boone County Emergency Management Agency"
+          "Baker County Florida PSAP ID 1451",
+          "Flagler County Florida PSAP IDS 1506 1623",
+          "Holmes County Florida PSAP ID 1537",
+          "Hillsborough County Florida PSAP IDs 1676 1671 1668 8425 1571 1533 1669 1631 8426 7915",
+          "Alachua County Florida PSAP IDs 1442 1443",
+          "Bradford County Florida PSAP ID 1460",
+          "John Stewart",
+          "Hendry County EOC (Labelle) - Port Labelle SO PSAP #1",
+          "Bojan Jovanovic",
+          "Bob Finney III",
+          "Union County Florida PSAP ID 1674",
+          "Wakulla County Florida PSAP ID 1680",
+          "Rebecca Bryan",
+          "Santa Rosa County Emergency Comm. Center",
+          "Highlands County Florida PSAP ID 1531",
+          "Lafayette County Florida PSAP ID 1552",
+          "Gilchrist County Florida PSAP ID 1516",
+          "Putnam County Florida PSAP ID 1640",
+          "Liberty County Florida PSAP ID 1569",
+          "St. Johns County Florida PSAP ID 1661",
+          "Polk County Florida PSAP IDs 8172 1562 1453 1554 1633 1634",
+          "Dixie County Florida PSAP ID 1496",
+          "Columbia County Florida PSAP ID 1486",
+          "Leon County Consolidated Dispatch Agency",
+          "Pasco County Florida PSAP IDs 1626 7940 8327",
+          "Gulf County Florida PSAP IDs 8822 1521",
+          "Hendry County EOC (Clewiston) - Clewiston PD PSAP #2"
         ],
         "phases": [
           "Phase 1",
           "See PDF"
         ],
         "psap_ids": [
-          "7545",
-          "7571",
+          "1552",
+          "1516",
+          "1486",
+          "1661",
+          "8841",
+          "1533",
+          "1594",
+          "1572",
+          "1442",
+          "8341",
+          "8172",
+          "1481",
+          "8822",
+          "1524",
+          "1545",
+          "1666",
+          "7923",
+          "1468",
+          "1646",
+          "1569",
+          "1640",
+          "1527",
+          "1680",
+          "1460",
+          "1593",
+          "1531",
+          "1681",
+          "1506",
+          "1537",
+          "1528",
+          "1674",
+          "1626",
+          "1667",
+          "1496",
+          "1670",
+          "1451"
+        ]
+      },
+      "NM": {
+        "count": 1,
+        "latest_date": "2026-05-07T19:08:14.362Z",
+        "filers": [
+          "Stephen Weinkauf"
+        ],
+        "phases": [
+          "Phase 1"
+        ],
+        "psap_ids": [
+          "4895"
+        ]
+      },
+      "WV": {
+        "count": 13,
+        "latest_date": "2026-05-07T18:35:01.691Z",
+        "filers": [
+          "Boone County Emergency Management Agency",
+          "Niki Sears",
+          "Barbour County Office of Emergency Management 911",
+          "Allen Holder",
+          "Upshur County 911",
+          "Mason County 911",
+          "Lincoln County 9-1-1",
+          "Logan County Emergency Operations Center"
+        ],
+        "phases": [
+          "Phase 1",
+          "See PDF"
+        ],
+        "psap_ids": [
           "7565",
+          "7545",
           "7599",
           "7566",
-          "7543"
+          "7543",
+          "7571"
         ]
       },
       "UT": {
@@ -105,114 +204,30 @@
           "7017"
         ]
       },
-      "FL": {
-        "count": 38,
-        "latest_date": "2026-05-06T16:32:53.199Z",
-        "filers": [
-          "Polk County Florida PSAP IDs 8172 1562 1453 1554 1633 1634",
-          "Niki Sears",
-          "Gulf County Florida PSAP IDs 8822 1521",
-          "Holmes County Florida PSAP ID 1537",
-          "Duval County Florida PSAP IDs 1446 1543 1544 1545 1595 8689",
-          "Columbia County Florida PSAP ID 1486",
-          "Dixie County Florida PSAP ID 1496",
-          "Hendry County EOC (Clewiston) - Clewiston PD PSAP #2",
-          "Putnam County Florida PSAP ID 1640",
-          "Lafayette County Florida PSAP ID 1552",
-          "Hernando County Sheriffs Department",
-          "Union County Florida PSAP ID 1674",
-          "Bradford County Florida PSAP ID 1460",
-          "Nassau County Florida PSAP ID 1594",
-          "St. Johns County Florida PSAP ID 1661",
-          "Madison County Florida PSAP ID 1572",
-          "Santa Rosa County Emergency Comm. Center",
-          "Highlands County Florida PSAP ID 1531",
-          "Pasco County Florida PSAP IDs 1626 7940 8327",
-          "John Stewart",
-          "Manatee County Public Safety Department",
-          "Hendry County EOC (Labelle) - Port Labelle SO PSAP #1",
-          "Wakulla County Florida PSAP ID 1680",
-          "Bojan Jovanovic",
-          "Baker County Florida PSAP ID 1451",
-          "Flagler County Florida PSAP IDS 1506 1623",
-          "Liberty County Florida PSAP ID 1569",
-          "Suwannee County Florida PSAP ID 1666",
-          "Rebecca Bryan",
-          "Calhoun County Sheriffs Office",
-          "Taylor County Florida PSAP ID 1670",
-          "Christine Cooper",
-          "Gilchrist County Florida PSAP ID 1516",
-          "Hamilton County Florida PSAP ID 1524",
-          "Alachua County Florida PSAP IDs 1442 1443",
-          "Leon County Consolidated Dispatch Agency",
-          "Hillsborough County Florida PSAP IDs 1676 1671 1668 8425 1571 1533 1669 1631 8426 7915"
-        ],
-        "phases": [
-          "Phase 1",
-          "See PDF"
-        ],
-        "psap_ids": [
-          "1594",
-          "1527",
-          "1640",
-          "1661",
-          "8341",
-          "1481",
-          "1552",
-          "1646",
-          "1667",
-          "8822",
-          "1666",
-          "1531",
-          "1545",
-          "1506",
-          "1572",
-          "1537",
-          "8841",
-          "1670",
-          "1681",
-          "1533",
-          "1680",
-          "1674",
-          "8172",
-          "1528",
-          "1626",
-          "1442",
-          "1451",
-          "1569",
-          "1486",
-          "7923",
-          "1516",
-          "1460",
-          "1524",
-          "1496",
-          "1468"
-        ]
-      },
       "SC": {
         "count": 9,
         "latest_date": "2026-05-01T11:24:54.509Z",
         "filers": [
-          "Beaufort County South Carolina PSAP IDs 6026 6067",
           "Charleston County Consolidated Emergency Communications Center South Carolina PSAP ID 6033",
-          "South Carolina Revenue and Fiscal Affairs",
           "Horry County South Carolina PSAP IDs 6068 8675 8674 8423",
-          "Summerville Police and Fire (Dorchester County) South Carolina PSAP ID 6099",
-          "City of Goose Creek (in Berkeley County) South Carolina PSAP ID 6059",
           "Berkeley County South Carolina PSAP ID 6028",
-          "South Carolina Revenue and Fiscal Affairs Office"
+          "City of Goose Creek (in Berkeley County) South Carolina PSAP ID 6059",
+          "South Carolina Revenue and Fiscal Affairs Office",
+          "South Carolina Revenue and Fiscal Affairs",
+          "Summerville Police and Fire (Dorchester County) South Carolina PSAP ID 6099",
+          "Beaufort County South Carolina PSAP IDs 6026 6067"
         ],
         "phases": [
           "Phase 1",
           "See PDF"
         ],
         "psap_ids": [
-          "6028",
+          "6033",
+          "6068",
           "6099",
           "6059",
-          "6026",
-          "6068",
-          "6033"
+          "6028",
+          "6026"
         ]
       },
       "NV": {
@@ -221,8 +236,8 @@
         "filers": [
           "West Wendover Dispatch Center",
           "North Las Vegas Police Department",
-          "Las Vegas Metropolitan Police Department",
-          "Elko County Regional Communications Center"
+          "Elko County Regional Communications Center",
+          "Las Vegas Metropolitan Police Department"
         ],
         "phases": [
           "Phase 1",
@@ -231,8 +246,8 @@
         "psap_ids": [
           "8471",
           "5008",
-          "5016",
-          "4994"
+          "4994",
+          "5016"
         ]
       },
       "ID": {
@@ -252,10 +267,10 @@
         "count": 4,
         "latest_date": "2026-04-28T15:35:36.369Z",
         "filers": [
+          "Covington County EMA",
           "HUMPHREYS COUNTY SHERIFF DEPARTMENT",
-          "Panola County 911 Daniel Cole",
           "Smith County Emergency Management",
-          "Covington County EMA"
+          "Panola County 911 Daniel Cole"
         ],
         "phases": [
           "Phase 1"
@@ -263,119 +278,119 @@
         "psap_ids": [
           "4068",
           "4019",
-          "4090",
-          "3994"
+          "3994",
+          "4090"
         ]
       },
       "TX": {
         "count": 54,
         "latest_date": "2026-04-24T21:43:19.411Z",
         "filers": [
-          "Lt. Gary Cummings (Garland PD)",
-          "Texas Eastern 9-1-1 Network",
-          "Richard G Green",
-          "Bexar Metro 911 Network",
-          "Central Texas Emergency Communications District",
-          "Rhonda Haydel",
-          "Robert J Rothe",
-          "City of Laredo on behalf of South Texas Development Council",
-          "Dallas County Sheriff's Office",
-          "Galveston County Emergency Communication District",
-          "South East Texas Regional Planning Commission",
-          "Mark Brown",
-          "Lubbock Emergency Communication District",
-          "Crystal Coorough",
-          "McLennan County 9-1-1 Emergency Assistance District",
-          "City of Denison Police Department",
-          "Brazos County Emergency Communications District",
-          "Greater Harris County 9-1-1 Emergency Network",
-          "City of Plano",
-          "NCT 9-1-1",
-          "City of DeSoto",
-          "Emergency Communication District of Ector County",
-          "City of Kilgore",
-          "Deep East Texas Council of Governments",
-          "Capital Area Emergency Communications District",
-          "Kim Ward",
-          "City of Sherman TX Police Department",
-          "City of Dallas Communications Office",
-          "Shawnda Brandon",
-          "East Texas Council of Governments",
-          "Town of Highland Park, TX",
-          "Heart of Texas Council of Governments",
-          "Smith County 911 Emergency Communications District",
-          "TARRANT COUNTY 9-1-1 EMERGENCY ASSISTANCE DISTRICT",
-          "Midland Emergency Communications District",
-          "Kerr Emergency 9-1-1 Network",
-          "Wichita Wilbarger 9-1-1 District",
-          "Tamara Bell; Elias Jalkh",
-          "Scott Calderwood",
-          "Rio Grande Valley Emergency Communication District",
-          "Alicia Atkinson",
-          "Bexar Metro 9-1-1 Network",
-          "North Texas Emergency Communications Center",
           "West Central Texas Council of Governments",
+          "North Texas Emergency Communications Center",
+          "McLennan County 9-1-1 Emergency Assistance District",
+          "WIlliam (Bill) V Morales",
           "Montgomery County Emergency Communications District - TX",
-          "WIlliam (Bill) V Morales"
+          "Texas Eastern 9-1-1 Network",
+          "East Texas Council of Governments",
+          "Deep East Texas Council of Governments",
+          "Tamara Bell; Elias Jalkh",
+          "Dallas County Sheriff's Office",
+          "Bexar Metro 911 Network",
+          "Town of Highland Park, TX",
+          "Central Texas Emergency Communications District",
+          "Alicia Atkinson",
+          "Greater Harris County 9-1-1 Emergency Network",
+          "Bexar Metro 9-1-1 Network",
+          "Wichita Wilbarger 9-1-1 District",
+          "City of Plano",
+          "Heart of Texas Council of Governments",
+          "Capital Area Emergency Communications District",
+          "Rio Grande Valley Emergency Communication District",
+          "City of Sherman TX Police Department",
+          "Richard G Green",
+          "Brazos County Emergency Communications District",
+          "Rhonda Haydel",
+          "Crystal Coorough",
+          "City of Kilgore",
+          "City of Denison Police Department",
+          "Mark Brown",
+          "Lt. Gary Cummings (Garland PD)",
+          "Galveston County Emergency Communication District",
+          "Lubbock Emergency Communication District",
+          "City of Dallas Communications Office",
+          "Robert J Rothe",
+          "TARRANT COUNTY 9-1-1 EMERGENCY ASSISTANCE DISTRICT",
+          "NCT 9-1-1",
+          "Kerr Emergency 9-1-1 Network",
+          "Emergency Communication District of Ector County",
+          "Shawnda Brandon",
+          "Smith County 911 Emergency Communications District",
+          "City of Laredo on behalf of South Texas Development Council",
+          "Kim Ward",
+          "South East Texas Regional Planning Commission",
+          "City of DeSoto",
+          "Midland Emergency Communications District",
+          "Scott Calderwood"
         ],
         "phases": [
           "Phase 1",
-          "Phase 1 & 2",
-          "See PDF"
+          "See PDF",
+          "Phase 1 & 2"
         ],
         "psap_ids": [
-          "6902",
-          "6432",
-          "6410",
-          "6536",
           "6852",
-          "6696",
-          "2126",
-          "7001",
-          "6426",
-          "6450",
-          "6394",
-          "2110",
-          "6766",
-          "6524",
-          "6527",
-          "6746",
-          "6833",
           "35EGNC910821",
+          "6450",
+          "6524",
+          "6410",
           "6505",
-          "6644",
-          "8435",
-          "6417",
-          "8478",
-          "6554",
-          "6918",
-          "6774",
-          "6603",
-          "6601",
+          "6536",
+          "6696",
           "6695",
+          "6426",
           "6413",
-          "6556",
+          "6918",
+          "6746",
+          "6554",
+          "6527",
+          "6766",
           "6647",
-          "6561"
+          "6432",
+          "6833",
+          "6774",
+          "6556",
+          "2126",
+          "6902",
+          "6644",
+          "6603",
+          "6561",
+          "6394",
+          "7001",
+          "8478",
+          "6417",
+          "6601",
+          "8435",
+          "2110"
         ]
       },
       "GA": {
         "count": 5,
         "latest_date": "2026-04-24T14:11:38.015Z",
         "filers": [
-          "Bojan Jovanovic",
-          "Tift County E-911",
-          "Toombs County Georgia PSAP ID 1862",
           "Irwin County 911",
-          "Decatur Grady Counties Georgia PSAP ID 1744"
+          "Toombs County Georgia PSAP ID 1862",
+          "Tift County E-911",
+          "Decatur Grady Counties Georgia PSAP ID 1744",
+          "Bojan Jovanovic"
         ],
         "phases": [
           "Phase 1"
         ],
         "psap_ids": [
-          "1786",
           "1860",
           "1744",
+          "1786",
           "1862"
         ]
       },
@@ -383,100 +398,100 @@
         "count": 42,
         "latest_date": "2026-04-15T23:09:02.219Z",
         "filers": [
-          "Pike County Missouri PSAP ID 8641",
-          "Reynolds County Missouri PSAP ID 3909",
-          "Clark County Missouri PSAP ID 3782",
-          "Madison County Missouri PSAP ID 3854",
-          "Barton County Missouri PSAP ID 3748",
-          "Scotland County Missouri PSAP ID 3919",
-          "Crawford County Missouri PSAP ID 3789",
-          "Howell County Missouri PSAP ID 3824",
-          "Shannon County Missouri PSAP ID 3924",
-          "Doniphan PD Ripley County, Missouri PSAP ID 3798",
-          "Ozark County Missouri PSAP ID 8409",
-          "Cedar County Missouri PSAP ID 3773",
-          "Polk County Missouri PSAP ID 3900",
-          "Howard County Missouri PSAP ID 3823",
-          "Atchison County Missouri PSAP ID 3742",
-          "Grundy County Missouri PSAP ID 3950",
-          "Wayne County Missouri PSAP ID 3958",
-          "Bollinger County Missouri PSAP ID 3755",
-          "Schuyler County Missouri PSAP ID 3918",
-          "St Francois County Communications Center (Perry, Iron, St. Francois & Ste. Genevieve) - Missouri PSAP IDs 3935 8271 3805 3939 3893",
-          "NECOMM (Marion, Lewis, Ralls) Missouri PSAP IDs 3857 3858",
-          "Wright County Missouri PSAP ID 8526",
-          "Chillicothe Police Department (Livingston County) Missouri PSAP ID 3780",
-          "Maryville Public Safety Missouri PSAP ID 3860",
-          "Webster County Missouri PSAP ID 3960",
-          "Benton County Missouri PSAP ID 8111",
-          "Macon County E911 Missouri PSAP ID 3853",
-          "Harrison & Mercer Counties Missouri PSAP IDs 3815 3862",
-          "St Clair County Missouri PSAP ID 3934",
-          "Chariton County Missouri PSAP ID 3778",
           "Shelby County Missouri PSAP ID 3925",
-          "Texas County Missouri PSAP ID 3965",
-          "Hickory County Missouri PSAP ID 3819",
-          "Salem Police Department (Dent County) Missouri PSAP ID 3916",
-          "Adair County Missouri PSAP ID 3837",
+          "Clark County Missouri PSAP ID 3782",
+          "St Francois County Communications Center (Perry, Iron, St. Francois & Ste. Genevieve) - Missouri PSAP IDs 3935 8271 3805 3939 3893",
+          "Reynolds County Missouri PSAP ID 3909",
           "Dent County Missouri PSAP ID 8705",
+          "St Clair County Missouri PSAP ID 3934",
+          "Webster County Missouri PSAP ID 3960",
+          "Cedar County Missouri PSAP ID 3773",
+          "Chariton County Missouri PSAP ID 3778",
+          "Macon County E911 Missouri PSAP ID 3853",
+          "Chillicothe Police Department (Livingston County) Missouri PSAP ID 3780",
+          "Benton County Missouri PSAP ID 8111",
+          "Crawford County Missouri PSAP ID 3789",
+          "Howard County Missouri PSAP ID 3823",
+          "NECOMM (Marion, Lewis, Ralls) Missouri PSAP IDs 3857 3858",
+          "Salem Police Department (Dent County) Missouri PSAP ID 3916",
+          "Grundy County Missouri PSAP ID 3950",
+          "Shannon County Missouri PSAP ID 3924",
+          "Madison County Missouri PSAP ID 3854",
+          "Bollinger County Missouri PSAP ID 3755",
           "ACCD 911 District (Andrew Caldwell Clinton DeKalb) Missouri PSAP IDs 3741 3766 3785 3795",
+          "Doniphan PD Ripley County, Missouri PSAP ID 3798",
+          "Wright County Missouri PSAP ID 8526",
+          "Pike County Missouri PSAP ID 8641",
+          "Sullivan County Missouri PSAP ID 3944",
+          "Atchison County Missouri PSAP ID 3742",
+          "Scotland County Missouri PSAP ID 3919",
           "Henry County Missouri PSAP ID 3818",
-          "Sullivan County Missouri PSAP ID 3944"
+          "Texas County Missouri PSAP ID 3965",
+          "Howell County Missouri PSAP ID 3824",
+          "Harrison & Mercer Counties Missouri PSAP IDs 3815 3862",
+          "Hickory County Missouri PSAP ID 3819",
+          "Maryville Public Safety Missouri PSAP ID 3860",
+          "Adair County Missouri PSAP ID 3837",
+          "Polk County Missouri PSAP ID 3900",
+          "Ozark County Missouri PSAP ID 8409",
+          "Barton County Missouri PSAP ID 3748",
+          "Schuyler County Missouri PSAP ID 3918",
+          "Wayne County Missouri PSAP ID 3958"
         ],
         "phases": [
           "Phase 1",
           "See PDF"
         ],
         "psap_ids": [
-          "3935",
-          "3909",
-          "3958",
-          "8641",
-          "3782",
-          "3755",
-          "3950",
-          "8111",
-          "3960",
-          "3965",
-          "3925",
-          "3944",
-          "3823",
-          "3854",
-          "3860",
-          "3815",
-          "3798",
-          "3789",
-          "3824",
-          "3818",
-          "3819",
-          "3780",
-          "3934",
-          "3857",
-          "3742",
-          "3900",
-          "8705",
           "8526",
-          "3773",
-          "3916",
-          "3748",
-          "3837",
-          "3924",
-          "8409",
+          "3818",
+          "3857",
+          "3798",
+          "3854",
+          "3815",
+          "3824",
+          "3742",
+          "8111",
           "3918",
-          "3919",
-          "3853",
+          "3748",
+          "3819",
           "3795",
-          "3778"
+          "3925",
+          "3934",
+          "3780",
+          "3916",
+          "3778",
+          "3965",
+          "3958",
+          "3950",
+          "3924",
+          "3837",
+          "8705",
+          "3782",
+          "3960",
+          "8409",
+          "3853",
+          "3823",
+          "3944",
+          "3909",
+          "8641",
+          "3919",
+          "3900",
+          "3789",
+          "3773",
+          "3860",
+          "3935",
+          "3755"
         ]
       },
       "LA": {
         "count": 7,
         "latest_date": "2026-04-14T16:02:43.758Z",
         "filers": [
-          "Pointe Coupee E911 La",
           "Assumption Parish",
           "Mark Jack",
-          "Livingston Parish Sheriff's Office"
+          "Livingston Parish Sheriff's Office",
+          "Pointe Coupee E911 La"
         ],
         "phases": [
           "Phase 1",
@@ -484,8 +499,8 @@
         ],
         "psap_ids": [
           "3047",
-          "3110",
-          "8099"
+          "8099",
+          "3110"
         ]
       },
       "AZ": {
@@ -504,26 +519,26 @@
         "latest_date": "2026-04-10T15:31:28.527Z",
         "filers": [
           "Ohio Department of Administrative Services 9-1-1 Program Office",
-          "Ohio Department of Administrative Services 9-1-1 Program Office (\u201cOhio 911 Program Office\u201d)",
-          "Molly Falls on behalf of Patrick Brandt (Ohio)"
+          "Molly Falls on behalf of Patrick Brandt (Ohio)",
+          "Ohio Department of Administrative Services 9-1-1 Program Office (\u201cOhio 911 Program Office\u201d)"
         ],
         "phases": [
           "Phase 1",
           "See PDF"
         ],
         "psap_ids": [
-          "5358",
+          "5395",
           "5261",
-          "5395"
+          "5358"
         ]
       },
       "OK": {
         "count": 3,
         "latest_date": "2026-03-24T20:08:04.889Z",
         "filers": [
+          "Jefferson County Sheriff's Office",
           "Ottawa County 911",
-          "Wayne Barnett",
-          "Jefferson County Sheriff's Office"
+          "Wayne Barnett"
         ],
         "phases": [
           "Phase 1",
@@ -590,8 +605,8 @@
         "count": 3,
         "latest_date": "2025-10-14T13:25:29.517Z",
         "filers": [
-          "Massachusetts State 911 Department",
-          "State of Massachusetts 911 Department"
+          "State of Massachusetts 911 Department",
+          "Massachusetts State 911 Department"
         ],
         "phases": [
           "Phase 2",
@@ -617,8 +632,8 @@
         "count": 2,
         "latest_date": "2025-07-15T17:46:47.169Z",
         "filers": [
-          "State of Michigan, State 911 Committee",
-          "Peninsula Fiber Network, LLC"
+          "Peninsula Fiber Network, LLC",
+          "State of Michigan, State 911 Committee"
         ],
         "phases": [
           "See PDF"
@@ -689,6 +704,414 @@
     }
   },
   "filings": [
+    {
+      "filing_id": "10508066430873",
+      "filer_names": [
+        "Bob Finney III",
+        "Collier County Sheriff's Office"
+      ],
+      "filer_primary": "Bob Finney III",
+      "filer_state": "FL",
+      "date_submitted": "2026-05-08T17:23:14.911Z",
+      "date_received": "2026-05-08T17:23:14.911Z",
+      "date_disseminated": "2026-05-08T21:00:33.029Z",
+      "filing_type": "REQUEST",
+      "filing_status": "DISSEMINATED",
+      "document_urls": [
+        "https://www.fcc.gov/ecfs/document/10508066430873/1"
+      ],
+      "document_filenames": [
+        "Collier Co FL-FCC Phase 1 Request.docx"
+      ],
+      "document_count": 1,
+      "phase_requested": "Phase 1",
+      "psap_id_extracted": "1593",
+      "authority_name": "COLLIER COUNTY SHERIFF\u2019S OFFICE",
+      "filer_display": "COLLIER COUNTY SHERIFF\u2019S OFFICE",
+      "poc_agency": "Motorola Solutions Connectivity Inc",
+      "psap_table": [
+        {
+          "psap_id": "1593",
+          "psap_name": "Naples Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "1485",
+          "psap_name": "Collier County Sheriff\u2019s Office Emergency Communications Center",
+          "phase": "1"
+        }
+      ],
+      "psap_ids_from_pdf": [
+        "1593",
+        "1485"
+      ]
+    },
+    {
+      "filing_id": "10507999423017",
+      "filer_names": [
+        "Stephen Weinkauf"
+      ],
+      "filer_primary": "Stephen Weinkauf",
+      "filer_state": "NM",
+      "date_submitted": "2026-05-07T19:08:14.362Z",
+      "date_received": "2026-05-07T19:08:14.363Z",
+      "date_disseminated": "2026-05-08T15:00:32.689Z",
+      "filing_type": "REQUEST",
+      "filing_status": "DISSEMINATED",
+      "document_urls": [
+        "https://www.fcc.gov/ecfs/document/10507999423017/1"
+      ],
+      "document_filenames": [
+        "911-Authority-NG911-Valid-Request- State of New Mexico.docx"
+      ],
+      "document_count": 1,
+      "phase_requested": "Phase 1",
+      "psap_id_extracted": "4895",
+      "phase_source": "PDF extraction",
+      "authority_name": "STATE OF NEW MEXICO 911 PROGRAM",
+      "filer_display": "STATE OF NEW MEXICO 911 PROGRAM",
+      "poc_agency": "Motorola Solutions Connectivity Inc",
+      "psap_table": [
+        {
+          "psap_id": "4895",
+          "psap_name": "Albuquerque Fire Department Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4896",
+          "psap_name": "Albuquerque Police Department Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4900",
+          "psap_name": "Bernalillo Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4903",
+          "psap_name": "Cannon Air Force Base Fire Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4904",
+          "psap_name": "Carlsbad Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4905",
+          "psap_name": "Catron County Sheriffs Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "8727",
+          "psap_name": "Cibola Regional Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4952",
+          "psap_name": "City of Rio Rancho Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4908",
+          "psap_name": "Clayton Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4909",
+          "psap_name": "Clovis Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4911",
+          "psap_name": "Debaca County Regional Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4913",
+          "psap_name": "Espanola-rio Arriba 9-1-1 Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4915",
+          "psap_name": "Grant County Regional Dispatch",
+          "phase": "1"
+        },
+        {
+          "psap_id": "8184",
+          "psap_name": "Guadalupe County Emergency Communications",
+          "phase": "1"
+        },
+        {
+          "psap_id": "6645",
+          "psap_name": "Hidalgo County Sheriffs Office",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4920",
+          "psap_name": "Holloman Air Force Base Police",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4921",
+          "psap_name": "Isleta Pueblo Tribal Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4923",
+          "psap_name": "Jicarilla Apache Nation Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4924",
+          "psap_name": "Kirtland Afb Fire Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4925",
+          "psap_name": "Kirtland Afb Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4926",
+          "psap_name": "Las Vegas City Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "8313",
+          "psap_name": "Lea County Communication Authority",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4928",
+          "psap_name": "Lincoln County Sheriff's Office",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4929",
+          "psap_name": "Los Alamos County Communications",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4931",
+          "psap_name": "Los Lunas Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4933",
+          "psap_name": "Luna County Central Dispatch",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4935",
+          "psap_name": "Mckinley Metro Dispatch",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4936",
+          "psap_name": "Mescalero Apache Tribal Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4937",
+          "psap_name": "Mesilla Valley Regional Dispatch Authority",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4939",
+          "psap_name": "Mora County Sheriff",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4941",
+          "psap_name": "Navajo Nation East Regional Communication Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4974",
+          "psap_name": "New Mexico State Police - District 2 (Las Vegas)",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4973",
+          "psap_name": "New Mexico State Police - District 4 (Las Cruces)",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4970",
+          "psap_name": "New Mexico State Police - District 5 (Albuquerque)",
+          "phase": "1"
+        },
+        {
+          "psap_id": "8422",
+          "psap_name": "New Mexico State University Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4942",
+          "psap_name": "Otero County Sheriffs Office",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4906",
+          "psap_name": "Pecos Valley Regional Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4945",
+          "psap_name": "Portales Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4946",
+          "psap_name": "Pueblo Of Laguna Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4947",
+          "psap_name": "Quay County Regional Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4950",
+          "psap_name": "Raton Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4951",
+          "psap_name": "Red River Marshals Office",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4912",
+          "psap_name": "Regional Emergency Dispatch Authority",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4955",
+          "psap_name": "Ruidoso Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4956",
+          "psap_name": "San Juan County Communications Authority",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4960",
+          "psap_name": "Sandoval County Regional Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4965",
+          "psap_name": "Santa Fe Regional Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4967",
+          "psap_name": "Sierra County Regional Dispatch Authority",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4969",
+          "psap_name": "Socorro Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4980",
+          "psap_name": "Taos Central Communications",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4985",
+          "psap_name": "Torrance County 9-1-1",
+          "phase": "1"
+        },
+        {
+          "psap_id": "8830",
+          "psap_name": "Tularosa Basin Regional Dispatch Authority",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4987",
+          "psap_name": "University of New Mexico Police Department",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4988",
+          "psap_name": "Valencia County E-911 Regional Emergency Communications Center",
+          "phase": "1"
+        },
+        {
+          "psap_id": "8750",
+          "psap_name": "White Sands Missile Range",
+          "phase": "1"
+        },
+        {
+          "psap_id": "4989",
+          "psap_name": "Zuni Tribal Police Department",
+          "phase": "1"
+        }
+      ],
+      "psap_ids_from_pdf": [
+        "4960",
+        "8422",
+        "4973",
+        "4947",
+        "4895",
+        "4925",
+        "4950",
+        "4942",
+        "4896",
+        "4900",
+        "4970",
+        "4911",
+        "4956",
+        "4946",
+        "4985",
+        "4936",
+        "4921",
+        "4915",
+        "4951",
+        "4952",
+        "4928",
+        "4989",
+        "4965",
+        "4980",
+        "4974",
+        "4923",
+        "4908",
+        "4988",
+        "8184",
+        "4913",
+        "4909",
+        "4903",
+        "8727",
+        "4926",
+        "4945",
+        "4905",
+        "4937",
+        "8313",
+        "4939",
+        "4969",
+        "4931",
+        "4967",
+        "4933",
+        "4920",
+        "4935",
+        "4912",
+        "4929",
+        "4904",
+        "6645",
+        "4941",
+        "8750",
+        "8830",
+        "4955",
+        "4987",
+        "4906",
+        "4924"
+      ]
+    },
     {
       "filing_id": "10507152196607",
       "filer_names": [
@@ -914,38 +1337,38 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "7064",
-        "7023",
-        "7057",
-        "7063",
-        "7018",
-        "7040",
-        "7072",
-        "7049",
-        "7066",
-        "7048",
+        "7069",
         "7067",
         "7062",
-        "7069",
-        "7041",
-        "7028",
-        "7034",
-        "7019",
-        "7042",
+        "8559",
+        "7023",
+        "7046",
+        "7072",
         "7017",
-        "7031",
+        "7057",
+        "7033",
+        "7041",
         "7052",
+        "7049",
+        "7031",
+        "7070",
+        "8664",
+        "7040",
+        "7063",
         "7061",
         "7038",
-        "7046",
-        "7070",
         "7074",
+        "7034",
+        "7066",
+        "7051",
+        "7064",
+        "7028",
+        "7018",
         "7065",
+        "7019",
         "7047",
-        "7033",
-        "8559",
-        "8664",
-        "7051"
+        "7042",
+        "7048"
       ]
     },
     {
@@ -1261,16 +1684,16 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "7936",
-        "7932",
         "7933",
-        "7928",
-        "1603",
-        "7935",
-        "7930",
         "7931",
         "8341",
-        "7929"
+        "7936",
+        "1603",
+        "7935",
+        "7928",
+        "7929",
+        "7930",
+        "7932"
       ]
     },
     {
@@ -1876,117 +2299,117 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "2135",
-        "2289",
-        "2231",
-        "2426",
-        "2480",
-        "2441",
-        "2376",
-        "2387",
-        "2338",
-        "8936",
-        "2464",
-        "2235",
         "2334",
-        "2110",
-        "8543",
-        "2295",
-        "2365",
-        "2388",
+        "2209",
+        "2285",
+        "2154",
+        "2276",
         "2425",
-        "2331",
-        "2304",
-        "2143",
-        "8893",
-        "2357",
-        "2245",
         "8547",
+        "2331",
+        "2145",
+        "2426",
         "8732",
-        "2286",
-        "2230",
+        "2421",
+        "8927",
+        "2207",
+        "2239",
+        "2288",
+        "2368",
+        "2135",
+        "8894",
+        "2174",
+        "2388",
+        "2287",
+        "2468",
+        "2437",
+        "2338",
+        "2432",
+        "2457",
+        "2177",
         "2455",
-        "2185",
+        "8158",
+        "2175",
+        "2196",
+        "2323",
+        "2371",
+        "2182",
+        "2144",
+        "2122",
+        "2151",
+        "2499",
+        "2304",
+        "2200",
+        "2224",
+        "2289",
+        "2299",
+        "2244",
+        "2150",
+        "8543",
+        "2387",
+        "2342",
+        "2300",
+        "2195",
+        "2325",
+        "2376",
+        "2210",
+        "2181",
+        "2143",
+        "2370",
+        "2484",
+        "2235",
+        "2498",
+        "2330",
+        "2257",
+        "2365",
+        "2286",
+        "8018",
+        "2353",
+        "2113",
+        "2441",
+        "2231",
+        "2480",
+        "2197",
+        "2230",
+        "2214",
+        "2295",
+        "2467",
+        "2117",
+        "2482",
         "2106",
+        "2222",
+        "2245",
+        "8893",
+        "2218",
+        "2115",
+        "2462",
+        "2399",
+        "2185",
+        "2398",
+        "2389",
+        "2310",
+        "2377",
+        "2363",
+        "2326",
+        "8936",
+        "2383",
+        "2357",
+        "2469",
+        "2211",
+        "2262",
+        "2418",
+        "2252",
+        "2464",
+        "2253",
+        "2367",
+        "2180",
+        "2153",
+        "2317",
         "2258",
         "8456",
-        "2370",
-        "2421",
-        "2325",
-        "2182",
-        "2300",
-        "2482",
-        "2122",
-        "2389",
-        "8894",
-        "2200",
-        "2499",
-        "8018",
-        "2239",
-        "2326",
-        "2276",
-        "2153",
-        "2197",
-        "2398",
-        "2210",
-        "2211",
-        "2196",
-        "2222",
-        "2115",
-        "2287",
-        "2174",
-        "2377",
         "8300",
-        "2180",
-        "2437",
-        "2288",
-        "2467",
-        "8927",
-        "2457",
-        "2383",
-        "2113",
-        "2399",
-        "2368",
-        "2244",
-        "2252",
-        "2154",
-        "2214",
-        "2498",
-        "2469",
-        "2257",
-        "2311",
-        "2151",
-        "2150",
-        "2195",
-        "2363",
-        "2117",
-        "2371",
-        "2317",
-        "2262",
-        "2285",
-        "2468",
-        "2353",
-        "2323",
-        "2299",
-        "2224",
-        "2330",
-        "2418",
-        "2177",
-        "2209",
-        "2207",
-        "2462",
-        "2484",
-        "2367",
-        "2432",
-        "2145",
-        "2181",
-        "8158",
-        "2218",
-        "2342",
-        "2310",
-        "2144",
-        "2175",
-        "2253"
+        "2110",
+        "2311"
       ]
     },
     {
@@ -2133,8 +2556,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3780",
+        "64106",
         "46225"
       ]
     },
@@ -2182,8 +2605,8 @@
       ],
       "psap_ids_from_pdf": [
         "64106",
-        "46225",
-        "3755"
+        "3755",
+        "46225"
       ]
     },
     {
@@ -2378,9 +2801,9 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "5261",
+        "5369",
         "8149",
-        "5369"
+        "5261"
       ]
     },
     {
@@ -2426,9 +2849,9 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "3778",
         "64106",
-        "46225",
-        "3778"
+        "46225"
       ]
     },
     {
@@ -3057,43 +3480,43 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6662",
-        "7963",
-        "6854",
-        "8339",
-        "6633",
-        "6672",
-        "6919",
-        "6600",
-        "6917",
-        "6708",
-        "6780",
-        "6426",
-        "6912",
-        "6592",
-        "6723",
         "6533",
-        "8618",
-        "6825",
-        "6870",
-        "6639",
-        "6972",
-        "6434",
-        "6921",
-        "6928",
-        "6588",
-        "6985",
-        "8047",
-        "6894",
-        "6679",
-        "6687",
-        "8687",
-        "6989",
-        "8686",
-        "6657",
         "6948",
+        "8686",
+        "6426",
+        "6672",
+        "6854",
+        "6434",
+        "6639",
+        "8685",
+        "7963",
+        "6588",
+        "6708",
+        "6825",
+        "6928",
+        "6657",
+        "6870",
+        "6633",
+        "6600",
+        "6780",
+        "6894",
+        "6592",
+        "8687",
+        "8047",
+        "6723",
+        "6912",
+        "6919",
+        "6687",
+        "6917",
+        "6921",
+        "6989",
+        "6972",
+        "6679",
+        "6985",
         "6823",
-        "8685"
+        "8339",
+        "8618",
+        "6662"
       ]
     },
     {
@@ -3146,8 +3569,8 @@
       "psap_ids_from_pdf": [
         "64106",
         "8641",
-        "3031",
-        "46225"
+        "46225",
+        "3031"
       ]
     },
     {
@@ -3265,8 +3688,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1680",
+        "33881",
         "46225"
       ]
     },
@@ -3457,8 +3880,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1537",
+        "33881",
         "46225"
       ]
     },
@@ -3589,8 +4012,8 @@
       ],
       "psap_ids_from_pdf": [
         "64106",
-        "46225",
-        "3823"
+        "3823",
+        "46225"
       ]
     },
     {
@@ -3720,8 +4143,8 @@
       ],
       "psap_ids_from_pdf": [
         "5395",
-        "5380",
-        "5242"
+        "5242",
+        "5380"
       ],
       "statewide_state": "OH"
     },
@@ -4576,16 +4999,16 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "7975",
-        "6762",
-        "6974",
-        "6644",
         "8586",
         "8613",
-        "7974",
-        "7011",
+        "6644",
         "6863",
-        "8615"
+        "7011",
+        "8615",
+        "6762",
+        "7974",
+        "6974",
+        "7975"
       ]
     },
     {
@@ -4680,19 +5103,19 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6432",
-        "6888",
-        "6865",
         "6776",
+        "6865",
+        "6888",
+        "6627",
         "6717",
-        "8587",
+        "6508",
         "6605",
         "8467",
-        "6627",
-        "6471",
         "6697",
-        "6508",
-        "6718"
+        "6718",
+        "6432",
+        "6471",
+        "8587"
       ]
     },
     {
@@ -4890,30 +5313,30 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6935",
-        "6573",
-        "6665",
-        "6410",
-        "6751",
-        "6429",
-        "6857",
-        "6802",
-        "6613",
-        "6997",
-        "6437",
-        "6530",
-        "6419",
         "6991",
-        "6615",
-        "6691",
-        "6670",
-        "6528",
-        "6713",
-        "6597",
-        "6465",
-        "6574",
+        "6530",
+        "6410",
+        "6573",
         "6819",
-        "6519"
+        "6528",
+        "6574",
+        "6997",
+        "6857",
+        "6429",
+        "6691",
+        "6519",
+        "6437",
+        "6751",
+        "6419",
+        "6665",
+        "6713",
+        "6465",
+        "6802",
+        "6670",
+        "6613",
+        "6615",
+        "6597",
+        "6935"
       ]
     },
     {
@@ -5014,13 +5437,13 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "8683",
-        "7010",
         "8682",
+        "8683",
         "6505",
+        "6785",
+        "7010",
         "8752",
-        "6784",
-        "6785"
+        "6784"
       ]
     },
     {
@@ -5117,10 +5540,10 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6493",
         "6450",
-        "6940",
         "8594",
+        "6940",
+        "6493",
         "6941"
       ]
     },
@@ -5187,13 +5610,13 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6545",
-        "6942",
-        "6601",
         "6602",
-        "6692",
+        "6942",
         "6890",
-        "6707"
+        "6601",
+        "6545",
+        "6707",
+        "6692"
       ]
     },
     {
@@ -5254,12 +5677,12 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6746",
-        "6744",
-        "6745",
         "8174",
+        "6745",
+        "6944",
+        "6746",
         "6832",
-        "6944"
+        "6744"
       ]
     },
     {
@@ -5305,8 +5728,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6622",
         "6641",
+        "6622",
         "6413"
       ]
     },
@@ -5358,9 +5781,9 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "6805",
         "6556",
         "8757",
-        "6805",
         "8758"
       ]
     },
@@ -5458,13 +5881,13 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "8574",
-        "6554",
-        "6954",
-        "8576",
+        "6907",
         "6734",
+        "6954",
+        "6554",
         "8575",
-        "6907"
+        "8574",
+        "8576"
       ]
     },
     {
@@ -5731,53 +6154,53 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "2419",
-        "2179",
-        "2332",
-        "2476",
-        "2212",
-        "2213",
-        "8016",
+        "2411",
         "2438",
+        "8418",
+        "2488",
+        "2278",
+        "2400",
+        "2282",
+        "2291",
+        "8538",
+        "8147",
+        "8014",
+        "2279",
+        "2340",
+        "2212",
+        "2228",
+        "2320",
+        "2281",
+        "2255",
+        "2247",
+        "2284",
+        "8016",
+        "2332",
+        "2189",
+        "2386",
+        "2396",
+        "2419",
+        "2354",
+        "2316",
+        "2280",
+        "2403",
+        "2213",
+        "2460",
         "2126",
+        "8013",
+        "2475",
+        "2397",
+        "2256",
+        "2248",
+        "2412",
+        "2476",
         "2172",
+        "2343",
         "2302",
         "2474",
-        "2354",
-        "2403",
         "2199",
-        "2320",
-        "2279",
-        "2280",
-        "8147",
-        "2278",
-        "2189",
-        "2281",
-        "2396",
-        "2411",
-        "2247",
-        "2475",
-        "2488",
-        "2460",
-        "2228",
-        "2284",
-        "2316",
-        "2397",
-        "8014",
-        "8418",
-        "2336",
-        "2343",
-        "2400",
-        "8013",
-        "8538",
-        "2282",
-        "2248",
-        "2291",
-        "2256",
-        "2340",
-        "2412",
-        "2255",
-        "2386"
+        "2179",
+        "2336"
       ],
       "statewide_state": "IL"
     },
@@ -6443,8 +6866,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "8437",
-        "4670"
+        "4670",
+        "8437"
       ]
     },
     {
@@ -6658,38 +7081,38 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "7064",
-        "7023",
-        "7057",
-        "7063",
-        "7018",
-        "7040",
-        "7072",
-        "7049",
-        "7066",
-        "7048",
+        "7069",
         "7067",
         "7062",
-        "7069",
-        "7041",
-        "7028",
-        "7034",
-        "7019",
-        "7042",
+        "8559",
+        "7023",
+        "7046",
+        "7072",
         "7017",
-        "7031",
+        "7057",
+        "7033",
+        "7041",
         "7052",
+        "7049",
+        "7031",
+        "7070",
+        "8664",
+        "7040",
+        "7063",
         "7061",
         "7038",
-        "7046",
-        "7070",
         "7074",
+        "7034",
+        "7066",
+        "7051",
+        "7064",
+        "7028",
+        "7018",
         "7065",
+        "7019",
         "7047",
-        "7033",
-        "8559",
-        "8664",
-        "7051"
+        "7042",
+        "7048"
       ]
     },
     {
@@ -7100,9 +7523,9 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "6525",
         "6526",
-        "6527",
-        "6525"
+        "6527"
       ]
     },
     {
@@ -7227,9 +7650,9 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6441",
+        "6417",
         "6423",
-        "6417"
+        "6441"
       ]
     },
     {
@@ -7896,8 +8319,8 @@
       ],
       "psap_ids_from_pdf": [
         "6448   6449   6489   6585   6712   6988   6782   6482    6498   6488   6531   6730   6731   6757   6424   8168     6976   6457   6560   6993   6994",
-        "6405",
-        "6394"
+        "6394",
+        "6405"
       ]
     },
     {
@@ -7938,8 +8361,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6527",
-        "6525"
+        "6525",
+        "6527"
       ]
     },
     {
@@ -8244,12 +8667,12 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "6968",
-        "6463",
-        "6900",
-        "6668",
         "6566",
-        "7001"
+        "6668",
+        "6968",
+        "6900",
+        "7001",
+        "6463"
       ]
     },
     {
@@ -8310,12 +8733,12 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "8574",
-        "6554",
+        "6907",
         "6954",
-        "8576",
+        "6554",
         "8575",
-        "6907"
+        "8574",
+        "8576"
       ]
     },
     {
@@ -8388,8 +8811,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3819",
+        "64106",
         "46225"
       ]
     },
@@ -8436,8 +8859,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3819",
+        "64106",
         "46225"
       ]
     },
@@ -8512,8 +8935,8 @@
       ],
       "psap_ids_from_pdf": [
         "64106",
-        "46225",
-        "3965"
+        "3965",
+        "46225"
       ]
     },
     {
@@ -8594,9 +9017,9 @@
       ],
       "psap_ids_from_pdf": [
         "3893",
+        "3939",
         "3935",
         "8271",
-        "3939",
         "3805"
       ]
     },
@@ -9007,8 +9430,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "5989",
-        "5988"
+        "5988",
+        "5989"
       ]
     },
     {
@@ -9096,10 +9519,10 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "1616",
-        "8705",
         "3916",
-        "46808"
+        "46808",
+        "8705",
+        "1616"
       ]
     },
     {
@@ -9180,16 +9603,16 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "1631",
-        "1668",
-        "1676",
         "1671",
-        "8426",
-        "1533",
-        "8425",
+        "1631",
+        "1676",
         "1669",
+        "1668",
+        "1533",
         "1571",
-        "7915"
+        "7915",
+        "8425",
+        "8426"
       ]
     },
     {
@@ -9275,8 +9698,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3773",
+        "64106",
         "46225"
       ]
     },
@@ -9419,8 +9842,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3916",
+        "64106",
         "46225"
       ]
     },
@@ -9473,9 +9896,9 @@
       ],
       "psap_ids_from_pdf": [
         "3766",
-        "3741",
         "3795",
-        "3785"
+        "3785",
+        "3741"
       ]
     },
     {
@@ -9802,8 +10225,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3919",
+        "64106",
         "46225"
       ]
     },
@@ -10150,69 +10573,69 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "2419",
-        "2353",
-        "2179",
-        "2332",
-        "2476",
-        "2192",
-        "2212",
-        "2213",
-        "8016",
+        "2411",
         "2438",
+        "8418",
+        "2488",
+        "2278",
+        "2400",
+        "2282",
+        "2444",
+        "2291",
+        "2315",
+        "2489",
+        "8538",
+        "2409",
+        "2353",
+        "8147",
+        "8014",
+        "2279",
+        "2192",
+        "2340",
+        "8015",
+        "2212",
+        "2228",
+        "2283",
+        "2320",
+        "2281",
+        "2445",
+        "2255",
+        "2247",
+        "2284",
+        "8016",
+        "2413",
+        "2332",
         "2129",
+        "2189",
+        "2386",
+        "2396",
+        "2419",
+        "2147",
+        "2354",
+        "2316",
+        "2280",
+        "2403",
+        "2494",
+        "2213",
+        "2460",
         "2126",
+        "8013",
+        "2475",
+        "2372",
+        "2397",
+        "2256",
+        "2248",
+        "2356",
+        "2412",
+        "2476",
+        "2193",
         "2172",
+        "2343",
         "2302",
         "2474",
-        "2315",
-        "2354",
-        "2403",
         "2199",
-        "2489",
-        "2320",
-        "2279",
-        "2280",
-        "2356",
-        "2372",
-        "2193",
-        "8147",
-        "2283",
-        "2278",
-        "2189",
-        "2281",
-        "2396",
-        "2494",
-        "2411",
-        "2247",
-        "2475",
-        "2488",
-        "2460",
-        "2228",
-        "2147",
-        "2284",
-        "2316",
-        "2397",
-        "2409",
-        "8015",
-        "2445",
-        "8014",
-        "8418",
-        "2413",
-        "2336",
-        "2343",
-        "2400",
-        "8013",
-        "8538",
-        "2282",
-        "2248",
-        "2291",
-        "2256",
-        "2340",
-        "2444",
-        "2412",
-        "2255",
-        "2386"
+        "2179",
+        "2336"
       ]
     },
     {
@@ -10833,120 +11256,120 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "2135",
-        "2289",
-        "2231",
-        "2426",
-        "2480",
-        "2441",
-        "2376",
-        "2387",
-        "2338",
-        "8936",
-        "2464",
-        "2235",
         "2334",
-        "2110",
-        "2295",
-        "2365",
-        "2388",
+        "2209",
+        "2285",
+        "2154",
+        "2276",
         "2425",
-        "2331",
-        "2304",
-        "2143",
-        "8893",
-        "2357",
-        "2245",
         "8547",
+        "2331",
+        "2145",
+        "2426",
         "8732",
-        "2286",
-        "2230",
+        "2421",
+        "2207",
+        "2239",
+        "2288",
+        "2368",
+        "2135",
+        "8894",
+        "2174",
+        "2388",
+        "2287",
+        "2468",
+        "2437",
+        "2338",
+        "2432",
+        "2457",
+        "2177",
         "2455",
-        "2185",
+        "8158",
+        "2175",
+        "2196",
+        "2323",
+        "2371",
+        "2182",
+        "2144",
+        "2122",
+        "2151",
+        "2499",
+        "2304",
+        "2200",
+        "2224",
+        "2289",
+        "8131",
+        "2299",
+        "2244",
+        "2150",
+        "2387",
+        "2342",
+        "2300",
+        "2195",
+        "2325",
+        "2376",
+        "2210",
+        "2181",
+        "8883",
+        "2143",
+        "2370",
+        "2484",
+        "2235",
+        "2498",
+        "2330",
+        "2257",
+        "2365",
+        "2286",
+        "8018",
+        "2353",
+        "2113",
+        "2441",
+        "2231",
+        "2480",
+        "2197",
+        "2329",
+        "2230",
+        "2214",
+        "2295",
+        "2467",
+        "2117",
+        "2482",
         "2106",
+        "2222",
+        "2245",
+        "8893",
+        "2218",
+        "2115",
+        "2462",
+        "2399",
+        "2185",
+        "2398",
+        "2389",
+        "2310",
+        "2377",
+        "2363",
+        "2326",
+        "8936",
+        "2383",
+        "2392",
+        "2357",
+        "2436",
+        "2469",
+        "2211",
+        "2262",
+        "2418",
+        "2252",
+        "2464",
+        "2253",
+        "2367",
+        "2180",
+        "2153",
+        "2317",
         "2258",
         "8456",
-        "2370",
-        "2421",
-        "2325",
-        "2182",
-        "2300",
-        "2482",
-        "2122",
-        "2389",
-        "8894",
-        "2200",
-        "2499",
-        "8018",
-        "2239",
-        "2326",
-        "2276",
-        "2153",
-        "2197",
-        "2398",
-        "2210",
-        "2211",
-        "2196",
-        "2222",
-        "2115",
-        "2287",
-        "8883",
-        "2174",
-        "2377",
-        "8131",
         "8300",
-        "2180",
-        "2437",
-        "2288",
-        "2467",
-        "2457",
-        "2392",
-        "2383",
-        "2113",
-        "2399",
-        "2368",
-        "2244",
-        "2252",
-        "2154",
-        "2214",
-        "2498",
-        "2469",
-        "2257",
-        "2311",
-        "2329",
-        "2150",
-        "2151",
-        "2195",
-        "2363",
-        "2117",
-        "2371",
-        "2317",
-        "2262",
-        "2285",
-        "2468",
-        "2353",
-        "2323",
-        "2299",
-        "2224",
-        "2330",
-        "2418",
-        "2177",
-        "2436",
-        "2209",
-        "2207",
-        "2462",
-        "2484",
-        "2367",
-        "2432",
-        "2145",
-        "2181",
-        "8158",
-        "2218",
-        "2342",
-        "2310",
-        "2144",
-        "2175",
-        "2253"
+        "2110",
+        "2311"
       ]
     },
     {
@@ -10997,9 +11420,9 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "8675",
         "8674",
         "6068",
-        "8675",
         "8423"
       ]
     },
@@ -11046,8 +11469,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3934",
+        "64106",
         "46225"
       ]
     },
@@ -11143,8 +11566,8 @@
       ],
       "psap_ids_from_pdf": [
         "7940",
-        "8327",
-        "1626"
+        "1626",
+        "8327"
       ]
     },
     {
@@ -11190,8 +11613,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1451",
+        "33881",
         "46225"
       ]
     },
@@ -11238,8 +11661,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1516",
+        "33881",
         "46225"
       ]
     },
@@ -11522,12 +11945,12 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "1453",
+        "8172",
         "1554",
         "1634",
-        "1633",
         "1562",
-        "1453",
-        "8172"
+        "1633"
       ]
     },
     {
@@ -11573,8 +11996,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "64106",
         "3824",
+        "64106",
         "46225"
       ]
     },
@@ -12504,157 +12927,157 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "3420",
-        "3549",
-        "3356",
-        "3560",
-        "3464",
-        "3390",
-        "3447",
-        "3506",
-        "3415",
-        "3397",
-        "3588",
-        "3518",
-        "3591",
-        "3374",
-        "3535",
-        "3309",
-        "3497",
-        "3581",
-        "3384",
-        "8217",
-        "3444",
-        "3443",
-        "3335",
-        "3382",
-        "3550",
-        "3572",
-        "3347",
-        "3488",
-        "3510",
-        "3342",
-        "3368",
-        "3485",
-        "3513",
-        "3493",
-        "3446",
-        "3546",
-        "3555",
-        "3520",
-        "3526",
-        "3474",
-        "3482",
-        "3317",
-        "3532",
-        "3407",
-        "3408",
-        "3313",
-        "3542",
-        "3454",
-        "3372",
-        "3392",
-        "3350",
-        "3321",
-        "3473",
-        "3419",
-        "3364",
-        "3336",
-        "3592",
-        "3562",
-        "3379",
-        "3501",
-        "3575",
-        "3484",
-        "3344",
-        "3399",
-        "3357",
-        "3324",
-        "3576",
-        "3405",
-        "3381",
-        "3487",
-        "3492",
-        "3537",
-        "3534",
-        "3422",
-        "3495",
-        "3401",
-        "3452",
-        "3332",
-        "3375",
-        "3365",
-        "3352",
-        "3459",
-        "3453",
-        "3531",
-        "3413",
-        "3429",
-        "3496",
-        "3554",
-        "3528",
-        "3515",
-        "3310",
-        "3404",
-        "3337",
-        "3417",
-        "3394",
-        "3440",
-        "3574",
-        "3456",
-        "3573",
-        "3570",
-        "3423",
-        "8333",
         "3568",
-        "3341",
-        "3508",
-        "8637",
-        "3348",
-        "3461",
-        "3431",
-        "3367",
-        "3489",
-        "3544",
-        "3410",
-        "3425",
-        "3436",
-        "3345",
-        "3354",
-        "3316",
-        "3330",
-        "3442",
-        "3308",
-        "3498",
-        "3540",
-        "3509",
-        "3334",
-        "3539",
-        "3533",
-        "3361",
-        "3587",
-        "3557",
-        "3571",
-        "3363",
-        "3511",
-        "3416",
-        "3331",
-        "3396",
-        "3369",
-        "3580",
-        "8025",
+        "3446",
+        "3321",
+        "3493",
         "3351",
+        "3344",
         "3504",
-        "3519",
-        "3391",
-        "3502",
-        "3340",
-        "3541",
-        "3338",
+        "3413",
+        "3361",
+        "3544",
+        "3572",
+        "3390",
+        "3489",
+        "3332",
+        "3557",
+        "3354",
+        "3497",
+        "3337",
+        "3357",
+        "3588",
+        "3334",
+        "3397",
         "3402",
-        "3579",
+        "3542",
+        "3502",
+        "8573",
+        "3506",
+        "3454",
+        "3379",
+        "3492",
+        "3367",
+        "3348",
+        "3554",
+        "3336",
+        "3510",
+        "3364",
+        "3384",
+        "3309",
+        "3534",
+        "3404",
+        "3374",
+        "3456",
+        "3581",
         "3584",
-        "8573"
+        "3407",
+        "3313",
+        "3498",
+        "3513",
+        "3511",
+        "3541",
+        "3310",
+        "3375",
+        "3509",
+        "3399",
+        "3464",
+        "3330",
+        "3350",
+        "3487",
+        "3519",
+        "3579",
+        "3408",
+        "3415",
+        "3488",
+        "3473",
+        "3340",
+        "3431",
+        "3369",
+        "3423",
+        "3533",
+        "3416",
+        "3410",
+        "3335",
+        "3440",
+        "3571",
+        "3444",
+        "3425",
+        "3382",
+        "3580",
+        "3459",
+        "3482",
+        "3535",
+        "3520",
+        "3496",
+        "3526",
+        "3562",
+        "3550",
+        "3331",
+        "3443",
+        "3515",
+        "8025",
+        "3537",
+        "3447",
+        "3338",
+        "3461",
+        "3453",
+        "8333",
+        "3575",
+        "3549",
+        "3419",
+        "3341",
+        "3391",
+        "3429",
+        "3531",
+        "3317",
+        "3546",
+        "8637",
+        "3576",
+        "3485",
+        "3555",
+        "3363",
+        "3345",
+        "8217",
+        "3436",
+        "3347",
+        "3417",
+        "3587",
+        "3442",
+        "3422",
+        "3501",
+        "3356",
+        "3324",
+        "3405",
+        "3532",
+        "3592",
+        "3573",
+        "3591",
+        "3392",
+        "3368",
+        "3484",
+        "3394",
+        "3570",
+        "3508",
+        "3474",
+        "3452",
+        "3539",
+        "3372",
+        "3574",
+        "3308",
+        "3352",
+        "3420",
+        "3518",
+        "3342",
+        "3316",
+        "3381",
+        "3560",
+        "3401",
+        "3365",
+        "3528",
+        "3540",
+        "3396",
+        "3495"
       ],
       "statewide_state": "MI"
     },
@@ -13259,115 +13682,115 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "3718",
-        "3626",
-        "3632",
-        "3644",
-        "3724",
-        "3597",
-        "3707",
-        "8028",
-        "3629",
-        "3691",
-        "3642",
-        "3600",
-        "3699",
-        "3624",
-        "3730",
-        "3609",
-        "3694",
-        "3647",
         "3611",
-        "3596",
-        "3614",
-        "3643",
+        "3642",
+        "3689",
+        "3730",
+        "3612",
+        "3651",
+        "3610",
+        "3625",
+        "3711",
+        "3739",
+        "3716",
+        "3740",
+        "3663",
+        "3605",
+        "3658",
+        "3692",
+        "3613",
+        "3602",
+        "3622",
+        "3631",
+        "3675",
+        "3738",
+        "3733",
+        "3714",
+        "3633",
+        "3724",
+        "3656",
+        "3718",
+        "3661",
+        "3728",
+        "3649",
+        "3609",
+        "3619",
+        "3731",
+        "8617",
+        "3617",
+        "3727",
+        "3627",
+        "3601",
+        "3662",
+        "3623",
+        "3694",
+        "8028",
+        "3616",
+        "3608",
+        "3699",
         "3679",
         "3704",
-        "3712",
-        "3619",
-        "3692",
-        "3645",
-        "3636",
-        "3613",
-        "3700",
-        "3605",
-        "3670",
-        "3658",
-        "3728",
-        "3685",
-        "3656",
-        "3661",
-        "3601",
-        "3696",
-        "3695",
-        "3631",
-        "3648",
-        "3674",
-        "3627",
-        "3651",
-        "3701",
-        "3608",
-        "3678",
-        "3703",
-        "3706",
-        "3612",
-        "3633",
-        "3659",
-        "3690",
-        "3663",
-        "3713",
-        "3740",
-        "3733",
-        "3729",
         "3697",
-        "3686",
-        "3639",
-        "3649",
-        "3721",
-        "3739",
-        "3617",
-        "3705",
-        "8617",
-        "3711",
-        "3726",
-        "3687",
-        "3637",
-        "3635",
-        "3716",
-        "3625",
-        "3610",
-        "3738",
-        "3640",
-        "3664",
-        "3714",
-        "3731",
-        "3732",
-        "3621",
-        "3634",
-        "3675",
-        "3710",
-        "3723",
-        "3646",
-        "3623",
-        "3650",
-        "3737",
-        "3727",
-        "8882",
-        "3602",
-        "8884",
-        "3604",
-        "3653",
-        "8638",
-        "3682",
-        "3620",
-        "3698",
-        "3616",
-        "3622",
         "3667",
-        "3689",
-        "3662",
+        "3690",
+        "8884",
+        "3712",
+        "3732",
+        "3597",
+        "3614",
+        "3604",
+        "3624",
+        "3729",
+        "3674",
+        "3710",
+        "3701",
+        "3703",
+        "3737",
+        "3726",
+        "3686",
+        "3635",
+        "3596",
+        "3639",
+        "3648",
+        "3644",
+        "3637",
+        "3696",
+        "3629",
+        "3721",
+        "3621",
+        "3678",
+        "3600",
+        "3707",
+        "3691",
+        "3650",
         "3669",
-        "3665"
+        "3713",
+        "3640",
+        "3705",
+        "3687",
+        "3670",
+        "3620",
+        "3682",
+        "3643",
+        "3706",
+        "3632",
+        "3698",
+        "3653",
+        "3645",
+        "8638",
+        "3723",
+        "3659",
+        "3664",
+        "3685",
+        "8882",
+        "3646",
+        "3700",
+        "3665",
+        "3634",
+        "3636",
+        "3695",
+        "3647",
+        "3626"
       ],
       "statewide_state": "MN"
     },
@@ -13601,8 +14024,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "1506",
-        "1623"
+        "1623",
+        "1506"
       ]
     },
     {
@@ -14408,12 +14831,12 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "1446",
         "1544",
+        "1545",
         "8689",
         "1595",
-        "1543",
-        "1545",
-        "1446"
+        "1543"
       ]
     },
     {
@@ -14459,8 +14882,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1552",
+        "33881",
         "46225"
       ]
     },
@@ -14507,8 +14930,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1486",
+        "33881",
         "46225"
       ]
     },
@@ -14538,11 +14961,11 @@
       "poc_agency": "Alabama 9-1-1 Board",
       "psap_ids_from_pdf": [
         "281",
-        "277",
         "230",
-        "247",
+        "277",
         "208",
-        "278"
+        "278",
+        "247"
       ]
     },
     {
@@ -14588,9 +15011,9 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "1670",
         "33881",
-        "46225",
-        "1670"
+        "46225"
       ]
     },
     {
@@ -14636,8 +15059,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1569",
+        "33881",
         "46225"
       ]
     },
@@ -15461,155 +15884,155 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "3420",
-        "3549",
-        "3356",
-        "3560",
-        "3464",
-        "3390",
-        "3447",
-        "3506",
-        "3415",
-        "3397",
-        "3588",
-        "3518",
-        "3591",
-        "3374",
-        "3535",
-        "3309",
-        "3497",
-        "3581",
-        "3384",
-        "8217",
-        "3444",
-        "3443",
-        "3335",
-        "3382",
-        "3550",
-        "3572",
-        "3347",
-        "3488",
-        "3510",
-        "3342",
-        "3368",
-        "3485",
-        "3513",
-        "3493",
-        "3446",
-        "3546",
-        "3555",
-        "3520",
-        "3526",
-        "3474",
-        "3317",
-        "3532",
-        "3407",
-        "3408",
-        "3313",
-        "3542",
-        "3454",
-        "3372",
-        "3392",
-        "3350",
-        "3321",
-        "3473",
-        "3419",
-        "3364",
-        "3336",
-        "3592",
-        "3562",
-        "3379",
-        "3501",
-        "3575",
-        "3484",
-        "3344",
-        "3399",
-        "3357",
-        "3324",
-        "3576",
-        "3405",
-        "3381",
-        "3487",
-        "3492",
-        "3537",
-        "3534",
-        "3422",
-        "3495",
-        "3401",
-        "3452",
-        "3332",
-        "3375",
-        "3365",
-        "3352",
-        "3459",
-        "3453",
-        "3531",
-        "3413",
-        "3429",
-        "3496",
-        "3554",
-        "3528",
-        "3515",
-        "3310",
-        "3404",
-        "3337",
-        "3417",
-        "3394",
-        "3440",
-        "3574",
-        "3456",
-        "3573",
-        "3423",
-        "8333",
         "3568",
-        "3341",
-        "3508",
-        "8637",
-        "3348",
-        "3461",
-        "3431",
-        "3367",
-        "3489",
-        "3544",
-        "3410",
-        "3425",
-        "3436",
-        "3345",
-        "3354",
-        "3316",
-        "3330",
-        "3442",
-        "3308",
-        "3498",
-        "3540",
-        "3509",
-        "3334",
-        "3539",
-        "3533",
-        "3361",
-        "3587",
-        "3557",
-        "3571",
-        "3363",
-        "3511",
-        "3416",
-        "3331",
-        "3396",
-        "3369",
-        "3580",
-        "8025",
+        "3446",
+        "3321",
+        "3493",
         "3351",
+        "3344",
         "3504",
-        "3519",
-        "3391",
-        "3502",
-        "3340",
-        "3541",
-        "3338",
+        "3413",
+        "3361",
+        "3544",
+        "3572",
+        "3390",
+        "3489",
+        "3332",
+        "3557",
+        "3354",
+        "3497",
+        "3337",
+        "3357",
+        "3588",
+        "3334",
+        "3397",
         "3402",
-        "3579",
+        "3542",
+        "3502",
+        "8573",
+        "3506",
+        "3454",
+        "3379",
+        "3492",
+        "3367",
+        "3348",
+        "3554",
+        "3336",
+        "3510",
+        "3364",
+        "3384",
+        "3309",
+        "3534",
+        "3404",
+        "3374",
+        "3456",
+        "3581",
         "3584",
-        "8573"
+        "3407",
+        "3313",
+        "3498",
+        "3513",
+        "3511",
+        "3541",
+        "3310",
+        "3375",
+        "3509",
+        "3399",
+        "3464",
+        "3330",
+        "3350",
+        "3487",
+        "3519",
+        "3579",
+        "3408",
+        "3415",
+        "3488",
+        "3473",
+        "3340",
+        "3431",
+        "3369",
+        "3423",
+        "3533",
+        "3416",
+        "3410",
+        "3335",
+        "3440",
+        "3571",
+        "3444",
+        "3425",
+        "3382",
+        "3580",
+        "3459",
+        "3535",
+        "3520",
+        "3496",
+        "3526",
+        "3562",
+        "3550",
+        "3331",
+        "3443",
+        "3515",
+        "8025",
+        "3537",
+        "3447",
+        "3338",
+        "3461",
+        "3453",
+        "8333",
+        "3575",
+        "3549",
+        "3419",
+        "3341",
+        "3391",
+        "3429",
+        "3531",
+        "3317",
+        "3546",
+        "8637",
+        "3576",
+        "3485",
+        "3555",
+        "3363",
+        "3345",
+        "8217",
+        "3436",
+        "3347",
+        "3417",
+        "3587",
+        "3442",
+        "3422",
+        "3501",
+        "3356",
+        "3324",
+        "3405",
+        "3532",
+        "3592",
+        "3573",
+        "3591",
+        "3392",
+        "3368",
+        "3484",
+        "3394",
+        "3508",
+        "3474",
+        "3452",
+        "3539",
+        "3372",
+        "3574",
+        "3308",
+        "3352",
+        "3420",
+        "3518",
+        "3342",
+        "3316",
+        "3381",
+        "3560",
+        "3401",
+        "3365",
+        "3528",
+        "3540",
+        "3396",
+        "3495"
       ],
       "statewide_state": "MI"
     },
@@ -15656,8 +16079,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1661",
+        "33881",
         "46225"
       ]
     },
@@ -15800,9 +16223,9 @@
         }
       ],
       "psap_ids_from_pdf": [
+        "1674",
         "33881",
-        "46225",
-        "1674"
+        "46225"
       ]
     },
     {
@@ -15848,8 +16271,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1666",
+        "33881",
         "46225"
       ]
     },
@@ -15896,8 +16319,8 @@
         }
       ],
       "psap_ids_from_pdf": [
-        "33881",
         "1496",
+        "33881",
         "46225"
       ]
     },
@@ -37412,7 +37835,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37425,7 +37848,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37438,7 +37861,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37464,7 +37887,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37477,7 +37900,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37490,7 +37913,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37503,7 +37926,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37516,7 +37939,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37542,7 +37965,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37568,7 +37991,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37581,7 +38004,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37594,7 +38017,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37607,7 +38030,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37620,7 +38043,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37633,7 +38056,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37646,7 +38069,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37685,7 +38108,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37698,7 +38121,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37711,7 +38134,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37724,7 +38147,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37737,7 +38160,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37750,7 +38173,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37763,7 +38186,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37776,7 +38199,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37789,7 +38212,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37802,7 +38225,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37815,7 +38238,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37828,7 +38251,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37841,7 +38264,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37854,7 +38277,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37880,7 +38303,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37893,7 +38316,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37906,7 +38329,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37919,7 +38342,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37945,7 +38368,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37958,7 +38381,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37971,7 +38394,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37984,7 +38407,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -37997,7 +38420,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38010,7 +38433,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38023,7 +38446,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38036,7 +38459,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38049,7 +38472,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38062,7 +38485,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38088,7 +38511,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38101,7 +38524,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38114,7 +38537,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38126,9 +38549,9 @@
       "city": "Naples",
       "psap_type": "Primary",
       "state_has_filings": true,
-      "direct_psap_match": false,
-      "state_filing_count": 38,
-      "ng911_status": "Filed (state-level)"
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "1486",
@@ -38153,7 +38576,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38166,7 +38589,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38179,7 +38602,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38218,7 +38641,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38231,7 +38654,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38244,7 +38667,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38257,7 +38680,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38270,7 +38693,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38283,7 +38706,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38296,7 +38719,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38309,7 +38732,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38322,7 +38745,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38335,7 +38758,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38361,7 +38784,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38374,7 +38797,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38387,7 +38810,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38400,7 +38823,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38439,7 +38862,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38452,7 +38875,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38465,7 +38888,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38478,7 +38901,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38491,7 +38914,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38504,7 +38927,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38517,7 +38940,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38530,7 +38953,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38569,7 +38992,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38582,7 +39005,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38595,7 +39018,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38608,7 +39031,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38621,7 +39044,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38634,7 +39057,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38660,7 +39083,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38673,7 +39096,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38686,7 +39109,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38699,7 +39122,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38712,7 +39135,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38725,7 +39148,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38738,7 +39161,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38764,7 +39187,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38777,7 +39200,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38790,7 +39213,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38803,7 +39226,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38816,7 +39239,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38829,7 +39252,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38855,7 +39278,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38868,7 +39291,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38881,7 +39304,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38907,7 +39330,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38920,7 +39343,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38933,7 +39356,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38972,7 +39395,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -38985,7 +39408,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39011,7 +39434,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39063,7 +39486,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39076,7 +39499,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39089,7 +39512,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39141,7 +39564,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39154,7 +39577,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39167,7 +39590,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39180,7 +39603,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39193,7 +39616,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39206,7 +39629,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39219,7 +39642,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39271,7 +39694,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39284,7 +39707,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39297,7 +39720,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39310,7 +39733,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39323,7 +39746,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39336,7 +39759,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39362,7 +39785,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39388,7 +39811,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39401,7 +39824,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39414,7 +39837,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39427,7 +39850,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39453,7 +39876,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39466,7 +39889,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39479,7 +39902,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39492,7 +39915,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39505,7 +39928,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39518,7 +39941,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39531,7 +39954,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39544,7 +39967,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39557,7 +39980,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39570,7 +39993,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39596,7 +40019,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39609,7 +40032,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39635,7 +40058,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39648,7 +40071,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39687,7 +40110,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39700,7 +40123,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39726,7 +40149,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39739,7 +40162,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39752,7 +40175,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39765,7 +40188,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39778,7 +40201,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39791,7 +40214,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39804,7 +40227,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39817,7 +40240,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39830,7 +40253,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39843,7 +40266,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39856,7 +40279,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39869,7 +40292,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39882,7 +40305,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39895,7 +40318,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39908,7 +40331,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39921,7 +40344,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39934,7 +40357,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39947,7 +40370,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39960,7 +40383,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39973,7 +40396,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39986,7 +40409,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -39999,7 +40422,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40011,9 +40434,9 @@
       "city": "Naples",
       "psap_type": "Primary",
       "state_has_filings": true,
-      "direct_psap_match": false,
-      "state_filing_count": 38,
-      "ng911_status": "Filed (state-level)"
+      "direct_psap_match": true,
+      "state_filing_count": 3,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "1594",
@@ -40051,7 +40474,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40064,7 +40487,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40090,7 +40513,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40103,7 +40526,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40116,7 +40539,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40129,7 +40552,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40142,7 +40565,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40155,7 +40578,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40168,7 +40591,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40181,7 +40604,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40194,7 +40617,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40220,7 +40643,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40233,7 +40656,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40246,7 +40669,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40259,7 +40682,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40272,7 +40695,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40285,7 +40708,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40298,7 +40721,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40311,7 +40734,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40324,7 +40747,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40337,7 +40760,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40350,7 +40773,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40363,7 +40786,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40376,7 +40799,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40389,7 +40812,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40402,7 +40825,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40415,7 +40838,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40428,7 +40851,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40454,7 +40877,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40467,7 +40890,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40480,7 +40903,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40493,7 +40916,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40506,7 +40929,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40519,7 +40942,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40532,7 +40955,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40545,7 +40968,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40558,7 +40981,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40597,7 +41020,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40610,7 +41033,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40623,7 +41046,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40636,7 +41059,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40649,7 +41072,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40662,7 +41085,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40675,7 +41098,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40688,7 +41111,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40701,7 +41124,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40714,7 +41137,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40779,7 +41202,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40792,7 +41215,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40805,7 +41228,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40818,7 +41241,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40831,7 +41254,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40857,7 +41280,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40896,7 +41319,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40909,7 +41332,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40922,7 +41345,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40935,7 +41358,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40948,7 +41371,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40961,7 +41384,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -40987,7 +41410,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41000,7 +41423,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41013,7 +41436,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41026,7 +41449,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41039,7 +41462,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41052,7 +41475,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41065,7 +41488,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41078,7 +41501,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41091,7 +41514,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41104,7 +41527,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41117,7 +41540,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41130,7 +41553,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41143,7 +41566,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41156,7 +41579,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41169,7 +41592,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41182,7 +41605,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41195,7 +41618,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41208,7 +41631,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41221,7 +41644,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41247,7 +41670,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41260,7 +41683,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41273,7 +41696,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41286,7 +41709,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41299,7 +41722,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41312,7 +41735,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41325,7 +41748,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41338,7 +41761,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41364,7 +41787,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41377,7 +41800,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41429,7 +41852,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41442,7 +41865,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41481,7 +41904,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41494,7 +41917,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41507,7 +41930,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41520,7 +41943,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41533,7 +41956,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41559,7 +41982,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41585,7 +42008,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41598,7 +42021,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41611,7 +42034,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41624,7 +42047,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41637,7 +42060,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41650,7 +42073,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41676,7 +42099,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41689,7 +42112,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41702,7 +42125,7 @@
       "psap_type": "Secondary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41715,7 +42138,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41754,7 +42177,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41767,7 +42190,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41780,7 +42203,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41793,7 +42216,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41806,7 +42229,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41819,7 +42242,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41832,7 +42255,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41845,7 +42268,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41858,7 +42281,7 @@
       "psap_type": "Orphaned",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41871,7 +42294,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -41884,7 +42307,7 @@
       "psap_type": "Primary",
       "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 38,
+      "state_filing_count": 39,
       "ng911_status": "Filed (state-level)"
     },
     {
@@ -88825,10 +89248,10 @@
       "county_fips": "35006",
       "city": "Acoma Pueblo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4894",
@@ -88838,10 +89261,10 @@
       "county_fips": "35035",
       "city": "Alamogordo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4895",
@@ -88851,10 +89274,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 3,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4896",
@@ -88864,10 +89287,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4897",
@@ -88877,10 +89300,10 @@
       "county_fips": "35015",
       "city": "Artesia",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4898",
@@ -88890,10 +89313,10 @@
       "county_fips": "35015",
       "city": "Artesia",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4899",
@@ -88903,10 +89326,10 @@
       "county_fips": "35061",
       "city": "Belen",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4900",
@@ -88916,10 +89339,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4901",
@@ -88929,10 +89352,10 @@
       "county_fips": "35043",
       "city": "Bernalillo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4902",
@@ -88942,10 +89365,10 @@
       "county_fips": "35039",
       "city": "Espanola",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4903",
@@ -88955,10 +89378,10 @@
       "county_fips": "35009",
       "city": "Cannon Air Force Base",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4904",
@@ -88968,10 +89391,10 @@
       "county_fips": "35015",
       "city": "Carlsbad",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4905",
@@ -88981,10 +89404,10 @@
       "county_fips": "35003",
       "city": "Reserve",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4907",
@@ -88994,10 +89417,10 @@
       "county_fips": "35006",
       "city": "Grants",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4908",
@@ -89007,10 +89430,10 @@
       "county_fips": "35059",
       "city": "Clayton",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4909",
@@ -89020,10 +89443,10 @@
       "county_fips": "35009",
       "city": "Clovis",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4910",
@@ -89033,10 +89456,10 @@
       "county_fips": "35043",
       "city": "Corrales",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4911",
@@ -89046,10 +89469,10 @@
       "county_fips": "35011",
       "city": "Ft Sumner",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4913",
@@ -89059,10 +89482,10 @@
       "county_fips": "35039",
       "city": "Espanola",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4914",
@@ -89072,10 +89495,10 @@
       "county_fips": "35025",
       "city": "Eunice",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4915",
@@ -89085,10 +89508,10 @@
       "county_fips": "35017",
       "city": "Silver City",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4916",
@@ -89098,10 +89521,10 @@
       "county_fips": "35006",
       "city": "Grants",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "8184",
@@ -89111,10 +89534,10 @@
       "county_fips": "35019",
       "city": "Santa Rosa",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4917",
@@ -89124,10 +89547,10 @@
       "county_fips": "35013",
       "city": "Hatch",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4918",
@@ -89137,10 +89560,10 @@
       "county_fips": "35023",
       "city": "Lordsburg",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4919",
@@ -89150,10 +89573,10 @@
       "county_fips": "35025",
       "city": "Hobbs",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4920",
@@ -89163,10 +89586,10 @@
       "county_fips": "35035",
       "city": "Holloman Afb",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4921",
@@ -89176,10 +89599,10 @@
       "county_fips": "35001",
       "city": "Isleta",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4922",
@@ -89189,10 +89612,10 @@
       "county_fips": "35025",
       "city": "Jal",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4923",
@@ -89202,10 +89625,10 @@
       "county_fips": "35039",
       "city": "Dulce",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4924",
@@ -89215,10 +89638,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4925",
@@ -89228,10 +89651,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4926",
@@ -89241,10 +89664,10 @@
       "county_fips": "35047",
       "city": "Las Vegas",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "8313",
@@ -89254,10 +89677,10 @@
       "county_fips": "35025",
       "city": "Hobbs",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4927",
@@ -89267,10 +89690,10 @@
       "county_fips": "35025",
       "city": "Lovington",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4928",
@@ -89280,10 +89703,10 @@
       "county_fips": "35027",
       "city": "Carrizozo",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4929",
@@ -89293,10 +89716,10 @@
       "county_fips": "35028",
       "city": "Los Alamos",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4930",
@@ -89306,10 +89729,10 @@
       "county_fips": "35028",
       "city": "Los Alamos",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4931",
@@ -89319,10 +89742,10 @@
       "county_fips": "35061",
       "city": "Los Lunas",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4932",
@@ -89332,10 +89755,10 @@
       "county_fips": "35025",
       "city": "Lovington",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4933",
@@ -89345,10 +89768,10 @@
       "county_fips": "35029",
       "city": "Deming",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4934",
@@ -89358,10 +89781,10 @@
       "county_fips": "35031",
       "city": "Gallup",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4935",
@@ -89371,10 +89794,10 @@
       "county_fips": "35031",
       "city": "Gallup",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4936",
@@ -89384,10 +89807,10 @@
       "county_fips": "35035",
       "city": "Mescalero",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4937",
@@ -89397,10 +89820,10 @@
       "county_fips": "35013",
       "city": "Las Cruces",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4938",
@@ -89410,10 +89833,10 @@
       "county_fips": "35006",
       "city": "Milan",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4939",
@@ -89423,10 +89846,10 @@
       "county_fips": "35033",
       "city": "Mora",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4940",
@@ -89436,10 +89859,10 @@
       "county_fips": "35031",
       "city": "Crownpoint",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4941",
@@ -89449,10 +89872,10 @@
       "county_fips": "35045",
       "city": "Shiprock",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4974",
@@ -89462,10 +89885,10 @@
       "county_fips": "35047",
       "city": "Las Vegas",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "8422",
@@ -89475,10 +89898,10 @@
       "county_fips": "35013",
       "city": "Las Cruces",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4942",
@@ -89488,10 +89911,10 @@
       "county_fips": "35035",
       "city": "Alamogordo",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4906",
@@ -89501,10 +89924,10 @@
       "county_fips": "35005",
       "city": "Roswell",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4943",
@@ -89514,10 +89937,10 @@
       "county_fips": "35055",
       "city": "Penasco",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4944",
@@ -89527,10 +89950,10 @@
       "county_fips": "35049",
       "city": "Pojoaque",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4945",
@@ -89540,10 +89963,10 @@
       "county_fips": "35041",
       "city": "Portales",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4946",
@@ -89553,10 +89976,10 @@
       "county_fips": "35006",
       "city": "Laguna",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4947",
@@ -89566,10 +89989,10 @@
       "county_fips": "35037",
       "city": "Tucumcari",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4948",
@@ -89579,10 +90002,10 @@
       "county_fips": "35031",
       "city": "Ramah",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4949",
@@ -89592,10 +90015,10 @@
       "county_fips": "35007",
       "city": "Raton",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4950",
@@ -89605,10 +90028,10 @@
       "county_fips": "35007",
       "city": "Raton",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4951",
@@ -89618,10 +90041,10 @@
       "county_fips": "35055",
       "city": "Red River",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4912",
@@ -89631,10 +90054,10 @@
       "county_fips": "35015",
       "city": "Carlsbad",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4952",
@@ -89644,10 +90067,10 @@
       "county_fips": "35043",
       "city": "Rio Rancho",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4953",
@@ -89657,10 +90080,10 @@
       "county_fips": "35005",
       "city": "Roswell",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4954",
@@ -89670,10 +90093,10 @@
       "county_fips": "35027",
       "city": "Ruidoso Downs",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4955",
@@ -89683,10 +90106,10 @@
       "county_fips": "35027",
       "city": "Ruidoso",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4959",
@@ -89696,10 +90119,10 @@
       "county_fips": "35001",
       "city": "Bernalillo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4960",
@@ -89709,10 +90132,10 @@
       "county_fips": "35043",
       "city": "Bernalillo",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4956",
@@ -89722,10 +90145,10 @@
       "county_fips": "35045",
       "city": "Aztec",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4957",
@@ -89735,10 +90158,10 @@
       "county_fips": "35039",
       "city": "San Juan Pueblo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4958",
@@ -89748,10 +90171,10 @@
       "county_fips": "35047",
       "city": "Las Vegas",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4961",
@@ -89761,10 +90184,10 @@
       "county_fips": "35043",
       "city": "Santa Ana Pueblo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4962",
@@ -89774,10 +90197,10 @@
       "county_fips": "35039",
       "city": "Santa Clara Pueblo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4963",
@@ -89787,10 +90210,10 @@
       "county_fips": "35049",
       "city": "Santa Fe",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4964",
@@ -89800,10 +90223,10 @@
       "county_fips": "35049",
       "city": "Santa Fe",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4965",
@@ -89813,10 +90236,10 @@
       "county_fips": "35049",
       "city": "Santa Fe",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4966",
@@ -89826,10 +90249,10 @@
       "county_fips": "35019",
       "city": "Santa Rosa",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4967",
@@ -89839,10 +90262,10 @@
       "county_fips": "35051",
       "city": "Truth Or Consequences",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4968",
@@ -89852,10 +90275,10 @@
       "county_fips": "35017",
       "city": "Silver City",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4969",
@@ -89865,10 +90288,10 @@
       "county_fips": "35053",
       "city": "Socorro",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4970",
@@ -89878,10 +90301,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4971",
@@ -89891,10 +90314,10 @@
       "county_fips": "35039",
       "city": "Espanola",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4972",
@@ -89904,10 +90327,10 @@
       "county_fips": "35031",
       "city": "Gallup",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4973",
@@ -89917,10 +90340,10 @@
       "county_fips": "35013",
       "city": "Las Cruces",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4975",
@@ -89930,10 +90353,10 @@
       "county_fips": "35005",
       "city": "Roswell",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4976",
@@ -89943,10 +90366,10 @@
       "county_fips": "35049",
       "city": "Santa Fe",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4977",
@@ -89956,10 +90379,10 @@
       "county_fips": "35053",
       "city": "Socorro",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4978",
@@ -89969,10 +90392,10 @@
       "county_fips": "35037",
       "city": "Tucumcari",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4979",
@@ -89982,10 +90405,10 @@
       "county_fips": "35013",
       "city": "Sunland Park",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4980",
@@ -89995,10 +90418,10 @@
       "county_fips": "35055",
       "city": "Taos",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4981",
@@ -90008,10 +90431,10 @@
       "county_fips": "35055",
       "city": "Taos",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4982",
@@ -90021,10 +90444,10 @@
       "county_fips": "35055",
       "city": "Taos Pueblo",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4983",
@@ -90034,10 +90457,10 @@
       "county_fips": "35025",
       "city": "Tatum",
       "psap_type": "Orphaned",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4984",
@@ -90047,10 +90470,10 @@
       "county_fips": "35049",
       "city": "Tesuque",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4985",
@@ -90060,10 +90483,10 @@
       "county_fips": "35057",
       "city": "Mcintosh",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4986",
@@ -90073,10 +90496,10 @@
       "county_fips": "35037",
       "city": "Tucumcari",
       "psap_type": "Primary",
-      "state_has_filings": false,
+      "state_has_filings": true,
       "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_filing_count": 1,
+      "ng911_status": "Filed (state-level)"
     },
     {
       "psap_id": "4987",
@@ -90086,10 +90509,10 @@
       "county_fips": "35001",
       "city": "Albuquerque",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4988",
@@ -90099,10 +90522,10 @@
       "county_fips": "35061",
       "city": "Los Lunas",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4989",
@@ -90112,10 +90535,10 @@
       "county_fips": "35031",
       "city": "Zuni",
       "psap_type": "Primary",
-      "state_has_filings": false,
-      "direct_psap_match": false,
-      "state_filing_count": 0,
-      "ng911_status": "No filing detected"
+      "state_has_filings": true,
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "4990",
@@ -113747,9 +114170,9 @@
       "city": "Edinburg",
       "psap_type": "Primary",
       "state_has_filings": true,
-      "direct_psap_match": false,
-      "state_filing_count": 1,
-      "ng911_status": "Filed (statewide)"
+      "direct_psap_match": true,
+      "state_filing_count": 2,
+      "ng911_status": "Filed (PSAP match)"
     },
     {
       "psap_id": "6646",
