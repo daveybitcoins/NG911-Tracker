@@ -1,6 +1,132 @@
 [
   {
     "submissiontype": {
+      "description": "COMPLIANCE FILING",
+      "short": "COMPLIANCE",
+      "id": 128,
+      "abbreviation": "CF"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "20260518110511.pdf",
+        "src": "https://www.fcc.gov/ecfs/document/10518097988959/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "10518097988959",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-05-18T19:00:32.699Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-05-18T16:00:29.971Z",
+    "date_last_modified": "2026-05-18T16:00:29.971Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "George Gillespie"
+      }
+    ],
+    "date_submission": "2026-05-18T16:00:29.969Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [],
+    "entity": "Filer",
+    "authors": [],
+    "_index": "filings.2026.5",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
+      "description": "REQUEST",
+      "short": "REQUEST",
+      "id": 95,
+      "abbreviation": "RQ"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "FCC WASHINGTON DC.pdf",
+        "src": "https://www.fcc.gov/ecfs/document/10515073836381/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "10515073836381",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-05-18T15:00:33.371Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-05-15T19:49:53.917Z",
+    "date_last_modified": "2026-05-15T19:49:53.917Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "Martha Culbreth"
+      }
+    ],
+    "date_submission": "2026-05-15T19:49:53.917Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [],
+    "entity": "Author",
+    "authors": [
+      {
+        "name": "Emanuel County E911"
+      }
+    ],
+    "_index": "filings.2026.5",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
       "description": "REQUEST",
       "short": "REQUEST",
       "id": 95,
