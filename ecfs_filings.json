@@ -1,6 +1,252 @@
 [
   {
     "submissiontype": {
+      "flag_public": "Y",
+      "short": "COMMENT",
+      "description": "COMMENT",
+      "id": 7,
+      "type": "CO"
+    },
+    "attachments": [],
+    "documents": [],
+    "bureaus": [],
+    "id_submission": "26110060981",
+    "created": true,
+    "total_page_count": 0,
+    "lawfirms": [],
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 1,
+    "date_disseminated": "2026-07-28T19:00:32.452Z",
+    "filers": [
+      {
+        "name": "Michelle Gordon"
+      }
+    ],
+    "date_submission": "2026-07-28T17:22:27.642Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "proceedings": [
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-07-28T17:22:27.642Z",
+    "text_data": "I never get 911 call to deaf.",
+    "date_last_modified": "2026-07-28T17:22:27.642Z",
+    "authors": [],
+    "_index": "filings.2026.7",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
+      "description": "REQUEST",
+      "short": "REQUEST",
+      "id": 95,
+      "abbreviation": "RQ"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "Dodge Wilcox CO GA-FCC 911-Authority-NG911-Valid-Request-Form (1).docx",
+        "src": "https://www.fcc.gov/ecfs/document/26110060854/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "26110060854",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-07-28T17:00:32.478Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-07-28T16:57:06.899Z",
+    "date_last_modified": "2026-07-28T16:57:06.899Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "Dodge Wilcox 911"
+      }
+    ],
+    "date_submission": "2026-07-28T16:57:06.899Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [],
+    "entity": "Filer",
+    "authors": [],
+    "_index": "filings.2026.7",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
+      "description": "NOTICE OF EXPARTE",
+      "short": "NOTICE",
+      "id": 45,
+      "abbreviation": "NO"
+    },
+    "attachments": [],
+    "documents": [
+      {
+        "filename": "RFA Ex Parte Notice Letter_07.27.26.pdf",
+        "src": "https://www.fcc.gov/ecfs/document/26110059735/1",
+        "description": ""
+      }
+    ],
+    "id_submission": "26110059735",
+    "bureaus": [],
+    "id_bureau": "",
+    "total_page_count": 0,
+    "lawfirms": [],
+    "file_number": "",
+    "report_number": "",
+    "date_disseminated": "2026-07-28T15:00:32.190Z",
+    "proceedings": [
+      {
+        "sunshine_start_date": "2026-06-22T04:00:00.000Z",
+        "date_closed": "2099-12-31T23:59:59.999Z",
+        "id_proceeding": 2021122005851,
+        "name": "21-479",
+        "bureau_code": "PSHSB",
+        "description": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "created_date": "2021-12-15T18:35:12.000Z",
+        "description_display": "Facilitating Implementation of Next Generation 911 Services (NG911)",
+        "sunshine_end_date": "2026-06-26T04:00:00.000Z",
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      },
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-07-28T12:18:02.190Z",
+    "date_last_modified": "2026-07-28T12:18:02.189Z",
+    "created": true,
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 0,
+    "filers": [
+      {
+        "name": "South Carolina Revenue and Fiscal Affairs Office"
+      }
+    ],
+    "date_submission": "2026-07-28T12:18:02.189Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "presented_to": [
+      {
+        "filingsCount": 0,
+        "bureau_code": "PSHSB",
+        "name": "Public Safety & Homeland Security Bureau",
+        "edocs_bureau_code": "PSHSB",
+        "id": 155
+      }
+    ],
+    "entity": "Filer",
+    "authors": [],
+    "_index": "filings.2026.7",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
+      "flag_public": "Y",
+      "short": "COMMENT",
+      "description": "COMMENT",
+      "id": 7,
+      "type": "CO"
+    },
+    "attachments": [],
+    "documents": [],
+    "bureaus": [],
+    "id_submission": "26110059064",
+    "created": true,
+    "total_page_count": 0,
+    "lawfirms": [],
+    "viewingstatus": {
+      "description": "Unrestricted",
+      "id": 10
+    },
+    "express_comment": 1,
+    "date_disseminated": "2026-07-28T15:00:32.190Z",
+    "filers": [
+      {
+        "name": "Charlotte"
+      }
+    ],
+    "date_submission": "2026-07-28T03:36:47.523Z",
+    "filingstatus": {
+      "description": "DISSEMINATED",
+      "id": 30
+    },
+    "proceedings": [
+      {
+        "sunshine_start_date": null,
+        "date_closed": null,
+        "id_proceeding": 1742920240657,
+        "name": "25-143",
+        "bureau_code": "PSHSB",
+        "description": "Next Generation 911 (NG911) Valid Requests",
+        "created_date": "2025-03-18T20:11:17.000Z",
+        "description_display": "Next Generation 911 (NG911) Valid Requests",
+        "sunshine_end_date": null,
+        "bureau_name": "Public Safety & Homeland Security Bureau"
+      }
+    ],
+    "date_received": "2026-07-28T03:36:47.523Z",
+    "text_data": "Hope to hear if it pass.  Thank you. ",
+    "date_last_modified": "2026-07-28T03:36:47.523Z",
+    "authors": [],
+    "_index": "filings.2026.7",
+    "exparte_or_late_filed": "N"
+  },
+  {
+    "submissiontype": {
       "description": "REQUEST",
       "short": "REQUEST",
       "id": 95,
